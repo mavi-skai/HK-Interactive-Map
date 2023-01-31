@@ -1,0 +1,32 @@
+This code initializes a simple leaflet map with custom coordinate system (CRS). The custom CRS is defined by crs variable and it uses a L.Transformation object to transform the coordinates.
+
+The following parameters for the map are defined:
+
+mapExtent: the extent of the map in the coordinate system
+mapMinZoom: the minimum zoom level
+mapMaxZoom: the maximum zoom level
+mapMaxResolution: the maximum resolution for the map
+tileExtent: the extent of the tiles in the coordinate system
+
+The custom CRS is defined as follows:
+crs.transformation: a L.Transformation object that defines the transformation of the coordinates
+crs.scale: a function that returns the scale based on the zoom level
+crs.zoom: a function that returns the zoom level based on the scale
+L.CRS.Simple: dont need to be georeferenced, such as image-based maps, game maps
+crs.unproject: takes a point argument and returns a geographical point (latitude, longitude) 
+that corresponds to the given point in the projected coordinate system.
+
+A L.Map object is created with the following options:
+maxZoom: set to mapMaxZoom
+minZoom: set to mapMinZoom
+crs: set to the custom CRS defined as crs
+maxBoundsViscosity: set to 1.0
+maxBounds: set to the bounds of the map using the custom CRS's unproject method
+
+A tile layer is added to the map using the L.tileLayer method with the following options:
+minZoom: set to mapMinZoom
+maxZoom: set to mapMaxZoom
+tileSize: set to 2048 x 1024 pixels
+noWrap: set to true to prevent tiles from wrapping around the edges
+tms: set to false to indicate that the tiles are not TMS-style
+Finally, the map is fitted to the bounds defined by mapExtent using the custom CRS's unproject method.
