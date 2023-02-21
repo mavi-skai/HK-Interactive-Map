@@ -321,7 +321,7 @@ window.addEventListener('load', function () {
                      ' He teaches the Cyclone Slash to whoever is willing to become his disciple.'],0],
                    ['Oro',-1845,4293,'icon/npc/oro.png',
                     ['<br>Nailmaster Oro is one of three Nailmasters in Hollow Knight.'+
-                      ' He teaches the Dash Slash Nail Art to those willing to pay him for his services.'],0],
+                     ' He teaches the Dash Slash Nail Art to those willing to pay him for his services.'],0],
                    ['Sheo',-950,477,'icon/npc/sheo.png',
                     ['<br>Nailmaster Sheo is one of three Nailmasters in Hollow Knight.'+
                      ' Although retired, he teaches the Great Slash Nail Art to those seeking him.'],0],
@@ -336,12 +336,106 @@ window.addEventListener('load', function () {
                      ' She asks Knight to take Delicate Flower to lover\'s grave in Queen\'s Gardens, but flower breaks if Knight teleports or takes damage.'],0],
                    ['Grub Father',-715,1890,'icon/npc/grub_father.png',
                     ['<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 5/46 Grub</img>'+
-                    '<br><img src="icon/charms/grubsong.png"  width="12" height="12"> Grubsong: 10/46 Grub</img>'+
-                    '<br><img src="icon/rancid_egg.png"  width="15" height="15"> Rancid Egg: 16/46 Grub</img>'+
-                    '<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 23/46 Grub</img>'+
-                    '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 31/46 Grub</img>'+
-                    '<br><img src="icon/kings_idol.png"  width="12" height="12"> King\'s Idol: 38/46 Grub</img>'+
-                    '<br><img src="icon/charms/grubberfly_elegy.png"  width="12" height="12"> Grubberfly Elegy: 46/46 Grub</img>'],0],]
+                     '<br><img src="icon/charms/grubsong.png"  width="12" height="12"> Grubsong: 10/46 Grub</img>'+
+                     '<br><img src="icon/rancid_egg.png"  width="15" height="15"> Rancid Egg: 16/46 Grub</img>'+
+                     '<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 23/46 Grub</img>'+
+                     '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 31/46 Grub</img>'+
+                     '<br><img src="icon/kings_idol.png"  width="12" height="12"> King\'s Idol: 38/46 Grub</img>'+
+                     '<br><img src="icon/charms/grubberfly_elegy.png"  width="12" height="12"> Grubberfly Elegy: 46/46 Grub</img>'],0],
+                   ['Seer',-815,3425,'icon/npc/seer.png',
+                    ['<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 100 Essence</img>'+
+                     '<br><img src="icon/spirit_glade.png"  width="12" height="12"> Spirit Glade: 200 Essence</img>'+
+                     '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 300 Essence</img>'+
+                     '<br><img src="icon/charms/dream_wielder.png"  width="12" height="12"> Dream Wielder: 500 Essence</img>'+
+                     '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 700 Essence</img>'+
+                     '<br><img src="icon/dream_gate.png"  width="12" height="12"> Dream Gate: 900 Essence</img>'+
+                     '<br><img src="icon/arcane_egg.png"  width="12" height="12"> Arcane Egg: 1200 Essence</img>'+
+                     '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 1500 Essence</img>'+
+                     '<br><img src="icon/spell_abilities/awoken_dream_nail.png"  width="12" height="12"> Awoken Dream Nail: 1800 Essence</img>'+
+                     '<br><img src="icon/achievements/achievement_ascension.png"  width="12" height="12"> Ascension Achievement: 2400 Essence</img>'],0],
+                    ['Hunter',-938,1668,'icon/npc/hunter.png',
+                     ['<br>He gifts the Hunter\'s Journal, a bestiary detailing all enemies in Hallownest.'],0],
+                    ['Godseeker',-1971,2102,'icon/npc/godseeker.png',
+                     ['<br>Godseeker\'s cocoon is in Junk Pit, unlocks with Simple Key. Free Godseeker, get Godtuner, start seeking gods or use Dream Nail to join Godhome fights.'],0],
+                    ['Zote',-643,972,'icon/npc/zote1.png',
+                     ['<br> Saved or If not saved before Mantis Claw, Zote dies there, leaving shell and nail. Hitting shell unlocks Neglect achievement.'+
+                      '<br>PS: FCK THIS GUY. FCK Grey Prince Zote.']],
+                    ['Zote',-643,972,'icon/npc/zote1.png',
+                     ['<br>Found stuck in spider webs in Deepnest. Knight can save or leave him, but leaving him won\'t result in death.'+
+                      '<br>PS:FCK Grey Prince Zote. Specially in Pantheon!']],
+                    ['Cornifer',-2154,2787,'icon/npc/cornifer.png',
+                      ['<br>Map for Ancient Basin: 112 Geo']],
+                    ['Cornifer',-1409,2703,'icon/npc/cornifer.png',
+                      ['<br>Map for City of Tears: 90 Geo']],
+                    ['Cornifer',-570,2715,'icon/npc/cornifer.png',
+                      ['<br>Map for Crystal Peak: 112 Geo']],
+                    ['Cornifer',-1696,1384,'icon/npc/cornifer.png',
+                      ['<br>Map for Deepnest: 38 Geo']],
+                    ['Cornifer',-1117,1556,'icon/npc/cornifer.png',
+                      ['<br>Map for Fog Canyon: 150 Geo']],
+                    ['Cornifer',-1117,1556,'icon/npc/cornifer.png',
+                      ['<br>Map for Fog Canyon: 150 Geo']],
+                    ['Cornifer',-865,1992,'icon/npc/cornifer.png',
+                      ['<br>Map for Forgotten Crossroads: 30 Geo']],
+                    ['Cornifer',-1460,1666,'icon/npc/cornifer.png',
+                      ['<br>Map for Fungal Wastes: 75 Geo']],
+                    ['Cornifer',-891,1620,'icon/npc/cornifer.png',
+                      ['<br>Map for Greenpath: 60 Geo']],
+                    ['Cornifer',-891,1620,'icon/npc/cornifer.png',
+                      ['<br>Map for Howling Cliffs: Geo']],
+                    ['Cornifer',-1757,3670,'icon/npc/cornifer.png',
+                      ['<br>Map for Kingdom\'s Edge: 112 Geo']],
+                    ['Cornifer',-1327,1192,'icon/npc/cornifer.png',
+                      ['<br>Map for Queen\'s Gardens: 150 Geo']],
+                    ['Cornifer',-1789,2078,'icon/npc/cornifer.png',
+                      ['<br>Map for Royal Waterways: 75 Geo']],]
+    //#endregion
+
+    //#region BENCH AND TRANSPORT
+    let bench_transportGroup = new L.LayerGroup()
+    let bench_transportInfo = [['Bench',-395,1420,'icon/bench/mato_bench.png','<br>Inside House',0],
+                               ['Bench',-630,2000,'icon/bench/bench.png','',0],
+                               ['Bench',-917,2162,'icon/bench/bench.png','',0],
+                               ['Bench',-907,2350,'icon/bench/bench.png','',0],
+                               ['Bench',-1020,2689,'icon/bench/salubra_bench.png','',0],
+                               ['Bench',-824,2042,'icon/bench/bone_bench.png','Inside House',0],
+                               ['Bench',-705,2254,'icon/bench/final_boss_bench.png','Inside',0],
+                               ['Bench',-739,1441,'icon/bench/bench.png','',0],
+                               ['Bench',-739,1441,'icon/bench/bench.png','',0],
+                               ['Bench',-1007,1557,'icon/bench/fung_bench.png','',0],
+                               ['Bench',-857,1090,'icon/bench/bench.png','50 Geo to unlock',0],//GreenPath
+                               ['Bench',-771,919,'icon/bench/bench.png','',0],
+                               ['Bench',-768,584,'icon/bench/slug_shrine_bench.png','Inside',0],
+                               ['Bench',-951,491,'icon/bench/sheo_bench.png','',0],
+                               ['Bench',-1228,1618,'icon/bench/fung_temple_bench.png','Inside',0],
+                               ['Bench',-1458,1489,'icon/bench/bench.png','',0],
+                               ['Bench',-1195,2109,'icon/bench/leg_eater_bench.png','',0],
+                               ['Bench',-1752,2114,'icon/bench/bench.png','',0],
+                               ['Bench',-1724,2000,'icon/bench/mantis_bench.png','',0],
+                               ['Bench',-1574,2484,'icon/bench/bench.png','',0],
+                               ['Bench',-1411,2684,'icon/bench/toll_bench.png','Pay Geo',0],//city of tears
+                               ['Bench',-1265,2444,'icon/bench/bench.png','',0],
+                               ['Bench',-1551,2898,'icon/bench/bench.png','',0],
+                               ['Bench',-1671,3478,'icon/bench/bench.png','',0],
+                               ['Bench',-1369,3279,'icon/bench/bath_bench.png','',0],
+                               ['Bench',-1855,2586,'icon/bench/bench.png','',0],
+                               ['Bench',-2074,1424,'icon/bench/bench.png','',0],
+                               ['Bench',-1719,1326,'icon/bench/bench.png','',0],
+                               ['Bench',-1860,313,'icon/bench/spider_bench.png','',0],
+                               ['Bench',-2256,2633,'icon/bench/toll_bench.png','',0],//ancient basin
+                               ['Bench',-2233,3249,'icon/bench/bench.png','',0],
+                               ['Bench',-1845,4311,'icon/bench/oro_bench.png','',0],
+                               ['Bench',-1581,4026,'icon/bench/camp_bench.png','',0],
+                               ['Bench',-1277,3665,'icon/bench/col_bench.png','Under Colloseum',0],
+                               ['Bench',-2115,3609,'icon/bench/bench.png','',0],
+                               ['Bench',-2115,3609,'icon/bench/bench.png','',0],
+                               ['Bench',-853,2897,'icon/bench/bench.png','',0],
+                               ['Bench',-526,2854,'icon/bench/bench.png','',0],
+                               ['Bench',-859,3511,'icon/bench/bench.png','',0],
+                               ['Bench',-950,3678,'icon/bench/bench.png','',0],
+                               ['Bench',-1325,1149,'icon/bench/guardian_bench.png','',0],
+                               ['Bench',-1476,714,'icon/bench/toll_bench.png','',0],
+                               ['Bench',-1369,861,'icon/bench/bench.png','',0],]
     //#endregion
 
     
@@ -396,17 +490,19 @@ window.addEventListener('load', function () {
 
       createMarkers(grubInfo,[32,32],grubGroup)
       grubGroup.addTo(map)
-      // setGroupOpacity(grubGroup)
+      
 
 
 
       createMarkers(charmsInfo,[22,22],charmsGroup)
       charmsGroup.addTo(map)
       
+      
 
 
       createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
       warriordreamsGroup.addTo(map)
+      
       
 
       createMarkers(bossesInfo,[32,32],bossesGroup)
@@ -439,6 +535,9 @@ window.addEventListener('load', function () {
 
       createMarkers(npcInfo,[28,28],npcGroup)
       npcGroup.addTo(map)
+
+      createMarkers(bench_transportInfo,[30,20],bench_transportGroup)
+      bench_transportGroup.addTo(map)
     
     
 
