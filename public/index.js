@@ -458,7 +458,65 @@ window.addEventListener('load', function () {
     //#endregion
 
     //#region  TRADABLES
-    
+    let itemsGroup = new L.LayerGroup()
+    let itemsInfo = [['Rancid Eggs',-487,2925,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-799,2868,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-751,2650,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-978,2876,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-986,433,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1276,1092,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1571,1714,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1957,1037,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-2003,721,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1837,332,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1768,2210,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1823,2421,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1852,2675,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1934,3130,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1530,2708,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1452,3218,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1375,3735,'icon/rancid_egg.png','',0],
+                     ['Rancid Eggs',-1935,4246,'icon/rancid_egg.png','',0],
+                     ['Wanderers Journal',-459,3001,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-536,1155,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-767,970,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1071,1476,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1350,1865,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1574,1885,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1287,2305,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-2032,2971,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1567,3222,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1585,3428,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1003,3733,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1654,3677,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1766,3956,'icon/wanderers_journal.png','',0],
+                     ['Wanderers Journal',-1579,3994,'icon/wanderers_journal.png','',0],
+                     ['King\'s Idol',-550,2730,'icon/kings_idol.png','',0],
+                     ['King\'s Idol',-582,1017,'icon/kings_idol.png','',0],
+                     ['King\'s Idol',-1844,1251,'icon/kings_idol.png','',0],
+                     ['King\'s Idol',-1837,3002,'icon/kings_idol.png','',0],
+                     ['King\'s Idol',-1339,3546,'icon/kings_idol.png','',0],
+                     ['King\'s Idol',-1391,4213,'icon/kings_idol.png','',0],
+                     ['King\'s Idol',-778,3708,'icon/kings_idol.png','',0],
+                     ['Hallownest Seal',-987,3439,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-658,2083,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1034,1814,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-979,1114,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1135,1297,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1424,1487,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1287,487,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1307,1787,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1852,298,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1741,1583,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1700,1977,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1327,2542,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1625,2551,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1348,2949,'icon/hallownest_seal.png','',0],
+                     ['Hallownest Seal',-1624,3461,'icon/hallownest_seal.png','',0],
+                     ['Arcane Egg',-2661,2430,'icon/arcane_egg.png','',0],
+                     ['Arcane Egg',-2755,3589,'icon/arcane_egg.png','',0],
+                     ['Arcane Egg',-2809,2626,'icon/arcane_egg.png','',0],]
+                     
     //#endregion
 
     //#region  ExplorationQuest
@@ -596,6 +654,9 @@ window.addEventListener('load', function () {
 
       createMarkers(keysInfo,[25,25],keysGroup)
       keysGroup.addTo(map)
+
+      createMarkers(itemsInfo,[20,23],itemsGroup)
+      itemsGroup.addTo(map)
 
 });
 
