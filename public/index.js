@@ -306,7 +306,7 @@ window.addEventListener('load', function () {
                     '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 500 Geo </img>'+
                     '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 550 Geo</img>'+
                     '<br><img src="icon/elegant_key.png"  width="12" height="12"> Elegant Key: 800 Geo</img>'+
-                    '<br><img src="" width="12" height="12">-------Requires Shopkeeper\'s Key-------</img>'+
+                    '<br><img src="" width="12" height="12">Requires Shopkeeper\'s Key</img>'+
                     '<br><img src="icon/charms/heavy_blow.png"  width="12" height="12"> Heavy Blow: 350 Geo</img>'+
                     '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 800 Geo</img>'+
                     '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 1500 Geo</img>'+
@@ -393,27 +393,27 @@ window.addEventListener('load', function () {
 
     //#region BENCH AND TRANSPORT
     let bench_transportGroup = new L.LayerGroup()
-    let bench_transportInfo = [['Bench',-395,1420,'icon/bench/mato_bench.png','<br>Inside House',0],
+    let benchInfo = [['Bench',-395,1420,'icon/bench/mato_bench.png','<br>Inside House',0],
                                ['Bench',-630,2000,'icon/bench/bench.png','',0],
                                ['Bench',-917,2162,'icon/bench/bench.png','',0],
                                ['Bench',-907,2350,'icon/bench/bench.png','',0],
                                ['Bench',-1020,2689,'icon/bench/salubra_bench.png','',0],
-                               ['Bench',-824,2042,'icon/bench/bone_bench.png','Inside House',0],
-                               ['Bench',-705,2254,'icon/bench/final_boss_bench.png','Inside',0],
+                               ['Bench',-824,2042,'icon/bench/bone_bench.png','<br>Inside House',0],
+                               ['Bench',-705,2254,'icon/bench/final_boss_bench.png','<br>Inside',0],
                                ['Bench',-739,1441,'icon/bench/bench.png','',0],
                                ['Bench',-739,1441,'icon/bench/bench.png','',0],
                                ['Bench',-1007,1557,'icon/bench/fung_bench.png','',0],
-                               ['Bench',-857,1090,'icon/bench/bench.png','50 Geo to unlock',0],//GreenPath
+                               ['Bench',-857,1090,'icon/bench/bench.png','<br>50 Geo to unlock',0],//GreenPath
                                ['Bench',-771,919,'icon/bench/bench.png','',0],
-                               ['Bench',-768,584,'icon/bench/slug_shrine_bench.png','Inside',0],
+                               ['Bench',-768,584,'icon/bench/slug_shrine_bench.png','<br>Inside',0],
                                ['Bench',-951,491,'icon/bench/sheo_bench.png','',0],
-                               ['Bench',-1228,1618,'icon/bench/fung_temple_bench.png','Inside',0],
+                               ['Bench',-1228,1618,'icon/bench/fung_temple_bench.png','<br>Inside',0],
                                ['Bench',-1458,1489,'icon/bench/bench.png','',0],
                                ['Bench',-1195,2109,'icon/bench/leg_eater_bench.png','',0],
                                ['Bench',-1752,2114,'icon/bench/bench.png','',0],
                                ['Bench',-1724,2000,'icon/bench/mantis_bench.png','',0],
                                ['Bench',-1574,2484,'icon/bench/bench.png','',0],
-                               ['Bench',-1411,2684,'icon/bench/toll_bench.png','Pay Geo',0],//city of tears
+                               ['Bench',-1411,2684,'icon/bench/toll_bench.png','<br>Pay Geo',0],//city of tears
                                ['Bench',-1265,2444,'icon/bench/bench.png','',0],
                                ['Bench',-1551,2898,'icon/bench/bench.png','',0],
                                ['Bench',-1671,3478,'icon/bench/bench.png','',0],
@@ -426,7 +426,7 @@ window.addEventListener('load', function () {
                                ['Bench',-2233,3249,'icon/bench/bench.png','',0],
                                ['Bench',-1845,4311,'icon/bench/oro_bench.png','',0],
                                ['Bench',-1581,4026,'icon/bench/camp_bench.png','',0],
-                               ['Bench',-1277,3665,'icon/bench/col_bench.png','Under Colloseum',0],
+                               ['Bench',-1277,3665,'icon/bench/col_bench.png','<br>Under Colloseum',0],
                                ['Bench',-2115,3609,'icon/bench/bench.png','',0],
                                ['Bench',-2115,3609,'icon/bench/bench.png','',0],
                                ['Bench',-853,2897,'icon/bench/bench.png','',0],
@@ -436,6 +436,52 @@ window.addEventListener('load', function () {
                                ['Bench',-1325,1149,'icon/bench/guardian_bench.png','',0],
                                ['Bench',-1476,714,'icon/bench/toll_bench.png','',0],
                                ['Bench',-1369,861,'icon/bench/bench.png','',0],]
+
+    let stagInfo = [['Stag',-304,1198,'icon/stag.png','',0],
+                    ['Stag',-769,891,'icon/stag.png','<br>140 Geo',0],
+                    ['Stag',-630,2016,'icon/stag.png','',0],
+                    ['Stag',-906,2328,'icon/stag.png','<br>50 Geo',0],
+                    ['Stag',-860,3543,'icon/stag.png','',0],
+                    ['Stag',-1264,2473,'icon/stag.png','<br>200 Geo',0],
+                    ['Stag',-860,3543,'icon/stag.png','',0],
+                    ['Stag',-1670,3506,'icon/stag.png','<br>300 Geo',0],
+                    ['Stag',-1457,1464,'icon/stag.png','<br>140 Geo',0],
+                    ['Stag',-1365,830,'icon/stag.png','<br>200 Geo',0],
+                    ['Stag',-1808,462,'icon/stag.png','<br>250 Geo',0],
+                    ['Stag',-2232,3221,'icon/stag.png','',0],]
+
+    let tramInfo = [['Tram',-935,2653,'icon/tram.png','',0],
+                    ['Tram',-935,2879,'icon/tram.png','',0],
+                    ['Tram',-2069,3281,'icon/tram.png','',0],
+                    ['Tram',-2069,2770,'icon/tram.png','',0],
+                    ['Tram',-2069,1820,'icon/tram.png','',0],]
+    //#endregion
+
+    //#region  TRADABLES
+    
+    //#endregion
+
+    //#region  ExplorationQuest
+    let explorequestGroup = new L.LayerGroup()
+    let explorequestInfo = [['Tram Pass',-1743,878,'icon/explorequest/tram_pass.png','',0],
+                            ['Lumafly Lantern',-551,1955,'icon/lumafly_lantern.png','',0],
+                            ['Collectors Map',-1523,3578,'icon/explorequest/collectors_map.png','<br>Marks the location of all 46 Grubs on any purchased Maps.',0],
+                            ['Hunter Mark',-925,1668,'icon/explorequest/hunter_mark.png','',0],
+                            ['Delicate Flower',-949,3646,'icon/explorequest/flower.png','<br>Clear Monster First, Donot bench',0],
+                            ['Grave of The Traitors Child',-1312,827,'icon/explorequest/grave_marker.png','<br>Delicate Flower Destination',0],
+                            ['Godtuner',-1957,2104,'icon/explorequest/godtuner.png','<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.',0],]
+    
+    //#endregion
+
+
+    //#region  Keys
+    let keysGroup = new L.LayerGroup()
+    let keysInfo = [['Simple Key',-563,1979,'icon/simple_key.png','<br> Simple Key: 950 Geo',0],
+                    ['Elegant Key',-563,1991,'icon/elegant_key.png','<br> Elegant Key: 800 Geo',0],
+                    ['Love Key',-1479,1347,'icon/love_key.png','',0],
+                    ['Shopkeeper\'s Key',-494,2808,'icon/shopkeeper_key.png','',0],
+                    ['City Crest',-846,2143,'icon/city_crest.png','<br>Drop from False Knight',0],
+                    ['King\'s Brand',-1742,4305,'icon/kings_brand.png','',0],]
     //#endregion
 
     
@@ -536,10 +582,20 @@ window.addEventListener('load', function () {
       createMarkers(npcInfo,[28,28],npcGroup)
       npcGroup.addTo(map)
 
-      createMarkers(bench_transportInfo,[30,20],bench_transportGroup)
+      createMarkers(benchInfo,[30,20],bench_transportGroup)
       bench_transportGroup.addTo(map)
     
-    
+      createMarkers(stagInfo,[30,25],bench_transportGroup)
+      bench_transportGroup.addTo(map)
+
+      createMarkers(tramInfo,[27,27],bench_transportGroup)
+      bench_transportGroup.addTo(map)
+
+      createMarkers(explorequestInfo,[25,25],explorequestGroup)
+      explorequestGroup.addTo(map)
+
+      createMarkers(keysInfo,[25,25],keysGroup)
+      keysGroup.addTo(map)
 
 });
 
