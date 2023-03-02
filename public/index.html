@@ -2,21 +2,497 @@
 <html>
   <head>
     <title>HK Interactive Map</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" type="text/javascript"></script>
-    <script src="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.js" type="text/javascript"></script>
-
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.js"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
-    <p style="display: none;">I HATE COFFEE</p>
+    <p style="display: none">I HATE COFFEE</p>
+
     <div id="map"></div>
-    
+    <nav class="sidebar">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="icon/hklogo.png" alt="hklogo.png" />
+          </span>
+          <div class="text-header-text">
+            <span class="name">Hollow Knight Map</span>
+          </div>
+        </div>
+        <div class="sidebar-menu">
+          <i class="bx bx-chevron-right toggle"></i>
+        </div>
+      </header>
+      <div class="MapSidebarTabs">
+        <div class="buttons-group">
+          <button type="button" class="marker-button active">
+            <img src="icon/scroll-map.png" alt="scorll_map.png" />
+          </button>
+          <button type="button" class="comment-button">
+            <img src="icon/wanderers-journal.png" alt="wanderers-journal.png" />
+          </button>
+          <button type="button" class="login-button">
+            <img src="icon/kingbrand.png" alt="kingbrand.png" />
+          </button>
+        </div>
+
+        <div class="marker-block" style="display: block">
+          <div class="dropdown-searchbar">
+            <div class="select-menu">
+              <div class="select-btn">
+                <span class="sBtn-text">Select your map</span>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+
+              <ul class="options">
+                <li class="option">
+                  <span class="option-text">Forgotten Crossroads</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Greenpath</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Fungal Wastes</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Dirtmouth</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Fog Canyon</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Howling Cliffs</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">City of Tears</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Crystal Peak</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Resting Ground</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Kingdom`s Edge</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Queen`s Garden</span>
+                </li>
+                <li class="option">
+                  <span class="option-text">Ancient Basin</span>
+                </li>
+              </ul>
+            </div>
+            <div class="search-box">
+              <i class="bx bx-search"></i>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+
+          <div class="parent-button"></div>
+
+          <div class="hideall-select-clear">
+            <button class="hideall-button">Hide Found Markers</button>
+            <button class="sellect-all">Select All</button>
+            <button class="clear-all">Clear All</button>
+          </div>
+
+          <div class="collectibles">
+            <button class="grub active" data-name="grub">
+              <img src="icon/grub-icon.png" alt="grub.png" />
+              <span class="my-button-text">Grub</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="charms active" data-name="charms">
+              <img src="icon/void-heart.png" alt="grub.png" />
+              <span class="my-button-text">Charms</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="bossess active" data-name="bossess">
+              <img src="icon/hornet.png" alt="grub.png" />
+              <span class="my-button-text">Bossess</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="warriordreams active" data-name="warrior dreams">
+              <img src="icon/marmu.png" alt="grub.png" />
+              <span class="my-button-text">Warrior Dreams</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="bossvariants active" data-name="boss variants">
+              <img src="icon/nkgrim.png" alt="grub.png" />
+              <span class="my-button-text">Boss Variants</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="dreamers active" data-name="dreamers">
+              <img src="icon/dreamers.png" alt="grub.png" />
+              <span class="my-button-text">Dreamers</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="nocthes active" data-name="nocthes">
+              <img src="icon/notch.png" alt="grub.png" />
+              <span class="my-button-text">Notches</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button
+              class="spellsandabilities active"
+              data-name="spells and ability"
+            >
+              <img src="icon/spell.png" alt="grub.png" />
+              <span class="my-button-text">Spells and Abilities</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="maskshard active" data-name="mask shard">
+              <img src="icon/maskshard.png" alt="grub.png" />
+              <span class="my-button-text">Mask Shard</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="vesselfragment active" data-name="vessel fragment">
+              <img src="icon/vessel.png" alt="grub.png" />
+              <span class="my-button-text">Vessel Fragment</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="paleore active" data-name="pale ore">
+              <img src="icon/paleore.png" alt="grub.png" />
+              <span class="my-button-text">Pale ore </span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="whisperingroot active" data-name="whispering root">
+              <img src="icon/whisperroot.png" alt="grub.png" />
+              <span class="my-button-text">Whispering Root</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="npc active" data-name="npc">
+              <img src="icon/salubra.png" alt="grub.png" />
+              <span class="my-button-text">NPC</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="shortcut active" data-name="shortcut">
+              <img src="icon/breakable.png" alt="grub.png" />
+              <span class="my-button-text">Shortcut</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button
+              class="benchandtransport active"
+              data-name="bench and transport"
+            >
+              <img src="icon/bench.png" alt="grub.png" />
+              <span class="my-button-text">Bench & Transport</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="tradables active" data-name="tradables">
+              <img src="icon/hseal.png" alt="grub.png" />
+              <span class="my-button-text">Tradables</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button
+              class="explorationandquest active"
+              data-name="exploration and quest"
+            >
+              <img src="icon/scroll-map.png" alt="grub.png" />
+              <span class="my-button-text">Exploration and Quests</span>
+              <span class="my-button-number"></span>
+            </button>
+            <button class="keys active" data-name="keys">
+              <img src="icon/keys.png" alt="grub.png" />
+              <span class="my-button-text">Keys</span>
+              <span class="my-button-number"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="comment-block">
+          <div class="alert">
+            <span class="alert-icon">!</span>
+            <p>Please select a marker on the map to enable comments.</p>
+          </div>
+
+          <form style="display: none">
+            <div class="input-text">
+              <input
+                type="text"
+                class="message"
+                placeholder="What are your thoughts?"
+              />
+            </div>
+
+            <div class="input-image">
+              <label for="files" class="image-btn"
+                ><i class="bx bxs-image-add"></i
+              ></label>
+              <input id="files" style="visibility: hidden" type="file" />
+            </div>
+
+            <div class="submit-button">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+
+          <div class="user-message" style="display: none">
+            <p>
+              This is a message asdfasdfasfdasdfasdfasdfasdfasdf asdfasdf
+              asdfasdfasdfasdf asdfasfsawith an image
+            </p>
+            <img src="icon/nkgrim.png" alt="image" id="image" />
+          </div>
+        </div>
+
+        <div class="login-block">
+          <section class="container forms hideall">
+            <div class="form login">
+              <div class="form-content">
+                <header>Login</header>
+                <form action="#">
+                  <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" />
+                  </div>
+
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+
+                  <div class="form-link">
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                  </div>
+
+                  <div class="field button-field">
+                    <button>Login</button>
+                  </div>
+                </form>
+
+                <div class="form-link">
+                  <span
+                    >Don't have an account?
+                    <a href="#" class="link signup-link">Signup</a></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Signup Form -->
+
+            <div class="form signup">
+              <div class="form-content">
+                <header>Signup</header>
+                <form action="#">
+                  <div class="field input-field">
+                    <input
+                      type="text"
+                      placeholder="username"
+                      class="username"
+                    />
+                  </div>
+
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Create password"
+                      class="password"
+                    />
+                  </div>
+
+                  <div class="field input-field">
+                    <input
+                      type="password"
+                      placeholder="Confirm password"
+                      class="password"
+                    />
+                    <i class="bx bx-hide eye-icon"></i>
+                  </div>
+
+                  <div class="field input-field">
+                    <input type="email" placeholder="Email" class="email" />
+                  </div>
+
+                  <div class="field button-field">
+                    <button>Signup</button>
+                  </div>
+                </form>
+
+                <div class="form-link">
+                  <span
+                    >Already have an account?
+                    <a href="#" class="link login-link">Login</a></span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="user-block">
+            <div class="user-info">
+              <h6 class="name">Mavi</h6>
+              <span class="email">vilencio@gmail.com</span>
+            </div>
+            <div class="user-button">
+              <button id="logout-btn"><i class="bx bx-log-out"></i></button>
+            </div>
+          </div>
+
+          <div class="user-percentage">
+            <span class="percent">112%</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="skill-box">
+              <span class="title">Mask Shard - 4%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per maskshard">
+                  <span class="tooltip">100%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Vessel Fragments - 3%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per vesselfragments">
+                  <span class="tooltip">70%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Spells and Abilities - 23%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per spellsandabilities">
+                  <span class="tooltip">50%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Godtuner - 1%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per godtuner">
+                  <span class="tooltip">30%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Nail upgrades - 4%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per nailupgrades">
+                  <span class="tooltip">30%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Charms - 40%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per charms">
+                  <span class="tooltip">35%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Bosses - 17%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per bosses">
+                  <span class="tooltip">40%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Warrior's Graves - 7%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per warriorsgraves">
+                  <span class="tooltip">45%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Dreamers - 3%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per dreamers">
+                  <span class="tooltip">50%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Colosseum of Fools trials - 3%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per colosseum">
+                  <span class="tooltip">60%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Seer Ascension (2400 essence) - 1%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per seerascension">
+                  <span class="tooltip">65%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">Godhome Pantheons - 4%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per godhomepantheons">
+                  <span class="tooltip">70%</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <span class="title">King Brand - 2%</span>
+
+              <div class="skill-bar">
+                <span class="skill-per kingbrand">
+                  <span class="tooltip">75%</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   </body>
 
   <script src="index.js"></script>
