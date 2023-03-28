@@ -1,7 +1,8 @@
 
 window.addEventListener('load', function () {
-
+    
     let foundMarkersGroup = new L.LayerGroup()
+    
 
     //#region GRUB
     let grubGroup = new L.LayerGroup()
@@ -524,13 +525,13 @@ window.addEventListener('load', function () {
 
     //#region  ExplorationQuest
     let explorationandquestGroup = new L.LayerGroup()
-    let explorationandquest = [['Tram Pass',-1743,878,'icon/explorequest/tram_pass.png','',0,'tradables'],
-                            ['Lumafly Lantern',-551,1955,'icon/lumafly_lantern.png','',0,'tradables'],
-                            ['Collectors Map',-1523,3578,'icon/explorequest/collectors_map.png','<br>Marks the location of all 46 Grubs on any purchased Maps.',0,'tradables'],
-                            ['Hunter Mark',-925,1668,'icon/explorequest/hunter_mark.png','',0,'tradables'],
-                            ['Delicate Flower',-949,3646,'icon/explorequest/flower.png','<br>Clear Monster First, Donot bench',0,'tradables'],
-                            ['Grave of The Traitors Child',-1312,827,'icon/explorequest/grave_marker.png','<br>Delicate Flower Destination',0,'tradables'],
-                            ['Godtuner',-1957,2104,'icon/explorequest/godtuner.png','<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.',1,'tradables'],]
+    let explorationandquest = [['Tram Pass',-1743,878,'icon/explorequest/tram_pass.png','',0,'explorationandquest'],
+                            ['Lumafly Lantern',-551,1955,'icon/lumafly_lantern.png','',0,'explorationandquest'],
+                            ['Collectors Map',-1523,3578,'icon/explorequest/collectors_map.png','<br>Marks the location of all 46 Grubs on any purchased Maps.',0,'explorationandquest'],
+                            ['Hunter Mark',-925,1668,'icon/explorequest/hunter_mark.png','',0,'explorationandquest'],
+                            ['Delicate Flower',-949,3646,'icon/explorequest/flower.png','<br>Clear Monster First, Donot bench',0,'explorationandquest'],
+                            ['Grave of The Traitors Child',-1312,827,'icon/explorequest/grave_marker.png','<br>Delicate Flower Destination',0,'explorationandquest'],
+                            ['Godtuner',-1957,2104,'icon/explorequest/godtuner.png','<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.',1,'explorationandquest'],]
     
     //#endregion
 
@@ -546,6 +547,25 @@ window.addEventListener('load', function () {
 
 
     
+    const LayerGroupDict = {
+      'grub':grubGroup,
+      'charms':charmsGroup,
+      'boss':bossesGroup,
+      'warriorsdreams':warriordreamsGroup,
+      'bossvariants':bossvariantsGroup,
+      'dreamers':dreamersGroup,
+      'notches':notchesGroup,
+      'maskshard':maskshardGroup,
+      'spellsandabilities':spellsandabilitiesGroup,
+      'vesselfragments':vesselfragmentGroup,
+      'paleore':paleoreGroup,
+      'whisperingroots':whisperingrootsGroup,
+      'npc':npcGroup,
+      'benchandtransport':benchandtransportGroup,
+      'tradables':tradablesGroup,
+      'explorationandquest':explorationandquestGroup,
+      'keys':keysGroup,
+    }
     
     //#region DROPDOWN
     const optionMenu = document.querySelector(".select-menu"),
@@ -615,8 +635,8 @@ window.addEventListener('load', function () {
     })
 
     function hideall(){
-        console.log('hide all found markers');
         this.classList.toggle('active')
+        hideAllFoundMarker()
     }
 
     function selectall(){
@@ -900,6 +920,7 @@ window.addEventListener('load', function () {
     map = new L.Map('map', {
         maxZoom: mapMaxZoom,
         minZoom: mapMinZoom,
+        zoomControl:false,
         crs: crs,
         maxBoundsViscosity: 1.0,
         maxBounds: [
@@ -907,6 +928,10 @@ window.addEventListener('load', function () {
           crs.unproject(L.point(mapExtent[2]+500, mapExtent[3]+500))
           ]
       });
+
+    L.control.zoom({
+      position:'topright',
+    }).addTo(map)
     
     var layer;
     layer = L.tileLayer('/{z}/{x}/{y}.png', {
@@ -931,79 +956,81 @@ window.addEventListener('load', function () {
       grubGroup.addTo(map)
       
 
-      createMarkers(charmsInfo,[22,22],charmsGroup)
-      charmsGroup.addTo(map)
+      // createMarkers(charmsInfo,[22,22],charmsGroup)
+      // charmsGroup.addTo(map)
       
 
-      createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
-      warriordreamsGroup.addTo(map)
+      // createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
+      // warriordreamsGroup.addTo(map)
       
 
-      createMarkers(bossesInfo,[32,32],bossesGroup)
-      bossesGroup.addTo(map)
+      // createMarkers(bossesInfo,[32,32],bossesGroup)
+      // bossesGroup.addTo(map)
       
 
-      createMarkers(bossvariants,[32,32],bossvariantsGroup)
-      bossvariantsGroup.addTo(map)
+      // createMarkers(bossvariants,[32,32],bossvariantsGroup)
+      // bossvariantsGroup.addTo(map)
 
 
-      createMarkers(dreamersInfo,[32,32],dreamersGroup)
-      dreamersGroup.addTo(map)
+      // createMarkers(dreamersInfo,[32,32],dreamersGroup)
+      // dreamersGroup.addTo(map)
 
 
-      createMarkers(notchesInfo,[22,22],notchesGroup)
-      notchesGroup.addTo(map)
+      // createMarkers(notchesInfo,[22,22],notchesGroup)
+      // notchesGroup.addTo(map)
 
 
-      createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
-      spellsandabilitiesGroup.addTo(map)
+      // createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
+      // spellsandabilitiesGroup.addTo(map)
 
 
-      createMarkers(maskshardInfo,[25,25],maskshardGroup)
-      maskshardGroup.addTo(map)
+      // createMarkers(maskshardInfo,[25,25],maskshardGroup)
+      // maskshardGroup.addTo(map)
 
 
-      createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
-      vesselfragmentGroup.addTo(map)
+      // createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
+      // vesselfragmentGroup.addTo(map)
       
 
-      createMarkers(paleoreInfo,[22,22],paleoreGroup)
-      paleoreGroup.addTo(map)
+      // createMarkers(paleoreInfo,[22,22],paleoreGroup)
+      // paleoreGroup.addTo(map)
 
 
-      createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
-      whisperingrootsGroup.addTo(map)
+      // createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
+      // whisperingrootsGroup.addTo(map)
 
 
-      createMarkers(npcInfo,[28,28],npcGroup)
-      npcGroup.addTo(map)
+      // createMarkers(npcInfo,[28,28],npcGroup)
+      // npcGroup.addTo(map)
 
 
-      createMarkers(benchInfo,[30,20],benchandtransportGroup)
-      benchandtransportGroup.addTo(map)
+      // createMarkers(benchInfo,[30,20],benchandtransportGroup)
+      // benchandtransportGroup.addTo(map)
     
 
-      createMarkers(stagInfo,[30,25],benchandtransportGroup)
-      benchandtransportGroup.addTo(map)
+      // createMarkers(stagInfo,[30,25],benchandtransportGroup)
+      // benchandtransportGroup.addTo(map)
 
 
-      createMarkers(tramInfo,[27,27],benchandtransportGroup)
-      benchandtransportGroup.addTo(map)
+      // createMarkers(tramInfo,[27,27],benchandtransportGroup)
+      // benchandtransportGroup.addTo(map)
 
 
-      createMarkers(explorationandquest,[25,25],explorationandquestGroup)
-      explorationandquestGroup.addTo(map)
+      // createMarkers(explorationandquest,[25,25],explorationandquestGroup)
+      // explorationandquestGroup.addTo(map)
 
 
-      createMarkers(keysInfo,[25,25],keysGroup)
-      keysGroup.addTo(map)
+      // createMarkers(keysInfo,[25,25],keysGroup)
+      // keysGroup.addTo(map)
 
 
-      createMarkers(tradablesInfo,[20,23],tradablesGroup)
-      tradablesGroup.addTo(map)
+      // createMarkers(tradablesInfo,[20,23],tradablesGroup)
+      // tradablesGroup.addTo(map)
+
+
+      foundMarkersGroup.addTo(map)
 
       //#endregion
-
 
       function showMarker(grouplayer){
         grouplayer.addTo(map)
@@ -1054,6 +1081,15 @@ window.addEventListener('load', function () {
       }
 
       function hideAllFoundMarker(){
+        if(map.hasLayer(foundMarkersGroup)){
+          hideMarker(foundMarkersGroup)
+          removeAllFoundMarkerFromTheirLayerGroup(foundMarkersGroup)
+        }
+        else{
+          showMarker(foundMarkersGroup)
+          AddAllFoundMarkerFromTheirLayerGroup(foundMarkersGroup)
+        }
+
         
       }
 
@@ -1080,10 +1116,40 @@ window.addEventListener('load', function () {
           var popupContent
           Marker.on("popupopen",function(e){
             var marker = e.target
+
+            
       
             var button = document.getElementById('MarkFoundButton')
             button.addEventListener('click',function(){
               var opacity = marker.options.opacity;
+
+
+              let markerINFO = {
+                id: marker.options.id,
+                title: marker.options.title,
+                description: marker.options.description,
+                completion: marker.options.completion,
+                category: marker.options.category,
+              }
+              console.log(markerINFO)
+
+              axios.put('/HKgitgud-map',{markerINFO});
+                // .then(response => {
+                //   console.log(response.data);
+                // })
+                // .catch(error => {
+                //   console.error(error);
+                // });
+
+              if(marker.options.opacity===1){
+                foundMarkersGroup.addLayer(marker)
+              }
+              else{
+                foundMarkersGroup.removeLayer(marker)
+                LayerGroupDict[marker.options.category].addLayer(marker)
+              }
+              
+
               marker.setOpacity(opacity===1? 0.5:1)
               marker.closePopup();
       
@@ -1096,11 +1162,8 @@ window.addEventListener('load', function () {
                 popupContent = opacity === 1 ? title+NotFoundpopup : title+Foundpopup;
               }
               marker.bindPopup(popupContent);
-      
             })
-      
           })
-      
           markerGroupLayer.addLayer(Marker)
         }
       }
@@ -1153,6 +1216,20 @@ window.addEventListener('load', function () {
       function mapview(x,y,zoom){
         map.setView([x,y],zoom)
       }
+
+      function removeAllFoundMarkerFromTheirLayerGroup(foundmarker){
+        foundmarker.eachLayer(marker => {
+          LayerGroupDict[marker.options.category].removeLayer(marker)
+        })
+      }
+
+      function AddAllFoundMarkerFromTheirLayerGroup(foundmarker){
+        foundmarker.eachLayer(marker => {
+          LayerGroupDict[marker.options.category].addLayer(marker)
+        })
+      }
+
+      
       
 });
 

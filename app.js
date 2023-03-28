@@ -4,9 +4,9 @@ const HKmap = require('./routes/hkmap.js')
 require('dotenv').config()
 
 app.use(express.static('./public'))
+app.use(express.json());
 
-
-app.use('HKgitgud-map',HKmap)
+app.use('/HKgitgud-map',HKmap)
 
 const port = process.env.PORT || 5000;
 
