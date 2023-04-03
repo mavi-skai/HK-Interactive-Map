@@ -45,6 +45,7 @@
           <i class="bx bx-chevron-right toggle"></i>
         </div>
       </header>
+
       <div class="MapSidebarTabs">
         <div class="buttons-group">
           <button type="button" class="marker-button active">
@@ -259,25 +260,22 @@
         </div>
 
         <div class="login-block">
-          <section class="container forms hideall">
+          <section class="container forms "> <!-- put hideall to hide this form-->
             <div class="form login">
               <div class="form-content">
                 <header>Login</header>
-                <form action="#">
+                
+                <form action="#" class="login-form">
                   <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input" />
+                    <input type="email" placeholder="Email" class="login-email"/>
                   </div>
 
                   <div class="field input-field">
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      class="password"
-                    />
+                    <input type="password" placeholder="Password" class="login-password"/>
                     <i class="bx bx-hide eye-icon"></i>
                   </div>
 
-                  <div class="form-link">
+                  <div class="form-link"n>
                     <a href="#" class="forgot-pass">Forgot password?</a>
                   </div>
 
@@ -293,6 +291,11 @@
                   >
                 </div>
               </div>
+
+              <div class="login-error">
+                <span></span>
+                <!-- <span>The email address you entered is not registered. Please check and try again, or sign up for a new account.</span> -->
+              </div>
             </div>
 
             <!-- Signup Form -->
@@ -300,34 +303,23 @@
             <div class="form signup">
               <div class="form-content">
                 <header>Signup</header>
-                <form action="#">
+
+                <form action="#" class="signup-form">
                   <div class="field input-field">
-                    <input
-                      type="text"
-                      placeholder="username"
-                      class="username"
-                    />
+                    <input type="text" placeholder="Name" class="signup-name"/>
                   </div>
 
                   <div class="field input-field">
-                    <input
-                      type="password"
-                      placeholder="Create password"
-                      class="password"
-                    />
+                    <input type="password" placeholder="Password" class="signup-password"/>
                   </div>
 
                   <div class="field input-field">
-                    <input
-                      type="password"
-                      placeholder="Confirm password"
-                      class="password"
-                    />
+                    <input type="password" placeholder="Password" class="signup-password2"/>
                     <i class="bx bx-hide eye-icon"></i>
                   </div>
 
                   <div class="field input-field">
-                    <input type="email" placeholder="Email" class="email" />
+                    <input type="email" placeholder="Email" class="signup-email" />
                   </div>
 
                   <div class="field button-field">
@@ -345,153 +337,159 @@
             </div>
           </section>
 
-          <div class="user-block">
-            <div class="user-info">
-              <h6 class="name">Mavi</h6>
-              <span class="email">vilencio@gmail.com</span>
+          <div class="user-details" style="display: none;">
+            <div class="user-block">
+              <div class="user-info">
+                <h6 class="name">Mavi</h6>
+                <span class="email">vilencio@gmail.com</span>
+              </div>
+              <div class="user-button">
+                <button id="logout-btn"><i class="bx bx-log-out"></i></button>
+              </div>
             </div>
-            <div class="user-button">
-              <button id="logout-btn"><i class="bx bx-log-out"></i></button>
+  
+            <div class="user-percentage">
+              <span class="percent">112%</span>
+            </div>
+  
+            <div class="progress-container">
+              <div class="skill-box">
+                <span class="title">Mask Shard - 4%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per maskshard">
+                    <span class="tooltip">100%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Vessel Fragments - 3%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per vesselfragments">
+                    <span class="tooltip">70%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Spells and Abilities - 23%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per spellsandabilities">
+                    <span class="tooltip">50%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Godtuner - 1%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per godtuner">
+                    <span class="tooltip">30%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Nail upgrades - 4%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per nailupgrades">
+                    <span class="tooltip">30%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Charms - 40%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per charms">
+                    <span class="tooltip">35%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Bosses - 17%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per bosses">
+                    <span class="tooltip">40%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Warrior's Graves - 7%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per warriorsgraves">
+                    <span class="tooltip">45%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Dreamers - 3%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per dreamers">
+                    <span class="tooltip">50%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Colosseum of Fools trials - 3%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per colosseum">
+                    <span class="tooltip">60%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Seer Ascension (2400 essence) - 1%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per seerascension">
+                    <span class="tooltip">65%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">Godhome Pantheons - 4%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per godhomepantheons">
+                    <span class="tooltip">70%</span>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="skill-box">
+                <span class="title">King Brand - 2%</span>
+  
+                <div class="skill-bar">
+                  <span class="skill-per kingbrand">
+                    <span class="tooltip">75%</span>
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div class="user-percentage">
-            <span class="percent">112%</span>
-          </div>
-
-          <div class="progress-container">
-            <div class="skill-box">
-              <span class="title">Mask Shard - 4%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per maskshard">
-                  <span class="tooltip">100%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Vessel Fragments - 3%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per vesselfragments">
-                  <span class="tooltip">70%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Spells and Abilities - 23%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per spellsandabilities">
-                  <span class="tooltip">50%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Godtuner - 1%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per godtuner">
-                  <span class="tooltip">30%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Nail upgrades - 4%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per nailupgrades">
-                  <span class="tooltip">30%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Charms - 40%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per charms">
-                  <span class="tooltip">35%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Bosses - 17%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per bosses">
-                  <span class="tooltip">40%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Warrior's Graves - 7%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per warriorsgraves">
-                  <span class="tooltip">45%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Dreamers - 3%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per dreamers">
-                  <span class="tooltip">50%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Colosseum of Fools trials - 3%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per colosseum">
-                  <span class="tooltip">60%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Seer Ascension (2400 essence) - 1%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per seerascension">
-                  <span class="tooltip">65%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">Godhome Pantheons - 4%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per godhomepantheons">
-                  <span class="tooltip">70%</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="skill-box">
-              <span class="title">King Brand - 2%</span>
-
-              <div class="skill-bar">
-                <span class="skill-per kingbrand">
-                  <span class="tooltip">75%</span>
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
+
       </div>
+
     </nav>
   </body>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

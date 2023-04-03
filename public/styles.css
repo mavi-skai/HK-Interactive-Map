@@ -520,7 +520,7 @@ form{
 }
 
 .field button:hover{
-    background-color: #016dcb;
+    background-color: #0d2236;
 }
 
 .form-link{
@@ -542,6 +542,16 @@ form{
 
 .form-content a:hover{
     text-decoration: underline;
+}
+
+.field button{
+    background-color: #2f4458;
+}
+
+.login-error {
+    color: red;
+    font-size: 18px;
+    margin-top: 30px;
 }
 
 

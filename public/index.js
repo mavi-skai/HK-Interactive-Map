@@ -1,8 +1,8 @@
 
 window.addEventListener('load', function () {
-    
+
     let foundMarkersGroup = new L.LayerGroup()
-    
+    let id = 1;
 
     //#region GRUB
     let grubGroup = new L.LayerGroup()
@@ -863,19 +863,26 @@ window.addEventListener('load', function () {
     const forms = document.querySelector(".forms"),
     pwShowHide = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
+    const loginform = document.querySelector(".login-form")
+
+
+    const signupform = document.querySelector('.signup-form')
 
     pwShowHide.forEach(eyeIcon => {
         eyeIcon.addEventListener("click", () => {
-            let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-            
+            let pwFields = document.querySelectorAll('[class*="password"]');
             pwFields.forEach(password => {
                 if(password.type === "password"){
                     password.type = "text";
-                    eyeIcon.classList.replace("bx-hide", "bx-show");
+                    pwShowHide.forEach(eyeIcon=>{
+                      eyeIcon.classList.replace("bx-hide", "bx-show");
+                    })
                     return;
                 }
                 password.type = "password";
-                eyeIcon.classList.replace("bx-show", "bx-hide");
+                pwShowHide.forEach(eyeIcon=>{
+                  eyeIcon.classList.replace("bx-show", "bx-hide");
+                })
             })
             
         })
@@ -887,6 +894,63 @@ window.addEventListener('load', function () {
           forms.classList.toggle("show-signup");
         })
     })
+
+    
+
+    signupform.addEventListener('submit',function(e){
+      e.preventDefault()
+
+      const name = document.querySelector('.signup-name')
+      const pass = document.querySelector('.signup-password')
+      const pass2= document.querySelector('.signup-password2')
+      const email= document.querySelector('.signup-email')
+
+      let action = 'register'
+      let registerinfo = {
+        name:name.value,
+        password:pass.value,
+        password2:pass2.value,
+        email:email.value,
+      }
+      
+      axios.post('/HKgitgud-map',{action,registerinfo})
+                .then(response => {
+                  console.log(response.data.msg)
+                })
+                .catch(error => {
+                  console.error(error);
+                });
+    })
+
+    loginform.addEventListener('submit',function(e){
+      e.preventDefault()
+      const login_alert = document.querySelector('.login-error span')
+      const email = document.querySelector('.login-email')
+      const pass = document.querySelector('.login-password')
+
+
+      login_alert.innerHTML = ''
+      let action = 'login'
+      let logininfo = {
+        email:email.value,
+        pass:pass.value
+      }
+
+      
+      axios.post('/HKgitgud-map',{action,logininfo})
+                .then(response => {
+                  console.log(response.data.msg)
+                })
+                .catch(error => {
+                  login_alert.innerHTML = error.response.data.msg
+                  //document.querySelector('.login-error span').innerHTML = error.response.data.msg
+                });
+
+      
+                
+      })
+
+
 
     //#endregion
 
@@ -1103,15 +1167,17 @@ window.addEventListener('load', function () {
           var Marker = L.marker([markerInfo[i][1],markerInfo[i][2]],
             {icon:Icon,
               opacity:1,
-              id:i,
+              id:id,
               title:markerInfo[i][0],
               description:markerInfo[i][4],
               completion:markerInfo[i][5],
               category:markerInfo[i][6],
             })
+
+          id+=1
           
-          var Foundpopup = "<br><button id='MarkFoundButton'>Mark Found</button>";
-          var NotFoundpopup = "<br><button id='MarkFoundButton'>Mark As Not Found</button>"
+          var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`;
+          var NotFoundpopup = `<br><button id='MarkFoundButton'> Mark As Not Found</button>`
           Marker.bindPopup(Marker.options.title + Marker.options.description + Foundpopup,{maxHeight:250});
           var popupContent
           Marker.on("popupopen",function(e){
@@ -1131,15 +1197,15 @@ window.addEventListener('load', function () {
                 completion: marker.options.completion,
                 category: marker.options.category,
               }
-              console.log(markerINFO)
+              
 
-              axios.put('/HKgitgud-map',{markerINFO});
-                // .then(response => {
-                //   console.log(response.data);
-                // })
-                // .catch(error => {
-                //   console.error(error);
-                // });
+              axios.put('/HKgitgud-map',{markerINFO})
+                .then(response => {
+                  console.log(response.data);
+                })
+                .catch(error => {
+                  console.error(error);
+                });
 
               if(marker.options.opacity===1){
                 foundMarkersGroup.addLayer(marker)
