@@ -8,11 +8,20 @@ const errorHandlerMiddleware = (err,req,res,next) => {
         msg: err.message || 'Something went wrong try again later',
       }
 
-      if (err instanceof CustomAPIError) {
-        return res.status(customError.statusCode).json({ msg: customError.msg })
-      } 
+      // if (err instanceof CustomAPIError) {
+      //   return res.status(customError.statusCode).json({ msg: customError.msg })
+      // } 
+
+    //console.log(err.name)
+   
+    if(err.name === 'ValidationError'){
+      console.log('validation error')
+      customError.msg = Object.values(err.errors)
+      .map((item) => item.message)
+      customError.statusCode = 400
+    }
       
-    //return res.status(customError.statusCode).json({ msg: customError.msg })
+    return res.status(customError.statusCode).json({ msg: customError.msg })
 }
 
 module.exports = errorHandlerMiddleware

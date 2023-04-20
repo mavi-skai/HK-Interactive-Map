@@ -1,42 +1,47 @@
 const mongoose = require('mongoose');
-const geojson = require('mongoose-geojson-schema');
 const Schema = mongoose.Schema;
 
-const CoordinatesSchema = new Schema({
-  coordinatestype: {
-    type: String,
-    enum: ['Point'],
-    required: true
-  },
-  coordinates: {
-    type: [Number],
-    required: true
-  },
-  //geojson
-  coordinates2: geojson.Point
-});
-
 const MarkerSchema = new Schema({
+  id: {
+    type: Number,
+    required: [true, 'Please provide marker id'],
+  },
   name:{
     type:String,
-    required:true,
-    unique:true
+    required:[true,'Please provide name'],
   },
-  markerType:{
+  x:{
+    type:Number,
+    required:[true,'Please provide x coordinate'],
+  },
+  y:{
+    type:Number,
+    required:[true,'Please provide y coordinate'],
+  },
+  path:{
     type:String,
-    enum:['Grub','Charms','NPC','Bosses',
-  'Upgrades','Shortcuts','Map Misc.',
-  'Bench & Transport','Items','Geo Totems'],
-    required:true,
+    required:[true,'Please provide image path'],
   },
-  isHidden:{
-    type:Boolean,
-    required:true,
-    default:false
+  description:{
+    type: [{
+      type: String
+    }],
   },
-  location: CoordinatesSchema
+  progress:{
+    type:Number,
+    required:[true,'Please provide progress'],
+
+  },
+  markertype:{
+    type:String,
+    required:[true,'Please provide image markertype'],
+  },
 });
 
-const Marker = mongoose.model('Marker', MarkerSchema);
+const HKMap = mongoose.connection.useDb('HKMap')
+const Marker = HKMap.model('markers',MarkerSchema)
 
 module.exports = Marker;
+
+//['Grub',-575, 1314,'icon/grub.png','',0,'grub'],
+//name,x,y,path,description,progress,markertype

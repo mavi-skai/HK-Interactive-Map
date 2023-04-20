@@ -1,0 +1,3766 @@
+[
+  {
+    "id": 1,
+    "name": "Grub",
+    "x": -575,
+    "y": 1314,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 2,
+    "name": "Grub",
+    "x": -704,
+    "y": 1030,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 3,
+    "name": "Grub",
+    "x": -1015,
+    "y": 860,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 4,
+    "name": "Grub",
+    "x": -1067,
+    "y": 1085,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 5,
+    "name": "Grub",
+    "x": -867,
+    "y": 1624,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 6,
+    "name": "Grub",
+    "x": -978,
+    "y": 1569,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 7,
+    "name": "Grub",
+    "x": -1200,
+    "y": 1562,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 8,
+    "name": "Grub",
+    "x": -1141,
+    "y": 502,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 9,
+    "name": "Grub",
+    "x": -1400,
+    "y": 836,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 10,
+    "name": "Grub",
+    "x": -1819,
+    "y": 317,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 11,
+    "name": "Grub",
+    "x": -1952,
+    "y": 851,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 12,
+    "name": "Grub",
+    "x": -1891,
+    "y": 1284,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 13,
+    "name": "Grub",
+    "x": -2093,
+    "y": 1252,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 14,
+    "name": "Grub",
+    "x": -1625,
+    "y": 1596,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 15,
+    "name": "Grub",
+    "x": -1520,
+    "y": 1483,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 16,
+    "name": "Grub",
+    "x": -1434,
+    "y": 1878,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 17,
+    "name": "Grub",
+    "x": -923,
+    "y": 1733,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 18,
+    "name": "Grub",
+    "x": -753,
+    "y": 2111,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 19,
+    "name": "Grub",
+    "x": -705,
+    "y": 2571,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 20,
+    "name": "Grub",
+    "x": -829,
+    "y": 2396,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 21,
+    "name": "Grub",
+    "x": -897,
+    "y": 2452,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 22,
+    "name": "Grub",
+    "x": -648,
+    "y": 2290,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 23,
+    "name": "Grub",
+    "x": -695,
+    "y": 2808,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 24,
+    "name": "Grub",
+    "x": -598,
+    "y": 2888,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 25,
+    "name": "Grub",
+    "x": -726,
+    "y": 2933,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 26,
+    "name": "Grub",
+    "x": -721,
+    "y": 3308,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 27,
+    "name": "Grub",
+    "x": -597,
+    "y": 3056,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 28,
+    "name": "Grub",
+    "x": -431,
+    "y": 3392,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 29,
+    "name": "Grub",
+    "x": -981,
+    "y": 3556,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 30,
+    "name": "Grub",
+    "x": -1313,
+    "y": 2516,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 31,
+    "name": "Grub",
+    "x": -1479,
+    "y": 2744,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 32,
+    "name": "Grub",
+    "x": -1458,
+    "y": 2994,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 33,
+    "name": "Grub",
+    "x": -1696,
+    "y": 3265,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 34,
+    "name": "Grub",
+    "x": -1503,
+    "y": 3588,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 35,
+    "name": "Grub",
+    "x": -1509,
+    "y": 3607,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 36,
+    "name": "Grub",
+    "x": -1513,
+    "y": 3626,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 37,
+    "name": "Grub",
+    "x": -1825,
+    "y": 2558,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 38,
+    "name": "Grub",
+    "x": -2168,
+    "y": 2206,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 39,
+    "name": "Grub",
+    "x": -2152,
+    "y": 2560,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 40,
+    "name": "Grub",
+    "x": -1763,
+    "y": 3395,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 41,
+    "name": "Grub",
+    "x": -1864,
+    "y": 3391,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 42,
+    "name": "Grub",
+    "x": -1729,
+    "y": 3573,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 43,
+    "name": "Grub",
+    "x": -1909,
+    "y": 3564,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 44,
+    "name": "Grub",
+    "x": -1715,
+    "y": 4001,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 45,
+    "name": "Grub",
+    "x": -1913,
+    "y": 3916,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 46,
+    "name": "Grub",
+    "x": -1942,
+    "y": 4385,
+    "path": "icon/grub.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "grub"
+  },
+  {
+    "id": 47,
+    "name": "Joni Blessing",
+    "x": -507,
+    "y": 1465,
+    "path": "icon/charms/joni_blessing.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 48,
+    "name": "Baldur Shell",
+    "x": -665,
+    "y": 1303,
+    "path": "icon/charms/baldur_shell.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 49,
+    "name": "Fury of The Fallen",
+    "x": -655,
+    "y": 1720,
+    "path": "icon/charms/fury_of_the_fallen.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 50,
+    "name": "Grimm Child",
+    "x": -620,
+    "y": 1888,
+    "path": "icon/charms/grimm_child.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 51,
+    "name": "Nailmaster Glory",
+    "x": -599,
+    "y": 1978,
+    "path": "icon/charms/nailmaster_glory.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 52,
+    "name": "Deep Focus",
+    "x": -644,
+    "y": 2481,
+    "path": "icon/charms/deep_focus.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 53,
+    "name": "Shape of Unn",
+    "x": -909,
+    "y": 373,
+    "path": "icon/charms/shape_of_unn.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 54,
+    "name": "Thorns of Agony",
+    "x": -931,
+    "y": 1287,
+    "path": "icon/charms/thorns_of_agony.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 55,
+    "name": "Soul Catcher",
+    "x": -817,
+    "y": 2055,
+    "path": "icon/charms/soul_catcher.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 56,
+    "name": "Glowing Womb",
+    "x": -801,
+    "y": 2335,
+    "path": "icon/charms/glowing_womb.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 57,
+    "name": "Dream Shield",
+    "x": -856,
+    "y": 3318,
+    "path": "icon/charms/dream_shield.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 58,
+    "name": "Soul Eater",
+    "x": -982,
+    "y": 3738,
+    "path": "icon/charms/soul_eater.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 59,
+    "name": "King Soul Left",
+    "x": -1147,
+    "y": 546,
+    "path": "icon/charms/king_soul_part1.png",
+    "description": "",
+    "progress": 0.5,
+    "markertype": "charms"
+  },
+  {
+    "id": 60,
+    "name": "Spore Shroom",
+    "x": -1547,
+    "y": 1506,
+    "path": "icon/charms/spore_shroom.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 61,
+    "name": "Mark of Pride",
+    "x": -1713,
+    "y": 1948,
+    "path": "icon/charms/mark_of_pride.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 62,
+    "name": "Dash Master",
+    "x": -1832,
+    "y": 1991,
+    "path": "icon/charms/dash_master.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 63,
+    "name": "Spell Twister",
+    "x": -1213,
+    "y": 2818,
+    "path": "icon/charms/spell_twister.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 64,
+    "name": "Weaversong",
+    "x": -1940,
+    "y": 998,
+    "path": "icon/charms/weaversong.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 65,
+    "name": "Sharp Shadow",
+    "x": -2175,
+    "y": 1692,
+    "path": "icon/charms/sharp_shadow.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 66,
+    "name": "Flukenest",
+    "x": -1956,
+    "y": 2416,
+    "path": "icon/charms/flukenest.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 67,
+    "name": "Defender Crest",
+    "x": -1809,
+    "y": 2960,
+    "path": "icon/charms/defender_crest.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 68,
+    "name": "Quick Slash",
+    "x": -1913,
+    "y": 4151,
+    "path": "icon/charms/quick_slash.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 69,
+    "name": "Hiverblood",
+    "x": -1986,
+    "y": 4071,
+    "path": "icon/charms/hiverblood.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 70,
+    "name": "King Soul Right",
+    "x": -2226,
+    "y": 3042,
+    "path": "icon/charms/king_soul_part2.png",
+    "description": "",
+    "progress": 0.5,
+    "markertype": "charms"
+  },
+  {
+    "id": 71,
+    "name": "Lifeblood Core",
+    "x": -2638,
+    "y": 2551,
+    "path": "icon/charms/lifeblood_core.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 72,
+    "name": "Void Heart",
+    "x": -2812,
+    "y": 2721,
+    "path": "icon/charms/void_heart.png",
+    "description": "Unlock 2 Endings",
+    "progress": 0,
+    "markertype": "charms"
+  },
+  {
+    "id": 73,
+    "name": "Unbreakable Greed",
+    "x": -605,
+    "y": 1840,
+    "path": "icon/charms/unbreakable_greed.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "charms"
+  },
+  {
+    "id": 74,
+    "name": "Unbreakable Heart",
+    "x": -605,
+    "y": 1855,
+    "path": "icon/charms/unbreakable_heart.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "charms"
+  },
+  {
+    "id": 75,
+    "name": "Unbreakable Strength",
+    "x": -605,
+    "y": 1870,
+    "path": "icon/charms/unbreakable_strength.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "charms"
+  },
+  {
+    "id": 76,
+    "name": "Grubsong",
+    "x": -696,
+    "y": 1874,
+    "path": "icon/charms/grubsong.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 77,
+    "name": "Grubberfly's Elegy",
+    "x": -696,
+    "y": 1886,
+    "path": "icon/charms/grubberfly_elegy.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 78,
+    "name": "Gathering Swarm",
+    "x": -587,
+    "y": 1955,
+    "path": "icon/charms/gathering_swarm.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 79,
+    "name": "Stalwart Shell",
+    "x": -587,
+    "y": 1967,
+    "path": "icon/charms/stalwart_shell.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 80,
+    "name": "Heavy Blow",
+    "x": -587,
+    "y": 1979,
+    "path": "icon/charms/heavy_blow.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 81,
+    "name": "Sprintmaster Shell",
+    "x": -587,
+    "y": 1991,
+    "path": "icon/charms/sprintmaster.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 82,
+    "name": "Wayward Compass",
+    "x": -599,
+    "y": 2041,
+    "path": "icon/charms/wayward_compass.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 83,
+    "name": "Fragile Greed",
+    "x": -1182,
+    "y": 2100,
+    "path": "icon/charms/fragile_greed.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 84,
+    "name": "Fragile Heart",
+    "x": -1182,
+    "y": 2112,
+    "path": "icon/charms/fragile_heart.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 85,
+    "name": "Fragile Strength",
+    "x": -1182,
+    "y": 2124,
+    "path": "icon/charms/fragile_strength.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 86,
+    "name": "Lifeblood Heart",
+    "x": -1006,
+    "y": 2662,
+    "path": "icon/charms/lifeblood_heart.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 87,
+    "name": "Longnail",
+    "x": -1006,
+    "y": 2674,
+    "path": "icon/charms/long_nail.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 88,
+    "name": "Steady Body",
+    "x": -1006,
+    "y": 2686,
+    "path": "icon/charms/steady_body.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 89,
+    "name": "Shaman Stone",
+    "x": -993,
+    "y": 2662,
+    "path": "icon/charms/shaman_stone.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 90,
+    "name": "Quick Focus",
+    "x": -993,
+    "y": 2674,
+    "path": "icon/charms/quick_focus.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 91,
+    "name": "Dream Wielder",
+    "x": -804,
+    "y": 3421,
+    "path": "icon/charms/dream_wielder.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "charms"
+  },
+  {
+    "id": 92,
+    "name": "Gorb",
+    "x": -327,
+    "y": 1308,
+    "path": "icon/warriordreams/gorb.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 93,
+    "name": "Elder Hu",
+    "x": -1359,
+    "y": 2267,
+    "path": "icon/warriordreams/elder_hu.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 94,
+    "name": "Galien",
+    "x": -1849,
+    "y": 955,
+    "path": "icon/warriordreams/galien.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 95,
+    "name": "Markoth",
+    "x": -1782,
+    "y": 4107,
+    "path": "icon/warriordreams/markoth.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 96,
+    "name": "Marmu",
+    "x": -1367,
+    "y": 695,
+    "path": "icon/warriordreams/marmu.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 97,
+    "name": "No Eyes",
+    "x": -1033,
+    "y": 1664,
+    "path": "icon/warriordreams/no_eyes.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 98,
+    "name": "Xero",
+    "x": -934,
+    "y": 3189,
+    "path": "icon/warriordreams/xero.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "warriorsdreams"
+  },
+  {
+    "id": 99,
+    "name": "Broken Vessel",
+    "x": -2243,
+    "y": 2098,
+    "path": "icon/bosses/broken_vessel.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 100,
+    "name": "Brooding Mawlek",
+    "x": -872,
+    "y": 1918,
+    "path": "icon/bosses/brooding_mawlek.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 101,
+    "name": "The Collector",
+    "x": -1522,
+    "y": 3593,
+    "path": "icon/bosses/the_collector.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 102,
+    "name": "Crystal Guardian",
+    "x": -525,
+    "y": 2869,
+    "path": "icon/bosses/crystal_guardian.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 103,
+    "name": "Dung Defender",
+    "x": -1804,
+    "y": 2942,
+    "path": "icon/bosses/dung_defender.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 104,
+    "name": "False Knight",
+    "x": -844,
+    "y": 2128,
+    "path": "icon/bosses/false_knight.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 105,
+    "name": "Flukemarm",
+    "x": -1942,
+    "y": 2436,
+    "path": "icon/bosses/flukemarm.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 106,
+    "name": "Grimm",
+    "x": -624,
+    "y": 1926,
+    "path": "icon/bosses/grimm.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 107,
+    "name": "Gruz Mother",
+    "x": -986,
+    "y": 2595,
+    "path": "icon/bosses/gruz_mother.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 108,
+    "name": "Soul Master",
+    "x": -1220,
+    "y": 2622,
+    "path": "icon/bosses/soul_master.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 109,
+    "name": "Hive Knight",
+    "x": -1951,
+    "y": 4071,
+    "path": "icon/bosses/hive_knight.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 110,
+    "name": "Hollow Knight",
+    "x": -705,
+    "y": 2238,
+    "path": "icon/bosses/hollow_knight.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 111,
+    "name": "Hornet",
+    "x": -728,
+    "y": 815,
+    "path": "icon/bosses/hornet.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 112,
+    "name": "Mantis Lords",
+    "x": -1845,
+    "y": 1866,
+    "path": "icon/bosses/mantis_lords.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 113,
+    "name": "Massive Moss Charger",
+    "x": -1047,
+    "y": 1352,
+    "path": "icon/bosses/massive_moss_charger.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 114,
+    "name": "Nosk",
+    "x": -2128,
+    "y": 1428,
+    "path": "icon/bosses/nosk.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 115,
+    "name": "The Radiance",
+    "x": -684,
+    "y": 2238,
+    "path": "icon/bosses/the_radiance.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 116,
+    "name": "Soul Warrior",
+    "x": -1345,
+    "y": 2686,
+    "path": "icon/bosses/soul_warrior.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 117,
+    "name": "Traitor Lord",
+    "x": -1149,
+    "y": 732,
+    "path": "icon/bosses/traitor_lord.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 118,
+    "name": "Uumuu",
+    "x": -1210,
+    "y": 1599,
+    "path": "icon/bosses/uumuu.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 119,
+    "name": "Vengefly King",
+    "x": -637,
+    "y": 988,
+    "path": "icon/bosses/vengefly_king.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "boss"
+  },
+  {
+    "id": 120,
+    "name": "Watcher Knights",
+    "x": -1395,
+    "y": 2985,
+    "path": "icon/bosses/watcher_knights.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "boss"
+  },
+  {
+    "id": 121,
+    "name": "Enraged Guardian",
+    "x": -480,
+    "y": 2863,
+    "path": "icon/bossvariants/enraged_guardian.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 122,
+    "name": "Failed Champion",
+    "x": -824,
+    "y": 2150,
+    "path": "icon/bossvariants/failed_champion.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 123,
+    "name": "Grey Prince Zote",
+    "x": -642,
+    "y": 2063,
+    "path": "icon/bossvariants/grey_prince_zote.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 124,
+    "name": "Hornet Sentinel",
+    "x": -1692,
+    "y": 4321,
+    "path": "icon/bossvariants/hornet_sentinel.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 125,
+    "name": "Lost Kin",
+    "x": -2243,
+    "y": 2110,
+    "path": "icon/bossvariants/lost_kin.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 126,
+    "name": "Nightmare King Grimm",
+    "x": -611,
+    "y": 1926,
+    "path": "icon/bossvariants/nightmare_king_grimm.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 127,
+    "name": "Soul Tyrant",
+    "x": -1222,
+    "y": 2650,
+    "path": "icon/bossvariants/soul_tyrant.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 128,
+    "name": "White Defender",
+    "x": -1843,
+    "y": 2953,
+    "path": "icon/bossvariants/white_defender.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "bossvariants"
+  },
+  {
+    "id": 129,
+    "name": "Herrah",
+    "x": -1855,
+    "y": 327,
+    "path": "icon/dreamers/herrah.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "dreamers"
+  },
+  {
+    "id": 130,
+    "name": "Lurien",
+    "x": -1119,
+    "y": 3044,
+    "path": "icon/dreamers/lurien.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "dreamers"
+  },
+  {
+    "id": 131,
+    "name": "Monomon",
+    "x": -1223,
+    "y": 1602,
+    "path": "icon/dreamers/monomon.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "dreamers"
+  },
+  {
+    "id": 132,
+    "name": "Notches",
+    "x": -980,
+    "y": 2662,
+    "path": "icon/notch.png",
+    "description": "Collect 5 Charms",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 133,
+    "name": "Notches",
+    "x": -980,
+    "y": 2674,
+    "path": "icon/notch.png",
+    "description": "Collect 10 Charms",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 134,
+    "name": "Notches",
+    "x": -980,
+    "y": 2686,
+    "path": "icon/notch.png",
+    "description": "Collect 18 Charms",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 135,
+    "name": "Notches",
+    "x": -993,
+    "y": 2686,
+    "path": "icon/notch.png",
+    "description": "Collect 25 Charms",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 136,
+    "name": "Notches",
+    "x": -1081,
+    "y": 1731,
+    "path": "icon/notch.png",
+    "description": "Unlock Isma's Tear or Monarch Wings",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 137,
+    "name": "Notches",
+    "x": -1262,
+    "y": 1906,
+    "path": "icon/notch.png",
+    "description": "Defeat 2 Shrumal Ogres",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 138,
+    "name": "Notches",
+    "x": -1255,
+    "y": 3653,
+    "path": "icon/notch.png",
+    "description": "Complete the Trial of the Warrior",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 139,
+    "name": "Notches",
+    "x": -596,
+    "y": 1926,
+    "path": "icon/notch.png",
+    "description": "Defeat Grimm",
+    "progress": 0,
+    "markertype": "notches"
+  },
+  {
+    "id": 140,
+    "name": "Vengeful Spirit",
+    "x": -839,
+    "y": 2054,
+    "path": "icon/spell_abilities/vengeful_spirit.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 141,
+    "name": "Desolate Dive",
+    "x": -1258,
+    "y": 2637,
+    "path": "icon/spell_abilities/desolate_dive.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 142,
+    "name": "Howling Wraiths",
+    "x": -1190,
+    "y": 1090,
+    "path": "icon/spell_abilities/howling_wraiths.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 143,
+    "name": "Shade Soul",
+    "x": -1331,
+    "y": 2685,
+    "path": "icon/spell_abilities/shade_soul.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 144,
+    "name": "Descending Dark",
+    "x": -760,
+    "y": 3309,
+    "path": "icon/spell_abilities/descending_dark.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 145,
+    "name": "Abyss Shriek",
+    "x": -2769,
+    "y": 2365,
+    "path": "icon/spell_abilities/abyss_shriek.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 146,
+    "name": "Mothwing Cloak",
+    "x": -712,
+    "y": 817,
+    "path": "icon/spell_abilities/mothwing_cloak.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 147,
+    "name": "Mantis Claw",
+    "x": -1634,
+    "y": 1796,
+    "path": "icon/spell_abilities/mantis_claw.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 148,
+    "name": "Crystal Heart",
+    "x": -633,
+    "y": 3409,
+    "path": "icon/spell_abilities/crystal_heart.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 149,
+    "name": "Monarch Wings",
+    "x": -2271,
+    "y": 1858,
+    "path": "icon/spell_abilities/monarch_wings.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 150,
+    "name": "Isma's Tear",
+    "x": -1948,
+    "y": 3372,
+    "path": "icon/spell_abilities/isma's_tear.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 151,
+    "name": "Shade Cloak",
+    "x": -2736,
+    "y": 3643,
+    "path": "icon/spell_abilities/shade_cloak.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 152,
+    "name": "Dream Nail",
+    "x": -947,
+    "y": 3321,
+    "path": "icon/spell_abilities/dream_nail.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 153,
+    "name": "Cyclone Slash",
+    "x": -379,
+    "y": 1407,
+    "path": "icon/spell_abilities/cyclone_slash.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 154,
+    "name": "Dash Slash",
+    "x": -1823,
+    "y": 4292,
+    "path": "icon/spell_abilities/dash_slash.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 155,
+    "name": "Great Slash",
+    "x": -928,
+    "y": 477,
+    "path": "icon/spell_abilities/great_slash.png",
+    "description": "",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 156,
+    "name": "Awoken Dream Nail",
+    "x": -782,
+    "y": 3433,
+    "path": "icon/spell_abilities/awoken_dream_nail.png",
+    "description": "<br>Collect 1800 Essence with the Dream Nail.",
+    "progress": 1,
+    "markertype": "spellsandabilities"
+  },
+  {
+    "id": 157,
+    "name": "Mask Shard",
+    "x": -575,
+    "y": 1955,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Just Sly",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 158,
+    "name": "Mask Shard",
+    "x": -575,
+    "y": 1967,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Just Sly",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 159,
+    "name": "Mask Shard",
+    "x": -575,
+    "y": 1979,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Sly With Shopkeeper Key",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 160,
+    "name": "Mask Shard",
+    "x": -575,
+    "y": 1991,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Sly With Shopkeeper Key",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 161,
+    "name": "Mask Shard",
+    "x": -872,
+    "y": 1935,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Reward for defeating Brooding Mawlek",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 162,
+    "name": "Mask Shard",
+    "x": -696,
+    "y": 1898,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires rescuing 5 Grubs",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 163,
+    "name": "Mask Shard",
+    "x": -940,
+    "y": 2122,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Recomended Mantis Claw",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 164,
+    "name": "Mask Shard",
+    "x": -1414,
+    "y": 1606,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires Mantis Claw",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 165,
+    "name": "Mask Shard",
+    "x": -828,
+    "y": 2063,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires rescuing Bretta from Fungal Wastes",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 166,
+    "name": "Mask Shard",
+    "x": -908,
+    "y": 2027,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Recommended Lumafly Lantern",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 167,
+    "name": "Mask Shard",
+    "x": -1814,
+    "y": 2157,
+    "path": "icon/mask_shard.png",
+    "description": "",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 168,
+    "name": "Mask Shard",
+    "x": -1839,
+    "y": 1700,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires Monarch Wings",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 169,
+    "name": "Mask Shard",
+    "x": -485,
+    "y": 2835,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires Monarch Wings",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 170,
+    "name": "Mask Shard",
+    "x": -1968,
+    "y": 3812,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires baiting a Hive Guardian into breaking a wall",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 171,
+    "name": "Mask Shard",
+    "x": -804,
+    "y": 3431,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires collecting 1500 Essence",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 172,
+    "name": "Mask Shard",
+    "x": -936,
+    "y": 3662,
+    "path": "icon/mask_shard.png",
+    "description": "<br>Requires completing the Delicate Flower quest",
+    "progress": 0.25,
+    "markertype": "maskshard"
+  },
+  {
+    "id": 173,
+    "name": "Vessel Fragment",
+    "x": -563,
+    "y": 1955,
+    "path": "icon/vessel_fragment.png",
+    "description": "<br>Just Sly",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 174,
+    "name": "Vessel Fragment",
+    "x": -563,
+    "y": 1967,
+    "path": "icon/vessel_fragment.png",
+    "description": "<br>Sly With Shopkeeper Key",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 175,
+    "name": "Vessel Fragment",
+    "x": -1058,
+    "y": 1024,
+    "path": "icon/vessel_fragment.png",
+    "description": "",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 176,
+    "name": "Vessel Fragment",
+    "x": -984,
+    "y": 2085,
+    "path": "icon/vessel_fragment.png",
+    "description": "",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 177,
+    "name": "Vessel Fragment",
+    "x": -1481,
+    "y": 3458,
+    "path": "icon/vessel_fragment.png",
+    "description": "",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 178,
+    "name": "Vessel Fragment",
+    "x": -1983,
+    "y": 1849,
+    "path": "icon/vessel_fragment.png",
+    "description": "",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 179,
+    "name": "Vessel Fragment",
+    "x": -306,
+    "y": 1221,
+    "path": "icon/vessel_fragment.png",
+    "description": "",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 180,
+    "name": "Vessel Fragment",
+    "x": -793,
+    "y": 3421,
+    "path": "icon/vessel_fragment.png",
+    "description": "<br>Collecting 700 Essence",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 181,
+    "name": "Vessel Fragment",
+    "x": -2140,
+    "y": 2782,
+    "path": "icon/vessel_fragment.png",
+    "description": "<br>Dropping Geo 3000 into the fountain",
+    "progress": 0.33,
+    "markertype": "vesselfragment"
+  },
+  {
+    "id": 182,
+    "name": "Pale Ore",
+    "x": -2135,
+    "y": 2348,
+    "path": "icon/pale_ore.png",
+    "description": "<br>Defeat two Lesser Mawleks that guard it.",
+    "progress": 0.66,
+    "markertype": "paleore"
+  },
+  {
+    "id": 183,
+    "name": "Pale Ore",
+    "x": -793,
+    "y": 3433,
+    "path": "icon/pale_ore.png",
+    "description": "Collect 300 Essence with the Dream Nail.",
+    "progress": 0.66,
+    "markertype": "paleore"
+  },
+  {
+    "id": 184,
+    "name": "Pale Ore",
+    "x": -104,
+    "y": 3122,
+    "path": "icon/pale_ore.png",
+    "description": "Requires Mantis Claw. Monarch Wings and Crystal Heart recommended.",
+    "progress": 0.66,
+    "markertype": "paleore"
+  },
+  {
+    "id": 185,
+    "name": "Pale Ore",
+    "x": -2132,
+    "y": 1549,
+    "path": "icon/pale_ore.png",
+    "description": "Requires defeating Nosk.",
+    "progress": 0.66,
+    "markertype": "paleore"
+  },
+  {
+    "id": 186,
+    "name": "Pale Ore",
+    "x": -696,
+    "y": 1910,
+    "path": "icon/pale_ore.png",
+    "description": "Rescue 31 Grubs.",
+    "progress": 0.66,
+    "markertype": "paleore"
+  },
+  {
+    "id": 187,
+    "name": "Pale Ore",
+    "x": -1255,
+    "y": 3665,
+    "path": "icon/pale_ore.png",
+    "description": "<br>Complete the Trial of the Conqueror.",
+    "progress": 0.66,
+    "markertype": "paleore"
+  },
+  {
+    "id": 188,
+    "name": "Whispering Roots",
+    "x": -839,
+    "y": 2041,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 189,
+    "name": "Whispering Roots",
+    "x": -1361,
+    "y": 2459,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 190,
+    "name": "Whispering Roots",
+    "x": -431,
+    "y": 3191,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 191,
+    "name": "Whispering Roots",
+    "x": -1986,
+    "y": 713,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 192,
+    "name": "Whispering Roots",
+    "x": -681,
+    "y": 1978,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 193,
+    "name": "Whispering Roots",
+    "x": -1186,
+    "y": 1921,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 194,
+    "name": "Whispering Roots",
+    "x": -1596,
+    "y": 1868,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 195,
+    "name": "Whispering Roots",
+    "x": -1069,
+    "y": 915,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 196,
+    "name": "Whispering Roots",
+    "x": -2093,
+    "y": 3876,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 197,
+    "name": "Whispering Roots",
+    "x": -559,
+    "y": 1081,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 198,
+    "name": "Whispering Roots",
+    "x": -1606,
+    "y": 3754,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 199,
+    "name": "Whispering Roots",
+    "x": -1463,
+    "y": 1175,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 200,
+    "name": "Whispering Roots",
+    "x": -892,
+    "y": 3445,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 201,
+    "name": "Whispering Roots",
+    "x": -2002,
+    "y": 3069,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 202,
+    "name": "Whispering Roots",
+    "x": -729,
+    "y": 3676,
+    "path": "icon/whispering_roots.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "whisperingroots"
+  },
+  {
+    "id": 203,
+    "name": "Salubra",
+    "x": -1018,
+    "y": 2676,
+    "path": "icon/npc/salubra.png",
+    "description": [
+      "<br><img src=\"icon/charms/lifeblood_heart.png\"  width=\"12\" height=\"12\"> Lifeblood Heart: 250 Geo</img><br><img src=\"icon/charms/long_nail.png\"  width=\"12\" height=\"12\"> Long Nail: 300 Geo</img><br><img src=\"icon/charms/steady_body.png\"  width=\"12\" height=\"12\"> Steady Body: 120 Geo</img><br><img src=\"icon/charms/shaman_stone.png\"  width=\"12\" height=\"12\"> Shaman Stone: 220 Geo</img><br><img src=\"icon/charms/quick_focus.png\"  width=\"12\" height=\"12\"> Quick Focus: 800 Geo</img><br><img src=\"icon/notch.png\"  width=\"12\" height=\"12\"> Notch: 120 Geo and Own 5 Charms</img><br><img src=\"icon/notch.png\" width=\"12\" height=\"12\"> Notch: 500 Geo and Own 10 Charms</img><br><img src=\"icon/notch.png\" width=\"12\" height=\"12\"> Notch: 900 Geo and Own 18 Charms</img><br><img src=\"icon/notch.png\" width=\"12\" height=\"12\"> Notch: 1400 Geo and Own 25 Charms</img><br><img src=\"icon/salubra_blessing.png\" width=\"12\" height=\"12\"> Blessing: 800 Geo and Own 40 Charms</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 204,
+    "name": "Confessor Jiji",
+    "x": -633,
+    "y": 2199,
+    "path": "icon/npc/confessor_jiji.png",
+    "description": [
+      "<br>Requires Rancid Eggs to summon the Knight's Shade."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 205,
+    "name": "Divine",
+    "x": -624,
+    "y": 1853,
+    "path": "icon/npc/divine.png",
+    "description": [
+      "<br><img src=\"icon/charms/unbreakable_greed.png\"  width=\"12\" height=\"12\"> Unbreakable Greed: 9000 Geo</img><br><img src=\"icon/charms/unbreakable_heart.png\"  width=\"12\" height=\"12\"> Unbreakable Heart: 12000 Geo</img><br><img src=\"icon/charms/unbreakable_strength.png\"  width=\"12\" height=\"12\"> Unbreakable Strength: 15000 Geo</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 206,
+    "name": "Iselda",
+    "x": -627,
+    "y": 2040,
+    "path": "icon/npc/iselda.png",
+    "description": [
+      "<br><img src=\"icon/charms/wayward_compass.png\"  width=\"12\" height=\"12\"> Wayward Compass: 220 Geo</img><br><img src=\"icon/area_map.png\"  width=\"12\" height=\"12\"> Resting Grounds: 75 Geo</img><br><img src=\"icon/quill.png\"  width=\"12\" height=\"12\"> :Quill</img><br><img src=\"icon/map_pins.png\"  width=\"28\" height=\"18\"> :Map pins</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 207,
+    "name": "Legeater",
+    "x": -1193,
+    "y": 2124,
+    "path": "icon/npc/legeater.png",
+    "description": [
+      "<br><img src=\"icon/charms/fragile_heart.png\"  width=\"12\" height=\"12\"> Fragile Heart: 350 Geo</img><br><img src=\"icon/charms/fragile_greed.png\"  width=\"12\" height=\"12\"> Fragile Greed: 250 Geo</img><br><img src=\"icon/charms/fragile_strength.png\"  width=\"12\" height=\"12\"> Fragile Strength:600 Geo</img><br><img src=\"icon/charms/fragile_heart_broken.png\"  width=\"12\" height=\"12\"> Repair:200 Geo/Defender Crest Equipped 160G</img><br><img src=\"icon/charms/fragile_greed_broken.png\"  width=\"12\" height=\"12\"> Repair:150 Geo/Defender Crest Equipped 120G</img><br><img src=\"icon/charms/fragile_strength_broken.png\"  width=\"12\" height=\"12\"> Repair:350 Geo/Defender Crest Equipped 280G</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 208,
+    "name": "Little Fool",
+    "x": -1277,
+    "y": 3648,
+    "path": "icon/npc/little_fool.png",
+    "description": [
+      "<br><img src=\"icon/trial_of_the_warrior.png\"  width=\"15\" height=\"20\"> Trial of The Warrior: 100 Geo</img><br><img src=\"icon/trial_of_the_conqueror.png\"  width=\"15\" height=\"20\"> Trial of The Conqueror: 450 Geo</img><br><img src=\"icon/trial_of_the_fool.png\"  width=\"15\" height=\"20\"> Trial of The Fool: 800 Geo</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 209,
+    "name": "Millibelle The Banker",
+    "x": -1391,
+    "y": 1396,
+    "path": "icon/npc/millibelle.png",
+    "description": [
+      "<br>If she holds 2550 Geo or more and the Knight rests at a Bench or uses the Stagways, visiting the bank again reveals that Millibelle has abandoned her stand.<br>Millibelle the Thief can be found at the Hot Spring in the Pleasure House in the City of Tears"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 210,
+    "name": "Nailsmith",
+    "x": -1683,
+    "y": 2184,
+    "path": "icon/npc/nailsmith.png",
+    "description": [
+      "<br>Sharpened Nail: 250 Geo <br>Channelled Nail: 800g + x1 Pale Ore <br>Coiled Nail: 2000g + x2 Pale Ore <br>Pure Nail: 4000g + x3 Pale Ore"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 211,
+    "name": "Relic Seeker Lemm",
+    "x": -1679,
+    "y": 2733,
+    "path": "icon/npc/lemm.png",
+    "description": [
+      "<br><img src=\"icon/wanderers_journal.png\"  width=\"12\" height=\"12\"> Wanderer Journal: 200 Geo</img><br><img src=\"icon/hallownest_seal.png\"  width=\"12\" height=\"12\"> Hollownest Seal: 450 Geo</img><br><img src=\"icon/kings_idol.png\"  width=\"12\" height=\"12\"> King's Idol: 800 Geo</img><br><img src=\"icon/arcane_egg.png\"  width=\"12\" height=\"12\"> Arcane Egg: 1200 Geo</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 212,
+    "name": "Sly",
+    "x": -627,
+    "y": 1977,
+    "path": "icon/npc/sly.png",
+    "description": [
+      "<br><img src=\"icon/simple_key.png\"  width=\"12\" height=\"12\"> Simple Key: 950 Geo</img><br><img src=\"icon/rancid_egg.png\"  width=\"12\" height=\"12\"> Rancid Egg: 60 Geo</img><br><img src=\"icon/lumafly_lantern.png\"  width=\"12\" height=\"12\"> Lumafly Lantern: 1800 Geo</img><br><img src=\"icon/charms/gathering_swarm.png\"  width=\"12\" height=\"12\"> Gathering Swarm: 300 Geo</img><br><img src=\"icon/charms/stalwart_shell.png\"  width=\"12\" height=\"12\"> Stalwart Shell: 200 Geo</img><br><img src=\"icon/mask_shard.png\"  width=\"12\" height=\"12\"> Mask Shard: 150 Geo</img><br><img src=\"icon/mask_shard.png\"  width=\"12\" height=\"12\"> Mask Shard: 500 Geo </img><br><img src=\"icon/vessel_fragment.png\"  width=\"12\" height=\"12\"> Vessel Fragment: 550 Geo</img><br><img src=\"icon/elegant_key.png\"  width=\"12\" height=\"12\"> Elegant Key: 800 Geo</img><br><img src=\"\" width=\"12\" height=\"12\">Requires Shopkeeper's Key</img><br><img src=\"icon/charms/heavy_blow.png\"  width=\"12\" height=\"12\"> Heavy Blow: 350 Geo</img><br><img src=\"icon/mask_shard.png\"  width=\"12\" height=\"12\"> Mask Shard: 800 Geo</img><br><img src=\"icon/mask_shard.png\"  width=\"12\" height=\"12\"> Mask Shard: 1500 Geo</img><br><img src=\"icon/vessel_fragment.png\"  width=\"12\" height=\"12\"> Vessel Fragment: 900 Geo</img><br><img src=\"icon/charms/sprintmaster.png\"  width=\"12\" height=\"12\"> Sprintmaster: 400 Geo</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 213,
+    "name": "Tuk",
+    "x": -1748,
+    "y": 2908,
+    "path": "icon/npc/tuk.png",
+    "description": [
+      "<br>She sells the Knight Rancid Eggs for Geo.png 80-100.She does not sell eggs if the Knight has 80 or more in their inventory.She also gives them one for free if they are wearing the Defender's Crest Charm,"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 214,
+    "name": "Mato",
+    "x": -393,
+    "y": 1407,
+    "path": "icon/npc/mato.png",
+    "description": [
+      "<br>Nailmaster Mato is one of three Nailmasters in Hollow Knight. He teaches the Cyclone Slash to whoever is willing to become his disciple."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 215,
+    "name": "Oro",
+    "x": -1845,
+    "y": 4293,
+    "path": "icon/npc/oro.png",
+    "description": [
+      "<br>Nailmaster Oro is one of three Nailmasters in Hollow Knight. He teaches the Dash Slash Nail Art to those willing to pay him for his services."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 216,
+    "name": "Sheo",
+    "x": -950,
+    "y": 477,
+    "path": "icon/npc/sheo.png",
+    "description": [
+      "<br>Nailmaster Sheo is one of three Nailmasters in Hollow Knight. Although retired, he teaches the Great Slash Nail Art to those seeking him."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 217,
+    "name": "Bretta",
+    "x": -1765,
+    "y": 2017,
+    "path": "icon/npc/bretta.png",
+    "description": [
+      "<br>Bretta is in Fungal Wastes past Dash Master statue. Unlock her house for Mask Shard. She sleeps in the house and sits on Bench."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 218,
+    "name": "Brumm",
+    "x": -1912,
+    "y": 299,
+    "path": "icon/npc/brumm_banish.png",
+    "description": [
+      "<br>After Grimm fight, Brumm in Distant Village gives Flame if Knight has less than three. He offers to help banish Grimm Troupe."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 219,
+    "name": "Brumm",
+    "x": -540,
+    "y": 1279,
+    "path": "icon/npc/brumm_banish.png",
+    "description": [
+      "<br>Brumm will jabs his staff into the brazier so it can be broken and banished Grimm Troupe"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 220,
+    "name": "Grey Mourner",
+    "x": -950,
+    "y": 3662,
+    "path": "icon/npc/grey_mourner.png",
+    "description": [
+      "<br>Grey Mourner is in Resting Grounds, needs Desolate Dive/Descending Dark. She asks Knight to take Delicate Flower to lover's grave in Queen's Gardens, but flower breaks if Knight teleports or takes damage."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 221,
+    "name": "Grub Father",
+    "x": -715,
+    "y": 1890,
+    "path": "icon/npc/grub_father.png",
+    "description": [
+      "<br><img src=\"icon/mask_shard.png\"  width=\"12\" height=\"12\"> Mask Shard: 5/46 Grub</img><br><img src=\"icon/charms/grubsong.png\"  width=\"12\" height=\"12\"> Grubsong: 10/46 Grub</img><br><img src=\"icon/rancid_egg.png\"  width=\"15\" height=\"15\"> Rancid Egg: 16/46 Grub</img><br><img src=\"icon/hallownest_seal.png\"  width=\"12\" height=\"12\"> Hallownest Seal: 23/46 Grub</img><br><img src=\"icon/pale_ore.png\"  width=\"12\" height=\"12\"> Pale Ore: 31/46 Grub</img><br><img src=\"icon/kings_idol.png\"  width=\"12\" height=\"12\"> King's Idol: 38/46 Grub</img><br><img src=\"icon/charms/grubberfly_elegy.png\"  width=\"12\" height=\"12\"> Grubberfly Elegy: 46/46 Grub</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 222,
+    "name": "Seer",
+    "x": -815,
+    "y": 3425,
+    "path": "icon/npc/seer.png",
+    "description": [
+      "<br><img src=\"icon/hallownest_seal.png\"  width=\"12\" height=\"12\"> Hallownest Seal: 100 Essence</img><br><img src=\"\"  width=\"12\" height=\"12\"> Spirit Glade: 200 Essence</img><br><img src=\"icon/pale_ore.png\"  width=\"12\" height=\"12\"> Pale Ore: 300 Essence</img><br><img src=\"icon/charms/dream_wielder.png\"  width=\"12\" height=\"12\"> Dream Wielder: 500 Essence</img><br><img src=\"icon/vessel_fragment.png\"  width=\"12\" height=\"12\"> Vessel Fragment: 700 Essence</img><br><img src=\"icon/dream_gate.png\"  width=\"12\" height=\"12\"> Dream Gate: 900 Essence</img><br><img src=\"icon/arcane_egg.png\"  width=\"12\" height=\"12\"> Arcane Egg: 1200 Essence</img><br><img src=\"icon/mask_shard.png\"  width=\"12\" height=\"12\"> Mask Shard: 1500 Essence</img><br><img src=\"icon/spell_abilities/awoken_dream_nail.png\"  width=\"12\" height=\"12\"> Awoken Dream Nail: 1800 Essence</img><br><img src=\"icon/achievements/achievement_ascension.png\"  width=\"12\" height=\"12\"> Ascension Achievement: 2400 Essence</img>"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 223,
+    "name": "Hunter",
+    "x": -938,
+    "y": 1668,
+    "path": "icon/npc/hunter.png",
+    "description": [
+      "<br>He gifts the Hunter's Journal, a bestiary detailing all enemies in Hallownest."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 224,
+    "name": "Godseeker",
+    "x": -1971,
+    "y": 2102,
+    "path": "icon/npc/godseeker.png",
+    "description": [
+      "<br>Godseeker's cocoon is in Junk Pit, unlocks with Simple Key. Free Godseeker, get Godtuner, start seeking gods or use Dream Nail to join Godhome fights."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 225,
+    "name": "Zote",
+    "x": -643,
+    "y": 972,
+    "path": "icon/npc/zote1.png",
+    "description": [
+      "<br> Saved or If not saved before Mantis Claw, Zote dies there, leaving shell and nail. Hitting shell unlocks Neglect achievement.<br>PS: FCK THIS GUY. FCK Grey Prince Zote."
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 226,
+    "name": "Zote",
+    "x": -643,
+    "y": 972,
+    "path": "icon/npc/zote1.png",
+    "description": [
+      "<br>Found stuck in spider webs in Deepnest. Knight can save or leave him, but leaving him won't result in death.<br>PS:FCK Grey Prince Zote. Specially in Pantheon!"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 227,
+    "name": "Cornifer",
+    "x": -2154,
+    "y": 2787,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Ancient Basin: 112 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 228,
+    "name": "Cornifer",
+    "x": -1409,
+    "y": 2703,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for City of Tears: 90 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 229,
+    "name": "Cornifer",
+    "x": -570,
+    "y": 2715,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Crystal Peak: 112 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 230,
+    "name": "Cornifer",
+    "x": -1696,
+    "y": 1384,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Deepnest: 38 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 231,
+    "name": "Cornifer",
+    "x": -1117,
+    "y": 1556,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Fog Canyon: 150 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 232,
+    "name": "Cornifer",
+    "x": -1117,
+    "y": 1556,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Fog Canyon: 150 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 233,
+    "name": "Cornifer",
+    "x": -865,
+    "y": 1992,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Forgotten Crossroads: 30 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 234,
+    "name": "Cornifer",
+    "x": -1460,
+    "y": 1666,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Fungal Wastes: 75 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 235,
+    "name": "Cornifer",
+    "x": -891,
+    "y": 1620,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Greenpath: 60 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 236,
+    "name": "Cornifer",
+    "x": -891,
+    "y": 1620,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Howling Cliffs: Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 237,
+    "name": "Cornifer",
+    "x": -1757,
+    "y": 3670,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Kingdom's Edge: 112 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 238,
+    "name": "Cornifer",
+    "x": -1327,
+    "y": 1192,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Queen's Gardens: 150 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 239,
+    "name": "Cornifer",
+    "x": -1789,
+    "y": 2078,
+    "path": "icon/npc/cornifer.png",
+    "description": [
+      "<br>Map for Royal Waterways: 75 Geo"
+    ],
+    "progress": 0,
+    "markertype": "npc"
+  },
+  {
+    "id": 240,
+    "name": "Bench",
+    "x": -395,
+    "y": 1420,
+    "path": "icon/bench/mato_bench.png",
+    "description": "<br>Inside House",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 241,
+    "name": "Bench",
+    "x": -630,
+    "y": 2000,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 242,
+    "name": "Bench",
+    "x": -917,
+    "y": 2162,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 243,
+    "name": "Bench",
+    "x": -907,
+    "y": 2350,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 244,
+    "name": "Bench",
+    "x": -1020,
+    "y": 2689,
+    "path": "icon/bench/salubra_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 245,
+    "name": "Bench",
+    "x": -824,
+    "y": 2042,
+    "path": "icon/bench/bone_bench.png",
+    "description": "<br>Inside House",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 246,
+    "name": "Bench",
+    "x": -705,
+    "y": 2254,
+    "path": "icon/bench/final_boss_bench.png",
+    "description": "<br>Inside",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 247,
+    "name": "Bench",
+    "x": -739,
+    "y": 1441,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 248,
+    "name": "Bench",
+    "x": -739,
+    "y": 1441,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 249,
+    "name": "Bench",
+    "x": -1007,
+    "y": 1557,
+    "path": "icon/bench/fung_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 250,
+    "name": "Bench",
+    "x": -857,
+    "y": 1090,
+    "path": "icon/bench/bench.png",
+    "description": "<br>50 Geo to unlock",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 251,
+    "name": "Bench",
+    "x": -771,
+    "y": 919,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 252,
+    "name": "Bench",
+    "x": -768,
+    "y": 584,
+    "path": "icon/bench/slug_shrine_bench.png",
+    "description": "<br>Inside",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 253,
+    "name": "Bench",
+    "x": -951,
+    "y": 491,
+    "path": "icon/bench/sheo_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 254,
+    "name": "Bench",
+    "x": -1228,
+    "y": 1618,
+    "path": "icon/bench/fung_temple_bench.png",
+    "description": "<br>Inside",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 255,
+    "name": "Bench",
+    "x": -1458,
+    "y": 1489,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 256,
+    "name": "Bench",
+    "x": -1195,
+    "y": 2109,
+    "path": "icon/bench/leg_eater_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 257,
+    "name": "Bench",
+    "x": -1752,
+    "y": 2114,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 258,
+    "name": "Bench",
+    "x": -1724,
+    "y": 2000,
+    "path": "icon/bench/mantis_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 259,
+    "name": "Bench",
+    "x": -1574,
+    "y": 2484,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 260,
+    "name": "Bench",
+    "x": -1411,
+    "y": 2684,
+    "path": "icon/bench/toll_bench.png",
+    "description": "<br>150 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 261,
+    "name": "Bench",
+    "x": -1265,
+    "y": 2444,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 262,
+    "name": "Bench",
+    "x": -1551,
+    "y": 2898,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 263,
+    "name": "Bench",
+    "x": -1671,
+    "y": 3478,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 264,
+    "name": "Bench",
+    "x": -1369,
+    "y": 3279,
+    "path": "icon/bench/bath_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 265,
+    "name": "Bench",
+    "x": -1855,
+    "y": 2586,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 266,
+    "name": "Bench",
+    "x": -2074,
+    "y": 1424,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 267,
+    "name": "Bench",
+    "x": -1719,
+    "y": 1326,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 268,
+    "name": "Bench",
+    "x": -1860,
+    "y": 313,
+    "path": "icon/bench/spider_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 269,
+    "name": "Bench",
+    "x": -2256,
+    "y": 2633,
+    "path": "icon/bench/toll_bench.png",
+    "description": "<br>150 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 270,
+    "name": "Bench",
+    "x": -2233,
+    "y": 3249,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 271,
+    "name": "Bench",
+    "x": -1845,
+    "y": 4311,
+    "path": "icon/bench/oro_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 272,
+    "name": "Bench",
+    "x": -1581,
+    "y": 4026,
+    "path": "icon/bench/camp_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 273,
+    "name": "Bench",
+    "x": -1277,
+    "y": 3665,
+    "path": "icon/bench/col_bench.png",
+    "description": "<br>Under Colloseum",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 274,
+    "name": "Bench",
+    "x": -2115,
+    "y": 3609,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 275,
+    "name": "Bench",
+    "x": -2115,
+    "y": 3609,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 276,
+    "name": "Bench",
+    "x": -853,
+    "y": 2897,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 277,
+    "name": "Bench",
+    "x": -526,
+    "y": 2854,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 278,
+    "name": "Bench",
+    "x": -859,
+    "y": 3511,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 279,
+    "name": "Bench",
+    "x": -950,
+    "y": 3678,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 280,
+    "name": "Bench",
+    "x": -1325,
+    "y": 1149,
+    "path": "icon/bench/guardian_bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 281,
+    "name": "Bench",
+    "x": -1476,
+    "y": 714,
+    "path": "icon/bench/toll_bench.png",
+    "description": "<br>150 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 282,
+    "name": "Bench",
+    "x": -1369,
+    "y": 861,
+    "path": "icon/bench/bench.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 283,
+    "name": "Stag",
+    "x": -304,
+    "y": 1198,
+    "path": "icon/stag.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 284,
+    "name": "Stag",
+    "x": -769,
+    "y": 891,
+    "path": "icon/stag.png",
+    "description": "<br>140 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 285,
+    "name": "Stag",
+    "x": -630,
+    "y": 2016,
+    "path": "icon/stag.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 286,
+    "name": "Stag",
+    "x": -906,
+    "y": 2328,
+    "path": "icon/stag.png",
+    "description": "<br>50 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 287,
+    "name": "Stag",
+    "x": -860,
+    "y": 3543,
+    "path": "icon/stag.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 288,
+    "name": "Stag",
+    "x": -1264,
+    "y": 2473,
+    "path": "icon/stag.png",
+    "description": "<br>200 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 289,
+    "name": "Stag",
+    "x": -860,
+    "y": 3543,
+    "path": "icon/stag.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 290,
+    "name": "Stag",
+    "x": -1670,
+    "y": 3506,
+    "path": "icon/stag.png",
+    "description": "<br>300 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 291,
+    "name": "Stag",
+    "x": -1457,
+    "y": 1464,
+    "path": "icon/stag.png",
+    "description": "<br>140 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 292,
+    "name": "Stag",
+    "x": -1365,
+    "y": 830,
+    "path": "icon/stag.png",
+    "description": "<br>200 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 293,
+    "name": "Stag",
+    "x": -1808,
+    "y": 462,
+    "path": "icon/stag.png",
+    "description": "<br>250 Geo",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 294,
+    "name": "Stag",
+    "x": -2232,
+    "y": 3221,
+    "path": "icon/stag.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 295,
+    "name": "Tram",
+    "x": -935,
+    "y": 2653,
+    "path": "icon/tram.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 296,
+    "name": "Tram",
+    "x": -935,
+    "y": 2879,
+    "path": "icon/tram.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 297,
+    "name": "Tram",
+    "x": -2069,
+    "y": 3281,
+    "path": "icon/tram.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 298,
+    "name": "Tram",
+    "x": -2069,
+    "y": 2770,
+    "path": "icon/tram.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 299,
+    "name": "Tram",
+    "x": -2069,
+    "y": 1820,
+    "path": "icon/tram.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "benchandtransport"
+  },
+  {
+    "id": 300,
+    "name": "Rancid Eggs",
+    "x": -487,
+    "y": 2925,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 301,
+    "name": "Rancid Eggs",
+    "x": -799,
+    "y": 2868,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 302,
+    "name": "Rancid Eggs",
+    "x": -751,
+    "y": 2650,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 303,
+    "name": "Rancid Eggs",
+    "x": -978,
+    "y": 2876,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 304,
+    "name": "Rancid Eggs",
+    "x": -986,
+    "y": 433,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 305,
+    "name": "Rancid Eggs",
+    "x": -1276,
+    "y": 1092,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 306,
+    "name": "Rancid Eggs",
+    "x": -1571,
+    "y": 1714,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 307,
+    "name": "Rancid Eggs",
+    "x": -1957,
+    "y": 1037,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 308,
+    "name": "Rancid Eggs",
+    "x": -2003,
+    "y": 721,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 309,
+    "name": "Rancid Eggs",
+    "x": -1837,
+    "y": 332,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 310,
+    "name": "Rancid Eggs",
+    "x": -1768,
+    "y": 2210,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 311,
+    "name": "Rancid Eggs",
+    "x": -1823,
+    "y": 2421,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 312,
+    "name": "Rancid Eggs",
+    "x": -1852,
+    "y": 2675,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 313,
+    "name": "Rancid Eggs",
+    "x": -1934,
+    "y": 3130,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 314,
+    "name": "Rancid Eggs",
+    "x": -1530,
+    "y": 2708,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 315,
+    "name": "Rancid Eggs",
+    "x": -1452,
+    "y": 3218,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 316,
+    "name": "Rancid Eggs",
+    "x": -1375,
+    "y": 3735,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 317,
+    "name": "Rancid Eggs",
+    "x": -1935,
+    "y": 4246,
+    "path": "icon/rancid_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 318,
+    "name": "Wanderers Journal",
+    "x": -459,
+    "y": 3001,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 319,
+    "name": "Wanderers Journal",
+    "x": -536,
+    "y": 1155,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 320,
+    "name": "Wanderers Journal",
+    "x": -767,
+    "y": 970,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 321,
+    "name": "Wanderers Journal",
+    "x": -1071,
+    "y": 1476,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 322,
+    "name": "Wanderers Journal",
+    "x": -1350,
+    "y": 1865,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 323,
+    "name": "Wanderers Journal",
+    "x": -1574,
+    "y": 1885,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 324,
+    "name": "Wanderers Journal",
+    "x": -1287,
+    "y": 2305,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 325,
+    "name": "Wanderers Journal",
+    "x": -2032,
+    "y": 2971,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 326,
+    "name": "Wanderers Journal",
+    "x": -1567,
+    "y": 3222,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 327,
+    "name": "Wanderers Journal",
+    "x": -1585,
+    "y": 3428,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 328,
+    "name": "Wanderers Journal",
+    "x": -1003,
+    "y": 3733,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 329,
+    "name": "Wanderers Journal",
+    "x": -1654,
+    "y": 3677,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 330,
+    "name": "Wanderers Journal",
+    "x": -1766,
+    "y": 3956,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 331,
+    "name": "Wanderers Journal",
+    "x": -1579,
+    "y": 3994,
+    "path": "icon/wanderers_journal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 332,
+    "name": "King's Idol",
+    "x": -550,
+    "y": 2730,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 333,
+    "name": "King's Idol",
+    "x": -582,
+    "y": 1017,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 334,
+    "name": "King's Idol",
+    "x": -1844,
+    "y": 1251,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 335,
+    "name": "King's Idol",
+    "x": -1837,
+    "y": 3002,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 336,
+    "name": "King's Idol",
+    "x": -1339,
+    "y": 3546,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 337,
+    "name": "King's Idol",
+    "x": -1391,
+    "y": 4213,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 338,
+    "name": "King's Idol",
+    "x": -778,
+    "y": 3708,
+    "path": "icon/kings_idol.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 339,
+    "name": "Hallownest Seal",
+    "x": -987,
+    "y": 3439,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 340,
+    "name": "Hallownest Seal",
+    "x": -658,
+    "y": 2083,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 341,
+    "name": "Hallownest Seal",
+    "x": -1034,
+    "y": 1814,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 342,
+    "name": "Hallownest Seal",
+    "x": -979,
+    "y": 1114,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 343,
+    "name": "Hallownest Seal",
+    "x": -1135,
+    "y": 1297,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 344,
+    "name": "Hallownest Seal",
+    "x": -1424,
+    "y": 1487,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 345,
+    "name": "Hallownest Seal",
+    "x": -1287,
+    "y": 487,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 346,
+    "name": "Hallownest Seal",
+    "x": -1307,
+    "y": 1787,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 347,
+    "name": "Hallownest Seal",
+    "x": -1852,
+    "y": 298,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 348,
+    "name": "Hallownest Seal",
+    "x": -1741,
+    "y": 1583,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 349,
+    "name": "Hallownest Seal",
+    "x": -1700,
+    "y": 1977,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 350,
+    "name": "Hallownest Seal",
+    "x": -1327,
+    "y": 2542,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 351,
+    "name": "Hallownest Seal",
+    "x": -1625,
+    "y": 2551,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 352,
+    "name": "Hallownest Seal",
+    "x": -1348,
+    "y": 2949,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 353,
+    "name": "Hallownest Seal",
+    "x": -1624,
+    "y": 3461,
+    "path": "icon/hallownest_seal.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 354,
+    "name": "Arcane Egg",
+    "x": -2661,
+    "y": 2430,
+    "path": "icon/arcane_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 355,
+    "name": "Arcane Egg",
+    "x": -2755,
+    "y": 3589,
+    "path": "icon/arcane_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 356,
+    "name": "Arcane Egg",
+    "x": -2809,
+    "y": 2626,
+    "path": "icon/arcane_egg.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "tradables"
+  },
+  {
+    "id": 357,
+    "name": "Tram Pass",
+    "x": -1743,
+    "y": 878,
+    "path": "icon/explorequest/tram_pass.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 358,
+    "name": "Lumafly Lantern",
+    "x": -551,
+    "y": 1955,
+    "path": "icon/lumafly_lantern.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 359,
+    "name": "Collectors Map",
+    "x": -1523,
+    "y": 3578,
+    "path": "icon/explorequest/collectors_map.png",
+    "description": "<br>Marks the location of all 46 Grubs on any purchased Maps.",
+    "progress": 0,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 360,
+    "name": "Hunter Mark",
+    "x": -925,
+    "y": 1668,
+    "path": "icon/explorequest/hunter_mark.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 361,
+    "name": "Delicate Flower",
+    "x": -949,
+    "y": 3646,
+    "path": "icon/explorequest/flower.png",
+    "description": "<br>Clear Monster First, Donot bench",
+    "progress": 0,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 362,
+    "name": "Grave of The Traitors Child",
+    "x": -1312,
+    "y": 827,
+    "path": "icon/explorequest/grave_marker.png",
+    "description": "<br>Delicate Flower Destination",
+    "progress": 0,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 363,
+    "name": "Godtuner",
+    "x": -1957,
+    "y": 2104,
+    "path": "icon/explorequest/godtuner.png",
+    "description": "<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.",
+    "progress": 1,
+    "markertype": "explorationandquest"
+  },
+  {
+    "id": 364,
+    "name": "Simple Key",
+    "x": -563,
+    "y": 1979,
+    "path": "icon/simple_key.png",
+    "description": "<br> Simple Key: 950 Geo",
+    "progress": 0,
+    "markertype": "keys"
+  },
+  {
+    "id": 365,
+    "name": "Elegant Key",
+    "x": -563,
+    "y": 1991,
+    "path": "icon/elegant_key.png",
+    "description": "<br> Elegant Key: 800 Geo",
+    "progress": 0,
+    "markertype": "keys"
+  },
+  {
+    "id": 366,
+    "name": "Love Key",
+    "x": -1479,
+    "y": 1347,
+    "path": "icon/love_key.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "keys"
+  },
+  {
+    "id": 367,
+    "name": "Shopkeeper's Key",
+    "x": -494,
+    "y": 2808,
+    "path": "icon/shopkeeper_key.png",
+    "description": "",
+    "progress": 0,
+    "markertype": "keys"
+  },
+  {
+    "id": 368,
+    "name": "City Crest",
+    "x": -846,
+    "y": 2143,
+    "path": "icon/city_crest.png",
+    "description": "<br>Drop from False Knight",
+    "progress": 0,
+    "markertype": "keys"
+  },
+  {
+    "id": 369,
+    "name": "King's Brand",
+    "x": -1742,
+    "y": 4305,
+    "path": "icon/kings_brand.png",
+    "description": "",
+    "progress": 2,
+    "markertype": "keys"
+  }
+]

@@ -1,13 +1,16 @@
 const mongoose = require('mongoose')
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs');
+const User_Markers = require('./User_Markers')
+const usermarkerData = require('../usermarkersData.json')
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema({
     name: {
         type:String,
-        required:'Please provide username',
-        minlength:4,
-        maxlength:50,
-        unique: true,    
+        required: [true, 'Please provide name'],
+        minlength: [4, 'Name must be at least 4 characters long'],
+        maxlength: [50, 'Name cannot be more than 50 characters long'], 
     },
     email: {
         type:String,
@@ -21,9 +24,42 @@ const UserSchema = new Schema({
     password: {
         type:String,
         required:[true,'Please provide password'],
-        minlength:6,
-        maxlength:18,
+        minlength:[6, 'Password must be at least 8 characters long'],
+        maxlength:[18, 'Password cannot be more than 50 characters long'],
     },
 })
 
-module.exports = mongoose.model('User',UserSchema)
+UserSchema.pre('save',async function(){
+    const salt = await bcrypt.genSalt(10)
+    this.password = await bcrypt.hash(this.password,salt)
+})
+
+
+UserSchema.methods.createJWT = function() {
+    return jwt.sign(
+        {userID:this._id,name:this.name},
+        process.env.JWT_SECRET,
+        {expiresIn:process.env.JWT_LIFETIME})
+}
+
+UserSchema.methods.comparePassword = async function(password){
+    const isMatch = await bcrypt.compare(password,this.password)
+    return isMatch
+}
+
+UserSchema.methods.createUserMakers = async function(){
+    const markers = usermarkerData.map(usermarker=>{
+        return {
+            userid:this._id,
+            markerid:usermarker.markerid,
+            markername:usermarker.markername,
+        }
+    })
+    console.log(markers)
+    await User_Markers.insertMany(markers) // ID ERROR 
+}
+
+const HKMap = mongoose.connection.useDb('HKMap')
+const User = HKMap.model('users',UserSchema)
+module.exports = User
+

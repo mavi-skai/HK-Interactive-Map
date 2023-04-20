@@ -1,6 +1,5 @@
 
 window.addEventListener('load', function () {
-
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1;
 
@@ -904,6 +903,8 @@ window.addEventListener('load', function () {
       const pass = document.querySelector('.signup-password')
       const pass2= document.querySelector('.signup-password2')
       const email= document.querySelector('.signup-email')
+      const signup_error = document.querySelector('.signup-error span')
+      const signup_success = document.querySelector('.signup-success span')
 
       let action = 'register'
       let registerinfo = {
@@ -915,16 +916,18 @@ window.addEventListener('load', function () {
       
       axios.post('/HKgitgud-map',{action,registerinfo})
                 .then(response => {
-                  console.log(response.data.msg)
+                  signup_success.innerHTML = response.data.msg
                 })
                 .catch(error => {
-                  console.error(error);
+                  signup_error.innerHTML = error.response.data.msg
                 });
     })
 
     loginform.addEventListener('submit',function(e){
       e.preventDefault()
       const login_alert = document.querySelector('.login-error span')
+      const login_section = document.querySelector('.container.forms')
+      const user_info = document.querySelector('.user-details')
       const email = document.querySelector('.login-email')
       const pass = document.querySelector('.login-password')
 
@@ -939,11 +942,15 @@ window.addEventListener('load', function () {
       
       axios.post('/HKgitgud-map',{action,logininfo})
                 .then(response => {
-                  console.log(response.data.msg)
+                  console.log(response.data.token)
+                  console.log(response.data.user.name)
+                  login_section.style.display = 'none';
+                  user_info.removeAttribute('style')
                 })
                 .catch(error => {
-                  login_alert.innerHTML = error.response.data.msg
-                  //document.querySelector('.login-error span').innerHTML = error.response.data.msg
+                  console.log(error)
+                  login_alert.innerHTML = error.response.data
+                  
                 });
 
       
@@ -1176,6 +1183,7 @@ window.addEventListener('load', function () {
 
           id+=1
           
+
           var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`;
           var NotFoundpopup = `<br><button id='MarkFoundButton'> Mark As Not Found</button>`
           Marker.bindPopup(Marker.options.title + Marker.options.description + Foundpopup,{maxHeight:250});

@@ -554,6 +554,19 @@ form{
     margin-top: 30px;
 }
 
+.signup-error {
+    color: red;
+    font-size: 18px;
+    margin-top: 30px;
+
+}
+
+.signup-success {
+    color: rgb(30, 255, 0);
+    font-size: 18px;
+    margin-top: 30px;
+}
+
 
 /* -----------------------------User info------------------------------*/
 
