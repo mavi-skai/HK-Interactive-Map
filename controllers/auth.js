@@ -1,7 +1,7 @@
 const BadRequestError = require('../errors/bad-request')
 const { StatusCodes } = require('http-status-codes')
 const User = require('../models/User')
-const { create } = require('../models/User_Markers')
+
 
 const handleAuth = async (req,res,next) => {
 
@@ -40,7 +40,7 @@ const handleAuth = async (req,res,next) => {
     else if(req.body.action=='login'){
         try {
             const {email,pass} = req.body.logininfo
-            console.log(req.body.logininfo)
+            //console.log(req.body.logininfo)
 
             if(!email || !pass){
                 throw new BadRequestError('Please provide email and password')

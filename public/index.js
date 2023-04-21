@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1;
 
+
     //#region GRUB
     let grubGroup = new L.LayerGroup()
     let grubInfo = [['Grub',-575, 1314,'icon/grub.png','',0,'grub'],
@@ -944,12 +945,14 @@ window.addEventListener('load', function () {
                 .then(response => {
                   console.log(response.data.token)
                   console.log(response.data.user.name)
+                  sessionStorage.setItem('token',response.data.token)
+
                   login_section.style.display = 'none';
                   user_info.removeAttribute('style')
                 })
                 .catch(error => {
                   console.log(error)
-                  login_alert.innerHTML = error.response.data
+                  login_alert.innerHTML = error.response.data.msg
                   
                 });
 
@@ -1204,15 +1207,16 @@ window.addEventListener('load', function () {
                 description: marker.options.description,
                 completion: marker.options.completion,
                 category: marker.options.category,
+                isHidden:opacity==1? true : false
               }
-              
 
-              axios.put('/HKgitgud-map',{markerINFO})
+              const token = sessionStorage.getItem('token')
+              axios.put('/HKgitgud-map',{markerINFO,token})
                 .then(response => {
                   console.log(response.data);
                 })
                 .catch(error => {
-                  console.error(error);
+                  console.log(error);
                 });
 
               if(marker.options.opacity===1){

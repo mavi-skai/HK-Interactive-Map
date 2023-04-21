@@ -55,7 +55,7 @@ UserSchema.methods.createUserMakers = async function(){
             markername:usermarker.markername,
         }
     })
-    console.log(markers)
+    //console.log(markers)
     await User_Markers.insertMany(markers) // ID ERROR 
 }
 
