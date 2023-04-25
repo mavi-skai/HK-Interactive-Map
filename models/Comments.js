@@ -2,21 +2,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CommentSchema = new Schema({
+  markerid:{
+    type:Schema.Types.ObjectId,
+    required:[true,'Please provide User ID']
+  },
   text: {
     type: String,
     required: true
   },
   image: {
-    type: String,
+    type: Buffer,
     required: true
-  },
-  likes: {
-    type: Number,
-    default: 0
-  },
-  dislikes: {
-    type: Number,
-    default: 0
   },
   createdAt: {
     type: Date,
@@ -24,6 +20,7 @@ const CommentSchema = new Schema({
   }
 });
 
-const Comment = mongoose.model('Comment', CommentSchema);
+const HKMap = mongoose.connection.useDb('HKMap')
+const Comments = HKMap.model('comments',CommentSchema)
 
-module.exports = Comment;
+module.exports = Comments

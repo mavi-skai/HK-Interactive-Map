@@ -864,9 +864,13 @@ window.addEventListener('load', function () {
     pwShowHide = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
     const loginform = document.querySelector(".login-form")
-
-
+    const login_alert = document.querySelector('.login-error span')
+    const login_section = document.querySelector('.container.forms')
+    const user_info = document.querySelector('.user-details')
     const signupform = document.querySelector('.signup-form')
+    const logoutbtn = document.getElementById('logout-btn')
+    
+
 
     pwShowHide.forEach(eyeIcon => {
         eyeIcon.addEventListener("click", () => {
@@ -895,8 +899,6 @@ window.addEventListener('load', function () {
         })
     })
 
-    
-
     signupform.addEventListener('submit',function(e){
       e.preventDefault()
 
@@ -918,6 +920,7 @@ window.addEventListener('load', function () {
       axios.post('/HKgitgud-map',{action,registerinfo})
                 .then(response => {
                   signup_success.innerHTML = response.data.msg
+                  clearAllInput()
                 })
                 .catch(error => {
                   signup_error.innerHTML = error.response.data.msg
@@ -926,9 +929,7 @@ window.addEventListener('load', function () {
 
     loginform.addEventListener('submit',function(e){
       e.preventDefault()
-      const login_alert = document.querySelector('.login-error span')
-      const login_section = document.querySelector('.container.forms')
-      const user_info = document.querySelector('.user-details')
+
       const email = document.querySelector('.login-email')
       const pass = document.querySelector('.login-password')
 
@@ -943,32 +944,44 @@ window.addEventListener('load', function () {
       
       axios.post('/HKgitgud-map',{action,logininfo})
                 .then(response => {
-                  console.log(response.data.token)
-                  console.log(response.data.user.name)
                   sessionStorage.setItem('token',response.data.token)
 
                   login_section.style.display = 'none';
                   user_info.removeAttribute('style')
+                  clearAllInput()
                 })
                 .catch(error => {
                   console.log(error)
                   login_alert.innerHTML = error.response.data.msg
                   
-                });
-
-      
-                
+                });    
       })
 
+      const token = this.sessionStorage.getItem('token')
+      if(token){
+        login_section.style.display = 'none';
+        user_info.removeAttribute('style')
+      }
+      else{
+        login_section.style.display = 'block';
+        user_info.setAttribute('style', 'display: none;');
+      }
 
+
+    logoutbtn.addEventListener('click',function(e){
+      e.preventDefault()
+      login_section.style.display = 'block';
+      user_info.setAttribute('style', 'display: none;');
+      sessionStorage.removeItem('token')
+    })
 
     //#endregion
 
     //#region  UPLOADING IMAGE
-    document.getElementById("files").addEventListener("change", function() {
-      var filename = this.files[0].name;
-      console.log(filename);
-    });
+    // document.getElementById("files").addEventListener("change", function() {
+    //   var filename = this.files[0].name;
+    //   console.log(filename);
+    // });
     //#endregion
 
     //#region MAP SETTINGS
@@ -1307,7 +1320,13 @@ window.addEventListener('load', function () {
         })
       }
 
-      
+      function clearAllInput(){
+        const allinput = document.querySelectorAll('.input-field input')
+
+        allinput.forEach(input=>{
+          input.value=''
+        })
+      }
       
 });
 

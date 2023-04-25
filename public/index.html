@@ -224,12 +224,12 @@
         </div>
 
         <div class="comment-block">
-          <div class="alert">
+          <div class="alert" style="display: none">
             <span class="alert-icon">!</span>
             <p>Please select a marker on the map to enable comments.</p>
           </div>
 
-          <form style="display: none">
+          <form >
             <div class="input-text">
               <input
                 type="text"
@@ -238,12 +238,18 @@
               />
             </div>
 
+            <!-- <div class="input-image">
+              <label for="image-upload" class="image-btn"><i class="bx bxs-image-add"></i></label>
+              <input id="image-upload" style="visibility: hidden" type="file" />
+            </div> -->
+
             <div class="input-image">
-              <label for="files" class="image-btn"
-                ><i class="bx bxs-image-add"></i
-              ></label>
-              <input id="files" style="visibility: hidden" type="file" />
+              <label for="image-upload" class="image-btn">
+                <i class="bx bxs-image-add"></i>
+              </label>
+              <input id="image-upload"  style="visibility: hidden" type="file" name="image" accept="image/*" />
             </div>
+            
 
             <div class="submit-button">
               <input type="submit" value="Submit" />
