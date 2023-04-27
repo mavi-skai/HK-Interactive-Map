@@ -1,4 +1,5 @@
 
+
 window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1;
@@ -978,10 +979,26 @@ window.addEventListener('load', function () {
     //#endregion
 
     //#region  UPLOADING IMAGE
-    // document.getElementById("files").addEventListener("change", function() {
-    //   var filename = this.files[0].name;
-    //   console.log(filename);
-    // });
+    const commentForm = document.querySelector('#comment-form')
+    commentForm.addEventListener('submit',function(e){
+      e.preventDefault()
+
+      const formData = new FormData(e.target);
+
+      const messageValue = formData.get('message');
+      const image = formData.get('image');
+      console.log('Message:', messageValue);
+      console.log('Image',image)
+
+      // axios.post('/HKgitgud-map',{formData})
+      // .then(response=>{
+
+      // })
+      // .catch(error=>{
+
+      // })
+
+    })
     //#endregion
 
     //#region MAP SETTINGS

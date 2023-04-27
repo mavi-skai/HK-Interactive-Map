@@ -229,19 +229,10 @@
             <p>Please select a marker on the map to enable comments.</p>
           </div>
 
-          <form >
+          <form id="comment-form" enctype="multipart/form-data">
             <div class="input-text">
-              <input
-                type="text"
-                class="message"
-                placeholder="What are your thoughts?"
-              />
+              <input type="text" class="message" placeholder="What are your thoughts?" name="message" />
             </div>
-
-            <!-- <div class="input-image">
-              <label for="image-upload" class="image-btn"><i class="bx bxs-image-add"></i></label>
-              <input id="image-upload" style="visibility: hidden" type="file" />
-            </div> -->
 
             <div class="input-image">
               <label for="image-upload" class="image-btn">

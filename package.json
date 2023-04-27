@@ -20,7 +20,8 @@
     "http-status-codes": "^2.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.4",
-    "mongoose-geojson-schema": "^2.2.4"
+    "mongoose-geojson-schema": "^2.2.4",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
