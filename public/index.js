@@ -990,13 +990,19 @@ window.addEventListener('load', function () {
       console.log('Message:', messageValue);
       console.log('Image',image)
 
-      // axios.post('/HKgitgud-map',{formData})
-      // .then(response=>{
+      const msgimage = {
+        image:image,
+        messageValue:messageValue,
+      }
+      const action = 'comments'
 
-      // })
-      // .catch(error=>{
+      axios.post('/HKgitgud-map',{msgimage,action})
+      .then(response=>{
 
-      // })
+      })
+      .catch(error=>{
+        console.log(error)
+      })
 
     })
     //#endregion
