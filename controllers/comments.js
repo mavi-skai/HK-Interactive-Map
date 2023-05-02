@@ -6,10 +6,10 @@ const getAllcomments = async(req,res) => {
 }
 
 const saveComment = async(req,res) =>{
-    const coments = req.body.msgimage
-
-    console.log(coments.messageValue)
-    console.log('test')
+   
+    console.log(req.body.message)
+    console.log(req.file)
+    console.log(req.file.originalname)
     
     
 }

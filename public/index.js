@@ -984,19 +984,17 @@ window.addEventListener('load', function () {
       e.preventDefault()
 
       const formData = new FormData(e.target);
-
+ 
       const messageValue = formData.get('message');
-      const image = formData.get('image');
-      console.log('Message:', messageValue);
-      console.log('Image',image)
+      const image = formData.get('Image');
 
-      const msgimage = {
-        image:image,
-        messageValue:messageValue,
-      }
+      const Comments = new FormData();
+      Comments.append('message',messageValue)
+      Comments.append('Image',image)
+
       const action = 'comments'
 
-      axios.post('/HKgitgud-map',{msgimage,action})
+      axios.post('/HKgitgud-map',Comments,{params:{action}})
       .then(response=>{
 
       })
