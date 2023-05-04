@@ -12,7 +12,6 @@ const CommentSchema = new Schema({
   },
   image: {
     type: Buffer,
-    required: true
   },
   createdAt: {
     type: Date,

@@ -2,8 +2,8 @@
 
 window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
-    let id = 1;
-
+    let id = 1
+    let currentMarkerID = null
 
     //#region GRUB
     let grubGroup = new L.LayerGroup()
@@ -994,7 +994,7 @@ window.addEventListener('load', function () {
 
       const action = 'comments'
 
-      axios.post('/HKgitgud-map',Comments,{params:{action}})
+      axios.post('/HKgitgud-map',Comments,{params:{action,currentMarkerID}})
       .then(response=>{
 
       })
@@ -1227,9 +1227,8 @@ window.addEventListener('load', function () {
           var popupContent
           Marker.on("popupopen",function(e){
             var marker = e.target
+            currentMarkerID = marker.options.id
 
-            
-      
             var button = document.getElementById('MarkFoundButton')
             button.addEventListener('click',function(){
               var opacity = marker.options.opacity;
