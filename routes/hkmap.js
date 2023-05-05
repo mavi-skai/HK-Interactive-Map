@@ -10,7 +10,9 @@ const multer = require('multer');
 var storage = multer.diskStorage({
   destination: './uploads',
   filename: function (req, file, cb) {
-    cb(null, file.originalname);
+    const extension = file.originalname.split('.').pop()
+    const filename = `${file.fieldname}_${Date.now()}.${extension}`;
+    cb(null, filename);
   }
 })
 
@@ -24,7 +26,6 @@ router.route('/')
 
   }
   else if(req.query.action==='comments'){
-    console.clear()
     upload.single('Image')(req, res, (err) => {
       if (err) {
         console.log(err);

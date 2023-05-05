@@ -6,12 +6,11 @@ const getAllcomments = async(req,res) => {
 }
 
 const saveComment = async(req,res) =>{
-   
-    console.log(req.body.message)
+    console.clear()
+    console.log('Inside of SaveComment req.body.message:'+req.body.message) 
     console.log(req.file)
-    console.log(req.query.currentMarkerID)
-    
-    
+    console.log('Inside of SaveComment req.body.currentMarkerID: '+req.query.currentMarkerID)
+
 }
 
 module.exports = {getAllcomments,saveComment}

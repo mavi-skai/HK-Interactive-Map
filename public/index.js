@@ -1228,6 +1228,7 @@ window.addEventListener('load', function () {
           Marker.on("popupopen",function(e){
             var marker = e.target
             currentMarkerID = marker.options.id
+            console.log('CurrentMarkerID: '+currentMarkerID)
 
             var button = document.getElementById('MarkFoundButton')
             button.addEventListener('click',function(){
