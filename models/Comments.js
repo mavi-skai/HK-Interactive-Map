@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const CommentSchema = new Schema({
   markerid:{
-    type:Schema.Types.ObjectId,
+    type:Number,
     required:[true,'Please provide User ID']
   },
-  text: {
+  message: {
     type: String,
     required: true
   },
