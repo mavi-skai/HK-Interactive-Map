@@ -1,5 +1,5 @@
 const Comments = require('../models/Comments')
-
+const fs = require('fs')
 
 const getAllcomments = async(req,res) => {
 
@@ -7,18 +7,28 @@ const getAllcomments = async(req,res) => {
 
 const saveComment = async(req,res) =>{
     console.clear()
-    console.log('Inside of SaveComment req.body.message:'+req.body.message) 
-    console.log(req.file) // not null
-    console.log(req.file.buffer) // undefined
-    console.log('Inside of SaveComment req.body.currentMarkerID: '+req.query.currentMarkerID)
-
 
     try {
+        
+        const imagebuffer = await new Promise((resolve, reject) => {
+            fs.readFile(req.file.path, (err, data) => {
+              if (err) {
+                console.log(err);
+                reject(err);
+              } else {
+                resolve(data);
+              }
+            });
+          });
+
         const newComments = {
             markerid:req.query.currentMarkerID,
             message:req.body.message,
-            image:req.file.buffer,
+            image:imagebuffer,
         }
+
+
+        console.log(newComments)
     
         const comment = await Comments.create(newComments)
         console.log('inserted')
