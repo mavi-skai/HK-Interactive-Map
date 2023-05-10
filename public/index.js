@@ -1,5 +1,3 @@
-
-
 window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1
@@ -1229,6 +1227,7 @@ window.addEventListener('load', function () {
             var marker = e.target
             currentMarkerID = marker.options.id
             console.log('CurrentMarkerID: '+currentMarkerID)
+            getComments(currentMarkerID)
 
             var button = document.getElementById('MarkFoundButton')
             button.addEventListener('click',function(){
@@ -1347,6 +1346,26 @@ window.addEventListener('load', function () {
         allinput.forEach(input=>{
           input.value=''
         })
+      }
+
+      function getComments(currentMarkerID){
+        const alert = document.querySelector('.alert')
+        const commentForm = document.getElementById('comment-form')
+        if(alert.style.display !== "none"){
+          alert.style.display = "none"
+          commentForm.removeAttribute("style")
+        }
+        axios.get('/HKgitgud-map',{params:{currentMarkerID}})
+        .then(response=>{
+          console.log(response)
+        })
+        .catch(error=>{
+          console.log(error)
+        })
+
+  
+
+
       }
       
 });

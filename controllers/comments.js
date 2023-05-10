@@ -2,7 +2,8 @@ const Comments = require('../models/Comments')
 const fs = require('fs')
 
 const getAllcomments = async(req,res) => {
-
+    console.log('getallcomments in:' + req.query.currentMarkerID)
+    
 }
 
 const saveComment = async(req,res) =>{
