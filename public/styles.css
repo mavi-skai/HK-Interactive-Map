@@ -852,10 +852,10 @@ input[type="submit"] {
 
 
 
-.user-message {
+.user-comment {
     display: flex;
     align-items: center;
-    background-color: #0171d3;
+    background-color: #3d4144;
     width: 90%;
     height: 50px;
     max-height: 100%;
@@ -870,7 +870,7 @@ input[type="submit"] {
    
 }
 
-.user-message p {
+.user-comment p {
     padding-top: 10px;
     font-size: 15px;
     max-width: 100%;
@@ -878,7 +878,7 @@ input[type="submit"] {
 }
 
 
-.user-message img{
+.user-comment img{
     width: 100px;
     height: 100px;
     object-fit: contain;
