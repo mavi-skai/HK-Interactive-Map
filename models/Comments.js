@@ -11,7 +11,8 @@ const CommentSchema = new Schema({
     required: true
   },
   image: {
-    type: Buffer,
+    type: String,
+    required:[true,'Please provide Image Path']
   },
   createdAt: {
     type: Date,
