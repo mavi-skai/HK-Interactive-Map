@@ -11,6 +11,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler.js')
 
 
 app.use(express.static('./public'))
+app.use('/uploads', express.static('uploads'));
 app.use(express.json());
 app.use('/HKgitgud-map',HKmap)
 app.use(errorHandlerMiddleware)

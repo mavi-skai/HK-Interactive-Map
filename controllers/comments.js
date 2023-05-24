@@ -6,12 +6,17 @@ const getAllcomments = async(req,res) => {
     console.log('getallcomments in:' + req.query.currentMarkerID)
     
     try {
-      var comments = await Comments.find({markerid:req.query.currentMarkerID}).limit(1).exec()
+      var comments = await Comments.find({markerid:req.query.currentMarkerID}).exec()
       //console.log('inside of comments.js controller:'+Array.isArray(comments))
 
-     
-
-      //res.status(StatusCodes.OK).json({comments });
+      if(comments.length!==0){
+        console.log(comments)
+      }
+      else{
+        console.log('empty')
+      }
+      
+      res.status(StatusCodes.OK).json({comments });
     } catch (error) {
       console.log(error)
     }

@@ -1,11 +1,13 @@
 const mongoose = require('mongoose')
 const User_Markers = require('../models/User_Markers')
+const Commnets = require('../models/Comments')
 const User = require('../models/User')
 const connectDB = require('../db/connect')
 const { response } = require('express')
+const Comments = require('../models/Comments')
 
 
-const deleteData = async() =>{
+const deleteDataUser = async() =>{
     await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
     userID = ''
     const userIDObj = mongoose.Types.ObjectId(userID)
@@ -21,4 +23,17 @@ const deleteData = async() =>{
   
 }
 
-deleteData()
+const deleteComments = async() =>{
+    await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+    try {
+        await Comments.deleteMany({});
+        console.log('deleted')
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
+
+deleteDataUser()
+deleteComments()
+

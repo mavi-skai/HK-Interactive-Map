@@ -1358,28 +1358,21 @@ window.addEventListener('load', function () {
           commentForm.removeAttribute("style")
           usersmessages.removeAttribute("style")
         }
-        // <div class="user-messages">
-        //     <div class="user-comment">
-        //       <p>
-        //         This is a messages
-        //       </p>
-        //       <img src="icon/nkgrim.png" alt="image" id="image" />
-        //     </div>
-        //   </div>
-
 
         axios.get('/HKgitgud-map',{params:{currentMarkerID}})
         .then(response=>{
-          
+          usersmessages.innerHTML=''
           response.data.comments.forEach(comment =>{
             var div = document.createElement('div')
             var paragraph = document.createElement('p')
             var img = document.createElement('img')
+
             img.id = 'image'
-            //console.log(comment.image.toString('base64'))
+            img.src = comment.image.replace('\\','/')
 
             div.className = 'user-comment'
             paragraph.innerHTML = comment.message
+
             div.appendChild(paragraph)
             div.appendChild(img)
             usersmessages.appendChild(div)
