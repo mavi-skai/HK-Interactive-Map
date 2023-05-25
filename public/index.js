@@ -976,7 +976,7 @@ window.addEventListener('load', function () {
 
     //#endregion
 
-    //#region  UPLOADING IMAGE
+    //#region  UPLOADING IMAGE COMMENT FORM
     const commentForm = document.querySelector('#comment-form')
     commentForm.addEventListener('submit',function(e){
       e.preventDefault()
@@ -994,7 +994,8 @@ window.addEventListener('load', function () {
 
       axios.post('/HKgitgud-map',Comments,{params:{action,currentMarkerID}})
       .then(response=>{
-
+        console.log(response.data.msg)
+        getComments(currentMarkerID)
       })
       .catch(error=>{
         console.log(error)
@@ -1226,7 +1227,8 @@ window.addEventListener('load', function () {
           Marker.on("popupopen",function(e){
             var marker = e.target
             currentMarkerID = marker.options.id
-            console.log('CurrentMarkerID: '+currentMarkerID)
+
+            changeSideBarButtons(markerBlock,commentBlock,loginBlock)
             getComments(currentMarkerID)
 
             var button = document.getElementById('MarkFoundButton')
@@ -1352,6 +1354,7 @@ window.addEventListener('load', function () {
         const alert = document.querySelector('.alert')
         const commentForm = document.getElementById('comment-form')
         const usersmessages = document.querySelector('.user-messages')
+        const nocomment = document.querySelector('.nocomment')
 
         if(alert.style.display !== "none"){
           alert.style.display = "none"
@@ -1362,6 +1365,13 @@ window.addEventListener('load', function () {
         axios.get('/HKgitgud-map',{params:{currentMarkerID}})
         .then(response=>{
           usersmessages.innerHTML=''
+          if(response.data.comments.length===0){
+            nocomment.style.display = 'block'
+          }
+          else{
+            nocomment.style.display = 'none'
+          }
+          
           response.data.comments.forEach(comment =>{
             var div = document.createElement('div')
             var paragraph = document.createElement('p')
@@ -1386,7 +1396,15 @@ window.addEventListener('load', function () {
 
 
       }
+
+      function changeSideBarButtons(markerBlock,commentBlock,loginBlock){
+          markerBlock.style.display = "none";
+          commentBlock.style.display = "block";
+          loginBlock.style.display = "none";
+      }
       
+
+
 });
 
 

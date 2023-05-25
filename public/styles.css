@@ -854,7 +854,7 @@ input[type="submit"] {
 .user-comment {
     display: flex;
     align-items: center;
-    background-color: #3d4144;
+    background-color: #ececec;
     width: 90%;
     height: 100px;
     margin: 10px auto;
@@ -879,3 +879,12 @@ input[type="submit"] {
     object-fit: contain;
 }
 
+
+.nocomment{
+    width: 90%;
+    height: 80px;
+    margin: 30px auto auto auto;
+    background-color: #ececec;
+    object-fit: contain;
+    text-overflow: ellipsis;
+}

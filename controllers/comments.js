@@ -3,19 +3,9 @@ const { StatusCodes } = require('http-status-codes')
 const fs = require('fs')
 
 const getAllcomments = async(req,res) => {
-    console.log('getallcomments in:' + req.query.currentMarkerID)
-    
     try {
       var comments = await Comments.find({markerid:req.query.currentMarkerID}).exec()
-      //console.log('inside of comments.js controller:'+Array.isArray(comments))
-
-      if(comments.length!==0){
-        console.log(comments)
-      }
-      else{
-        console.log('empty')
-      }
-      
+    
       res.status(StatusCodes.OK).json({comments });
     } catch (error) {
       console.log(error)
@@ -24,7 +14,6 @@ const getAllcomments = async(req,res) => {
 
 const saveComment = async(req,res) =>{
     console.clear()
-    console.log(req.file.path)
     try {
         const newComments = {
             markerid:req.query.currentMarkerID,
@@ -33,7 +22,7 @@ const saveComment = async(req,res) =>{
         }
 
         const comment = await Comments.create(newComments)
-        console.log('inserted')
+        res.status(StatusCodes.OK).json({msg:'comment inserted'})
     } catch (error) {
         console.log(error)
         fs.unlink(req.file.path,(error)=>{
@@ -41,7 +30,6 @@ const saveComment = async(req,res) =>{
             console.log(error)
             return
           }
-          
           console.log('Image deleted successfully.');
         })
     }
