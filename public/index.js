@@ -908,15 +908,16 @@ window.addEventListener('load', function () {
       const signup_error = document.querySelector('.signup-error span')
       const signup_success = document.querySelector('.signup-success span')
 
-      let action = 'register'
-      let registerinfo = {
+      let action = 'signuplogin'
+      let action2 = 'signup'
+      let signupinfo = {
         name:name.value,
         password:pass.value,
         password2:pass2.value,
         email:email.value,
       }
       
-      axios.post('/HKgitgud-map',{action,registerinfo})
+      axios.post('/HKgitgud-map',{action,action2,signupinfo})
                 .then(response => {
                   signup_success.innerHTML = response.data.msg
                   clearAllInput()
@@ -934,14 +935,15 @@ window.addEventListener('load', function () {
 
 
       login_alert.innerHTML = ''
-      let action = 'login'
+      let action = 'signuplogin'
+      let action2 = 'login'
       let logininfo = {
         email:email.value,
         pass:pass.value
       }
 
       
-      axios.post('/HKgitgud-map',{action,logininfo})
+      axios.post('/HKgitgud-map',{action,action2,logininfo})
                 .then(response => {
                   sessionStorage.setItem('token',response.data.token)
 

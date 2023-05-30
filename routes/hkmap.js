@@ -22,8 +22,17 @@ router.route('/')
 .get(getAllcomments)
 .put(updateMarker)
 .post((req,res)=>{
-  if(req.body.action==='signuplogin'){
-
+  console.log('test')
+  console.log(req.body.action)
+  console.log(req.body.action2)
+  if(req.query.action==='signuplogin'){
+    if(req.query.action2==='login')
+    {
+      console.log('login')
+    }
+    else{
+      console.log('signup')
+    }
   }
   else if(req.query.action==='comments'){
     upload.single('Image')(req, res, (err) => {
