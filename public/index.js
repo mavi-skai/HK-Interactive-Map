@@ -901,23 +901,22 @@ window.addEventListener('load', function () {
     signupform.addEventListener('submit',function(e){
       e.preventDefault()
 
-      const name = document.querySelector('.signup-name')
+      const username = document.querySelector('.signup-username')
       const pass = document.querySelector('.signup-password')
       const pass2= document.querySelector('.signup-password2')
       const email= document.querySelector('.signup-email')
       const signup_error = document.querySelector('.signup-error span')
       const signup_success = document.querySelector('.signup-success span')
 
-      let action = 'signuplogin'
-      let action2 = 'signup'
+      let action = 'signup'
       let signupinfo = {
-        name:name.value,
+        username:username.value,
         password:pass.value,
         password2:pass2.value,
         email:email.value,
       }
       
-      axios.post('/HKgitgud-map',{action,action2,signupinfo})
+      axios.post('/HKgitgud-map',{action,signupinfo})
                 .then(response => {
                   signup_success.innerHTML = response.data.msg
                   clearAllInput()
@@ -930,20 +929,19 @@ window.addEventListener('load', function () {
     loginform.addEventListener('submit',function(e){
       e.preventDefault()
 
-      const email = document.querySelector('.login-email')
+      const username = document.querySelector('.login-username')
       const pass = document.querySelector('.login-password')
 
 
       login_alert.innerHTML = ''
-      let action = 'signuplogin'
-      let action2 = 'login'
+      let action = 'login'
       let logininfo = {
-        email:email.value,
+        username:username.value,
         pass:pass.value
       }
 
       
-      axios.post('/HKgitgud-map',{action,action2,logininfo})
+      axios.post('/HKgitgud-map',{action,logininfo})
                 .then(response => {
                   sessionStorage.setItem('token',response.data.token)
 
@@ -952,9 +950,7 @@ window.addEventListener('load', function () {
                   clearAllInput()
                 })
                 .catch(error => {
-                  console.log(error)
                   login_alert.innerHTML = error.response.data.msg
-                  
                 });    
       })
 

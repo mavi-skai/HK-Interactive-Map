@@ -6,11 +6,11 @@ const usermarkerData = require('../usermarkersData.json')
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema({
-    name: {
+    username: {
         type:String,
         required: [true, 'Please provide name'],
         minlength: [4, 'Name must be at least 4 characters long'],
-        maxlength: [50, 'Name cannot be more than 50 characters long'], 
+        maxlength: [18, 'Name cannot be more than 18 characters long'], 
     },
     email: {
         type:String,

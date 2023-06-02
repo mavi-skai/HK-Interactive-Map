@@ -21,18 +21,10 @@ var upload = multer({ storage: storage});
 router.route('/')
 .get(getAllcomments)
 .put(updateMarker)
-.post((req,res)=>{
-  console.log('test')
-  console.log(req.body.action)
-  console.log(req.body.action2)
-  if(req.query.action==='signuplogin'){
-    if(req.query.action2==='login')
-    {
-      console.log('login')
-    }
-    else{
-      console.log('signup')
-    }
+.post((req,res,next)=>{
+
+  if(req.body.action==='login' || req.body.action==='signup'){
+    handleAuth(req,res,next)
   }
   else if(req.query.action==='comments'){
     upload.single('Image')(req, res, (err) => {
@@ -42,9 +34,8 @@ router.route('/')
       }
       saveComment(req,res)
     });
-  
-
   }
+
 })
 
  // 
