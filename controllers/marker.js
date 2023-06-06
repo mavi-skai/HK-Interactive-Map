@@ -2,14 +2,13 @@ const { StatusCodes } = require('http-status-codes')
 const User_Markers = require('../models/User_Markers')
 const jwt = require('jsonwebtoken')
 const updateMarker = async(req,res) =>{
-    
-
     try {
         console.log(req.body.markerINFO)
         const {id: id,title,description,completion,category,isHidden} = req.body.markerINFO
-        
+        console.clear()
+        console.log('before update')
+        console.log(id,title)
         if(req.body.token){
-            console.clear()
             const decodedToken = jwt.decode(req.body.token);
             const userID = decodedToken.userID
             const updatedmarker = await User_Markers.findOneAndUpdate(

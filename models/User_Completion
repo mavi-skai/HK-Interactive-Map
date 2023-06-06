@@ -1,0 +1,24 @@
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const User_CompletionSchema = new Schema({
+    userid:{
+        type:Schema.Types.ObjectId,
+        required:[true,'Please provide User ID']
+    },
+    category:{
+        type:String,
+        required:[true,'Please provide Marker Category']
+    },
+    completionPercentage:{
+        type:Number,
+        required:[true,'Please provide Completion Percentage'],
+        default:0,
+    }
+})
+
+
+const HKMap = mongoose.connection.useDb('HKMap')
+const User_Completion = HKMap.model('user_completion',User_CompletionSchema)
+
+module.exports 

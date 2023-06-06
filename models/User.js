@@ -27,6 +27,10 @@ const UserSchema = new Schema({
         minlength:[6, 'Password must be at least 8 characters long'],
         maxlength:[18, 'Password cannot be more than 50 characters long'],
     },
+    totalcompletion:{
+        type:Number,
+        default:0,
+    }
 })
 
 UserSchema.pre('save',async function(){

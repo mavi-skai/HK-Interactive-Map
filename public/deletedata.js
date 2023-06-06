@@ -5,6 +5,8 @@ const User = require('../models/User')
 const connectDB = require('../db/connect')
 const { response } = require('express')
 const Comments = require('../models/Comments')
+const fs = require('fs')
+
 
 
 const deleteDataUser = async() =>{
@@ -23,17 +25,58 @@ const deleteDataUser = async() =>{
   
 }
 
+
+const deleteAllUser = async() =>{
+    await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+    try {
+        await User.deleteMany({})
+        console.log('all user deleted')
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const deleteAllUserMarkers = async() => {
+    await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+    try {
+        await User_Markers.deleteMany({})
+        console.log('all user markers deleted')
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const deleteComments = async() =>{
     await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
     try {
         await Comments.deleteMany({});
-        console.log('deleted')
+        console.log('all comments deleted')
     } catch (error) {
         console.log(error)
     }
-    
+
+    try {
+        var folderpath = '../uploads/'
+        fs.readdir(folderpath,(err,files)=>{
+            if(err) throw err
+
+            files.forEach(file => {
+                fs.unlink(folderpath+file,err=>{
+                    if(err){
+                        console.log(err);
+                    }
+                })
+            })
+
+        })
+  
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-deleteDataUser()
-deleteComments()
+//deleteDataUser()
+//deleteComments()
+//deleteAllUser()
+//deleteAllUserMarkers()
 

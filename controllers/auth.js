@@ -65,7 +65,7 @@ const handleAuth = async (req,res,next) => {
             }
 
             const token = user.createJWT()
-            res.status(StatusCodes.OK).json({ user: { name: user.name }, token });
+            res.status(StatusCodes.OK).json({ user: { name: user.username }, token });
             
         } catch (error) {
             console.log('inside of auth.js')

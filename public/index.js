@@ -3,6 +3,8 @@ window.addEventListener('load', function () {
     let id = 1
     let currentMarkerID = null
 
+    
+
     //#region GRUB
     let grubGroup = new L.LayerGroup()
     let grubInfo = [['Grub',-575, 1314,'icon/grub.png','',0,'grub'],
@@ -545,7 +547,6 @@ window.addEventListener('load', function () {
     //#endregion
 
 
-    
     const LayerGroupDict = {
       'grub':grubGroup,
       'charms':charmsGroup,
@@ -565,6 +566,26 @@ window.addEventListener('load', function () {
       'explorationandquest':explorationandquestGroup,
       'keys':keysGroup,
     }
+
+    const completionPercentage = {
+      'maskshard':4,
+      'vesselfragment':3,
+      'spellsandabilities':23,
+      'explorationandquest':1, //GODTUNER
+      'paleore':4, //NAIL UPGRADES
+      'charms':40,
+      'boss':15,
+      'bossvariants':2,
+      'warriorsdreams':7,
+      'dreamers':3,
+      'fools':3, //add trials of fools icon
+      'seerascension':1, //add achievements
+      'godhomepantheons':4, // add god home
+      'keys':2,
+    }
+
+    changePercentage('.maskshard')
+    
     
     //#region DROPDOWN
     const optionMenu = document.querySelector(".select-menu"),
@@ -931,7 +952,9 @@ window.addEventListener('load', function () {
 
       const username = document.querySelector('.login-username')
       const pass = document.querySelector('.login-password')
-
+      const userdetails = document.querySelector('.user-details')
+      const user_info = document.querySelector('.user-info')
+      const h6element = user_info.querySelector('h6')
 
       login_alert.innerHTML = ''
       let action = 'login'
@@ -944,9 +967,9 @@ window.addEventListener('load', function () {
       axios.post('/HKgitgud-map',{action,logininfo})
                 .then(response => {
                   sessionStorage.setItem('token',response.data.token)
-
+                  h6element.textContent = response.data.user.name
                   login_section.style.display = 'none';
-                  user_info.removeAttribute('style')
+                  userdetails.removeAttribute('style')
                   clearAllInput()
                 })
                 .catch(error => {
@@ -1061,76 +1084,76 @@ window.addEventListener('load', function () {
       grubGroup.addTo(map)
       
 
-      // createMarkers(charmsInfo,[22,22],charmsGroup)
-      // charmsGroup.addTo(map)
+      createMarkers(charmsInfo,[22,22],charmsGroup)
+      charmsGroup.addTo(map)
       
 
-      // createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
-      // warriordreamsGroup.addTo(map)
+      createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
+      warriordreamsGroup.addTo(map)
       
 
-      // createMarkers(bossesInfo,[32,32],bossesGroup)
-      // bossesGroup.addTo(map)
+      createMarkers(bossesInfo,[32,32],bossesGroup)
+      bossesGroup.addTo(map)
       
 
-      // createMarkers(bossvariants,[32,32],bossvariantsGroup)
-      // bossvariantsGroup.addTo(map)
+      createMarkers(bossvariants,[32,32],bossvariantsGroup)
+      bossvariantsGroup.addTo(map)
 
 
-      // createMarkers(dreamersInfo,[32,32],dreamersGroup)
-      // dreamersGroup.addTo(map)
+      createMarkers(dreamersInfo,[32,32],dreamersGroup)
+      dreamersGroup.addTo(map)
 
 
-      // createMarkers(notchesInfo,[22,22],notchesGroup)
-      // notchesGroup.addTo(map)
+      createMarkers(notchesInfo,[22,22],notchesGroup)
+      notchesGroup.addTo(map)
 
 
-      // createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
-      // spellsandabilitiesGroup.addTo(map)
+      createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
+      spellsandabilitiesGroup.addTo(map)
 
 
-      // createMarkers(maskshardInfo,[25,25],maskshardGroup)
-      // maskshardGroup.addTo(map)
+      createMarkers(maskshardInfo,[25,25],maskshardGroup)
+      maskshardGroup.addTo(map)
 
 
-      // createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
-      // vesselfragmentGroup.addTo(map)
+      createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
+      vesselfragmentGroup.addTo(map)
       
 
-      // createMarkers(paleoreInfo,[22,22],paleoreGroup)
-      // paleoreGroup.addTo(map)
+      createMarkers(paleoreInfo,[22,22],paleoreGroup)
+      paleoreGroup.addTo(map)
 
 
-      // createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
-      // whisperingrootsGroup.addTo(map)
+      createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
+      whisperingrootsGroup.addTo(map)
 
 
-      // createMarkers(npcInfo,[28,28],npcGroup)
-      // npcGroup.addTo(map)
+      createMarkers(npcInfo,[28,28],npcGroup)
+      npcGroup.addTo(map)
 
 
-      // createMarkers(benchInfo,[30,20],benchandtransportGroup)
-      // benchandtransportGroup.addTo(map)
+      createMarkers(benchInfo,[30,20],benchandtransportGroup)
+      benchandtransportGroup.addTo(map)
     
 
-      // createMarkers(stagInfo,[30,25],benchandtransportGroup)
-      // benchandtransportGroup.addTo(map)
+      createMarkers(stagInfo,[30,25],benchandtransportGroup)
+      benchandtransportGroup.addTo(map)
 
 
-      // createMarkers(tramInfo,[27,27],benchandtransportGroup)
-      // benchandtransportGroup.addTo(map)
+      createMarkers(tramInfo,[27,27],benchandtransportGroup)
+      benchandtransportGroup.addTo(map)
 
 
-      // createMarkers(explorationandquest,[25,25],explorationandquestGroup)
-      // explorationandquestGroup.addTo(map)
+      createMarkers(explorationandquest,[25,25],explorationandquestGroup)
+      explorationandquestGroup.addTo(map)
 
 
-      // createMarkers(keysInfo,[25,25],keysGroup)
-      // keysGroup.addTo(map)
+      createMarkers(keysInfo,[25,25],keysGroup)
+      keysGroup.addTo(map)
 
 
-      // createMarkers(tradablesInfo,[20,23],tradablesGroup)
-      // tradablesGroup.addTo(map)
+      createMarkers(tradablesInfo,[20,23],tradablesGroup)
+      tradablesGroup.addTo(map)
 
 
       foundMarkersGroup.addTo(map)
@@ -1226,7 +1249,7 @@ window.addEventListener('load', function () {
             var marker = e.target
             currentMarkerID = marker.options.id
 
-            changeSideBarButtons(markerBlock,commentBlock,loginBlock)
+            changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons)
             getComments(currentMarkerID)
 
             var button = document.getElementById('MarkFoundButton')
@@ -1395,14 +1418,32 @@ window.addEventListener('load', function () {
 
       }
 
-      function changeSideBarButtons(markerBlock,commentBlock,loginBlock){
+      function changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons){
           markerBlock.style.display = "none";
           commentBlock.style.display = "block";
+          
           loginBlock.style.display = "none";
+
+          for (const button of buttons){
+            if(button.classList.contains('comment-button')){
+              button.classList.add('active')
+            }
+            else{
+              button.classList.remove('active')
+            }
+          }
       }
+
+      function changePercentage(category){
+        const skillPerElement = document.querySelector('.skill-per'+category)
+        const tooltipElement = skillPerElement.querySelector('.tooltip')
+        skillPerElement.style.width = '10%';
+        tooltipElement.textContent = '10%';
+      }
+
+
       
-
-
+      
 });
 
 

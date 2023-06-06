@@ -673,68 +673,68 @@ form{
     opacity: 0;
 }
 
-.skill-per.maskshard{
-    width: 100%;
+.skill-per .maskshard{
+    width: 0%; 
     animation-delay: 0.1s;
 }
 
 .skill-per.vesselfragments{
-    width: 70%;
+    width: 0%;
     animation-delay: 0.1s;
 }
 
 .skill-per.spellsandabilities{
-    width: 50%;
+    width: 0%;
     animation-delay: 0.2s;
 }
 
 .skill-per.godtuner{
-    width: 30%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.nailupgrades{
-    width: 32%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.charms{
-    width: 35%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.bosses{
-    width: 40%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.warriorsgraves{
-    width: 45%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.dreamers{
-    width: 45%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.colosseum{
-    width: 60%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.seerascension{
-    width: 65%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.godhomepantheons{
-    width: 70%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
 .skill-per.kingbrand{
-    width: 75%;
+    width: 0%;
     animation-delay: 0.3s;
 }
 
