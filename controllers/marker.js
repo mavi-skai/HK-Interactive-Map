@@ -17,7 +17,8 @@ const updateMarker = async(req,res) =>{
                     isHidden:isHidden
                 },
                 {new:true})
-                console.log(updatedmarker)
+            console.log('after update')
+            console.log(updatedmarker)
         }
         else{
             console.log('no account login')

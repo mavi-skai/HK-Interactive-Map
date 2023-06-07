@@ -2,58 +2,66 @@ window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1
     let currentMarkerID = null
-    let markerDataArray = []
-    let isHidden=false
+   
+
+
+    
 
 
     //#region GRUB
     let grubGroup = new L.LayerGroup()
-    let grubInfo = [['Grub',-575, 1314,'icon/grub.png','',0,'grub'],
-                   ['Grub',-704, 1030,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1015, 860,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1067, 1085,'icon/grub.png','',0,'grub'],
-                   ['Grub',-867, 1624,'icon/grub.png','',0,'grub'],
-                   ['Grub',-978, 1569,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1200,1562,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1141, 502,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1400, 836,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1819, 317,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1952, 851,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1891, 1284,'icon/grub.png','',0,'grub'],
-                   ['Grub',-2093, 1252,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1625, 1596,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1520, 1483,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1434, 1878,'icon/grub.png','',0,'grub'],
-                   ['Grub',-923, 1733,'icon/grub.png','',0,'grub'],
-                   ['Grub',-753, 2111,'icon/grub.png','',0,'grub'],
-                   ['Grub',-705, 2571,'icon/grub.png','',0,'grub'],
-                   ['Grub',-829, 2396,'icon/grub.png','',0,'grub'],
-                   ['Grub',-897, 2452,'icon/grub.png','',0,'grub'],
-                   ['Grub',-648, 2290,'icon/grub.png','',0,'grub'],
-                   ['Grub',-695, 2808,'icon/grub.png','',0,'grub'],
-                   ['Grub',-598, 2888,'icon/grub.png','',0,'grub'],
-                   ['Grub',-726, 2933,'icon/grub.png','',0,'grub'],
-                   ['Grub',-721, 3308,'icon/grub.png','',0,'grub'],
-                   ['Grub',-597, 3056,'icon/grub.png','',0,'grub'],
-                   ['Grub',-431, 3392,'icon/grub.png','',0,'grub'],
-                   ['Grub',-981, 3556,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1313, 2516,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1479, 2744,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1458, 2994,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1696, 3265,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1503, 3588,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1509, 3607,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1513, 3626,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1825, 2558,'icon/grub.png','',0,'grub'],
-                   ['Grub',-2168, 2206,'icon/grub.png','',0,'grub'],
-                   ['Grub',-2152, 2560,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1763, 3395,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1864, 3391,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1729, 3573,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1909, 3564,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1715, 4001,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1913, 3916,'icon/grub.png','',0,'grub'],
-                   ['Grub',-1942, 4385,'icon/grub.png','',0,'grub'],];
+    var grubData = [
+      {name: 'Grub', x:-575, y:1314, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-704, y:1030, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1015, y:860, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1067, y:1085, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-867, y:1624, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-978, y:1569, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1200, y:1562, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1141, y:502, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1400, y:836, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1819, y:317, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1952, y:851, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1891, y:1284, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-2093, y:1252, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1625, y:1596, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1520, y:1483, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1434, y:1878, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-923, y:1733, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-753, y:2111, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-705, y:2571, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-829, y:2396, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-897, y:2452, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-648, y:2290, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-695, y:2808, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-598, y:2888, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-726, y:2933, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-721, y:3308, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-597, y:3056, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-431, y:3392, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-981, y:3556, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1313, y:2516, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1479, y:2744, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1458, y:2994, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1696, y:3265, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1503, y:3588, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1509, y:3607, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1513, y:3626, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1825, y:2558, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-2168, y:2206, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-2152, y:2560, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1763, y:3395, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1864, y:3391, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1729, y:3573, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1909, y:3564, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1715, y:4001, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1913, y:3916, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      {name: 'Grub', x:-1942, y:4385, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
+      // Additional marker objects...
+    ];
+    
+
+
     //#endregion
 
     //#region CHARMS
@@ -197,8 +205,8 @@ window.addEventListener('load', function () {
 
     //#region MASK SHARD
     let maskshardGroup = new L.LayerGroup()
-    let maskshardInfo = [['Mask Shard',-575,1955,'icon/mask_shard.png','<br>Just Sly','',0.25,'maskshard'],
-                         ['Mask Shard',-575,1967,'icon/mask_shard.png','<br>Just Sly','',0.25,'maskshard'],
+    let maskshardInfo = [['Mask Shard',-575,1955,'icon/mask_shard.png','<br>Just Sly',0.25,'maskshard'], //name,x,y,path,description,progress,markertype
+                         ['Mask Shard',-575,1967,'icon/mask_shard.png','<br>Just Sly',0.25,'maskshard'],
                          ['Mask Shard',-575,1979,'icon/mask_shard.png','<br>Sly With Shopkeeper Key',0.25,'maskshard'],
                          ['Mask Shard',-575,1991,'icon/mask_shard.png','<br>Sly With Shopkeeper Key',0.25,'maskshard'],
                          ['Mask Shard',-872,1935,'icon/mask_shard.png','<br>Reward for defeating Brooding Mawlek',0.25,'maskshard'],
@@ -207,23 +215,23 @@ window.addEventListener('load', function () {
                          ['Mask Shard',-1414,1606,'icon/mask_shard.png','<br>Requires Mantis Claw',0.25,'maskshard'],
                          ['Mask Shard',-828,2063,'icon/mask_shard.png','<br>Requires rescuing Bretta from Fungal Wastes',0.25,'maskshard'],
                          ['Mask Shard',-908,2027,'icon/mask_shard.png','<br>Recommended Lumafly Lantern',0.25,'maskshard'],
-                         ['Mask Shard',-1814,2157,'icon/mask_shard.png',,'',0.25,'maskshard'],
-                         ['Mask Shard',-1839,1700,'icon/mask_shard.png','<br>Requires Monarch Wings','',0.25,'maskshard'],
-                         ['Mask Shard',-485,2835,'icon/mask_shard.png','<br>Requires Monarch Wings','',0.25,'maskshard'],
-                         ['Mask Shard',-1968,3812,'icon/mask_shard.png','<br>Requires baiting a Hive Guardian into breaking a wall','',0.25,'maskshard'],
-                         ['Mask Shard',-804,3431,'icon/mask_shard.png','<br>Requires collecting 1500 Essence','',0.25,'maskshard'],
-                         ['Mask Shard',-936,3662,'icon/mask_shard.png','<br>Requires completing the Delicate Flower quest','',0.25,'maskshard'],]
+                         ['Mask Shard',-1814,2157,'icon/mask_shard.png','',0.25,'maskshard'],
+                         ['Mask Shard',-1839,1700,'icon/mask_shard.png','<br>Requires Monarch Wings',0.25,'maskshard'],
+                         ['Mask Shard',-485,2835,'icon/mask_shard.png','<br>Requires Monarch Wings',0.25,'maskshard'],
+                         ['Mask Shard',-1968,3812,'icon/mask_shard.png','<br>Requires baiting a Hive Guardian into breaking a wall',0.25,'maskshard'],
+                         ['Mask Shard',-804,3431,'icon/mask_shard.png','<br>Requires collecting 1500 Essence',0.25,'maskshard'],
+                         ['Mask Shard',-936,3662,'icon/mask_shard.png','<br>Requires completing the Delicate Flower quest',0.25,'maskshard'],]
     //#endregion
 
     //#region VESSEL FRAGMENT
     let vesselfragmentGroup = new L.LayerGroup()
     let vesselfragmentInfo = [['Vessel Fragment',-563,1955,'icon/vessel_fragment.png','<br>Just Sly',0.33,'vesselfragment'],
                               ['Vessel Fragment',-563,1967,'icon/vessel_fragment.png','<br>Sly With Shopkeeper Key',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-1058,1024,'icon/vessel_fragment.png','',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-984,2085,'icon/vessel_fragment.png','',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-1481,3458,'icon/vessel_fragment.png','',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-1983,1849,'icon/vessel_fragment.png','',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-306,1221,'icon/vessel_fragment.png','',0.33,'vesselfragment'],
+                              ['Vessel Fragment',-1058,1024,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
+                              ['Vessel Fragment',-984,2085,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
+                              ['Vessel Fragment',-1481,3458,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
+                              ['Vessel Fragment',-1983,1849,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
+                              ['Vessel Fragment',-306,1221,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
                               ['Vessel Fragment',-793,3421,'icon/vessel_fragment.png','<br>Collecting 700 Essence',0.33,'vesselfragment'],
                               ['Vessel Fragment',-2140,2782,'icon/vessel_fragment.png','<br>Dropping Geo 3000 into the fountain',0.33,'vesselfragment'],]
 
@@ -366,19 +374,17 @@ window.addEventListener('load', function () {
                     ['Zote',-643,972,'icon/npc/zote1.png',
                      ['<br> Saved or If not saved before Mantis Claw, Zote dies there, leaving shell and nail. Hitting shell unlocks Neglect achievement.'+
                       '<br>PS: FCK THIS GUY. FCK Grey Prince Zote.'],0,'npc'],
-                    ['Zote',-643,972,'icon/npc/zote1.png',
+                    ['Zote',-1833,1306,'icon/npc/zote1.png',
                      ['<br>Found stuck in spider webs in Deepnest. Knight can save or leave him, but leaving him won\'t result in death.'+
                       '<br>PS:FCK Grey Prince Zote. Specially in Pantheon!'],0,'npc'],
                     ['Cornifer',-2154,2787,'icon/npc/cornifer.png',
                       ['<br>Map for Ancient Basin: 112 Geo'],0,'npc'],
                     ['Cornifer',-1409,2703,'icon/npc/cornifer.png',
-                      ['<br>Map for City of Tears: 90 Geo'],0,'npc'],
+                      ['<br>Map for City of Tears: 90 Geo'],0,'npc'], 
                     ['Cornifer',-570,2715,'icon/npc/cornifer.png',
                       ['<br>Map for Crystal Peak: 112 Geo'],0,'npc'],
                     ['Cornifer',-1696,1384,'icon/npc/cornifer.png',
                       ['<br>Map for Deepnest: 38 Geo'],0,'npc'],
-                    ['Cornifer',-1117,1556,'icon/npc/cornifer.png',
-                      ['<br>Map for Fog Canyon: 150 Geo'],0,'npc'],
                     ['Cornifer',-1117,1556,'icon/npc/cornifer.png',
                       ['<br>Map for Fog Canyon: 150 Geo'],0,'npc'],
                     ['Cornifer',-865,1992,'icon/npc/cornifer.png',
@@ -387,8 +393,8 @@ window.addEventListener('load', function () {
                       ['<br>Map for Fungal Wastes: 75 Geo'],0,'npc'],
                     ['Cornifer',-891,1620,'icon/npc/cornifer.png',
                       ['<br>Map for Greenpath: 60 Geo'],0,'npc'],
-                    ['Cornifer',-891,1620,'icon/npc/cornifer.png',
-                      ['<br>Map for Howling Cliffs: Geo'],0,'npc'],
+                    ['Cornifer',-435,1468,'icon/npc/cornifer.png',
+                      ['<br>Map for Howling Cliffs: 75 Geo'],0,'npc'],
                     ['Cornifer',-1757,3670,'icon/npc/cornifer.png',
                       ['<br>Map for Kingdom\'s Edge: 112 Geo'],0,'npc'],
                     ['Cornifer',-1327,1192,'icon/npc/cornifer.png',
@@ -558,7 +564,7 @@ window.addEventListener('load', function () {
       'notches':notchesGroup,
       'maskshard':maskshardGroup,
       'spellsandabilities':spellsandabilitiesGroup,
-      'vesselfragments':vesselfragmentGroup,
+      'vesselfragment':vesselfragmentGroup,
       'paleore':paleoreGroup,
       'whisperingroots':whisperingrootsGroup,
       'npc':npcGroup,
@@ -1081,80 +1087,80 @@ window.addEventListener('load', function () {
     //#endregion
 
     //#region  CREATEMARKERS
-      createMarkers(grubInfo,[32,32],grubGroup)
+      createMarkers(grubData,[32,32],grubGroup)
       grubGroup.addTo(map)
       
 
-      createMarkers(charmsInfo,[22,22],charmsGroup)
-      charmsGroup.addTo(map)
+      // createMarkers(charmsInfo,[22,22],charmsGroup)
+      // charmsGroup.addTo(map)
       
 
-      createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
-      warriordreamsGroup.addTo(map)
+      // createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
+      // warriordreamsGroup.addTo(map)
       
 
-      createMarkers(bossesInfo,[32,32],bossesGroup)
-      bossesGroup.addTo(map)
+      // createMarkers(bossesInfo,[32,32],bossesGroup)
+      // bossesGroup.addTo(map)
       
 
-      createMarkers(bossvariants,[32,32],bossvariantsGroup)
-      bossvariantsGroup.addTo(map)
+      // createMarkers(bossvariants,[32,32],bossvariantsGroup)
+      // bossvariantsGroup.addTo(map)
 
 
-      createMarkers(dreamersInfo,[32,32],dreamersGroup)
-      dreamersGroup.addTo(map)
+      // createMarkers(dreamersInfo,[32,32],dreamersGroup)
+      // dreamersGroup.addTo(map)
 
 
-      createMarkers(notchesInfo,[22,22],notchesGroup)
-      notchesGroup.addTo(map)
+      // createMarkers(notchesInfo,[22,22],notchesGroup)
+      // notchesGroup.addTo(map)
 
 
-      createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
-      spellsandabilitiesGroup.addTo(map)
+      // createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
+      // spellsandabilitiesGroup.addTo(map)
 
 
-      createMarkers(maskshardInfo,[25,25],maskshardGroup)
-      maskshardGroup.addTo(map)
+      // createMarkers(maskshardInfo,[25,25],maskshardGroup)
+      // maskshardGroup.addTo(map)
 
 
-      createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
-      vesselfragmentGroup.addTo(map)
+      // createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
+      // vesselfragmentGroup.addTo(map)
       
 
-      createMarkers(paleoreInfo,[22,22],paleoreGroup)
-      paleoreGroup.addTo(map)
+      // createMarkers(paleoreInfo,[22,22],paleoreGroup)
+      // paleoreGroup.addTo(map)
 
 
-      createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
-      whisperingrootsGroup.addTo(map)
+      // createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
+      // whisperingrootsGroup.addTo(map)
 
 
-      createMarkers(npcInfo,[28,28],npcGroup)
-      npcGroup.addTo(map)
+      // createMarkers(npcInfo,[28,28],npcGroup)
+      // npcGroup.addTo(map)
 
 
-      createMarkers(benchInfo,[30,20],benchandtransportGroup)
-      benchandtransportGroup.addTo(map)
+      // createMarkers(benchInfo,[30,20],benchandtransportGroup)
+      // benchandtransportGroup.addTo(map)
     
 
-      createMarkers(stagInfo,[30,25],benchandtransportGroup)
-      benchandtransportGroup.addTo(map)
+      // createMarkers(stagInfo,[30,25],benchandtransportGroup)
+      // benchandtransportGroup.addTo(map)
 
 
-      createMarkers(tramInfo,[27,27],benchandtransportGroup)
-      benchandtransportGroup.addTo(map)
+      // createMarkers(tramInfo,[27,27],benchandtransportGroup)
+      // benchandtransportGroup.addTo(map)
 
 
-      createMarkers(explorationandquest,[25,25],explorationandquestGroup)
-      explorationandquestGroup.addTo(map)
+      // createMarkers(explorationandquest,[25,25],explorationandquestGroup)
+      // explorationandquestGroup.addTo(map)
 
 
-      createMarkers(keysInfo,[25,25],keysGroup)
-      keysGroup.addTo(map)
+      // createMarkers(keysInfo,[25,25],keysGroup)
+      // keysGroup.addTo(map)
 
 
-      createMarkers(tradablesInfo,[20,23],tradablesGroup)
-      tradablesGroup.addTo(map)
+      // createMarkers(tradablesInfo,[20,23],tradablesGroup)
+      // tradablesGroup.addTo(map)
 
 
       foundMarkersGroup.addTo(map)
@@ -1225,25 +1231,25 @@ window.addEventListener('load', function () {
       function createMarkers(markerInfo,iconSize,markerGroupLayer){
         for(let i=0;i<markerInfo.length;i++){
           var Icon = L.icon({
-            iconUrl:markerInfo[i][3],
+            iconUrl:markerInfo[i].path,
             iconSize:iconSize,
           });
-      
-          var Marker = L.marker([markerInfo[i][1],markerInfo[i][2]],
+          
+          var Marker = L.marker([markerInfo[i].x,markerInfo[i].y],
             {icon:Icon,
               opacity:1,
               id:id,
-              title:markerInfo[i][0],
-              description:markerInfo[i][4],
-              completion:markerInfo[i][5],
-              category:markerInfo[i][6],
+              name:markerInfo[i].name,
+              description:markerInfo[i].description,
+              progression:markerInfo[i].progression,
+              markertype:markerInfo[i].markertype,
             })
 
           id+=1
           
           var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`;
           var NotFoundpopup = `<br><button id='MarkFoundButton'> Mark As Not Found</button>`
-          Marker.bindPopup(Marker.options.title + Marker.options.description + Foundpopup,{maxHeight:250});
+          Marker.bindPopup(Marker.options.name + Marker.options.description + Foundpopup,{maxHeight:250});
           var popupContent
           Marker.on("popupopen",function(e){
             var marker = e.target
@@ -1259,41 +1265,44 @@ window.addEventListener('load', function () {
 
               let markerINFO = {
                 id: marker.options.id,
-                title: marker.options.title,
+                name: marker.options.name,
                 description: marker.options.description,
-                completion: marker.options.completion,
-                category: marker.options.category,
+                progression: marker.options.progression,
+                markertype: marker.options.markertype,
                 isHidden:opacity==1? true : false
               }
 
-              const token = sessionStorage.getItem('token')
-              axios.put('/HKgitgud-map',{markerINFO,token})
-                .then(response => {
-                  console.log(response.data);
-                })
-                .catch(error => {
-                  console.log(error);
-                });
+              
 
+              const token = sessionStorage.getItem('token')
+              // axios.put('/HKgitgud-map',{markerINFO,token})
+              //   .then(response => {
+              //     console.log(response.data);
+              //   })
+              //   .catch(error => {
+              //     console.log(error);
+              //   });
+  
+              
               if(marker.options.opacity===1){
                 foundMarkersGroup.addLayer(marker)
               }
               else{
                 foundMarkersGroup.removeLayer(marker)
-                LayerGroupDict[marker.options.category].addLayer(marker)
+                LayerGroupDict[marker.options.markertype].addLayer(marker)
               }
               
 
               marker.setOpacity(opacity===1? 0.5:1)
               marker.closePopup();
       
-              var title = marker.options.title;
+              var name = marker.options.name;
               var desc = marker.options.description;
               if(desc){
-                popupContent = opacity === 1 ? title+desc+NotFoundpopup : title+desc+Foundpopup;
+                popupContent = opacity === 1 ? name+desc+NotFoundpopup : name+desc+Foundpopup;
               }
               else{
-                popupContent = opacity === 1 ? title+NotFoundpopup : title+Foundpopup;
+                popupContent = opacity === 1 ? name+NotFoundpopup : name+Foundpopup;
               }
               marker.bindPopup(popupContent);
             })
@@ -1353,13 +1362,13 @@ window.addEventListener('load', function () {
 
       function removeAllFoundMarkerFromTheirLayerGroup(foundmarker){
         foundmarker.eachLayer(marker => {
-          LayerGroupDict[marker.options.category].removeLayer(marker)
+          LayerGroupDict[marker.options.markertype].removeLayer(marker)
         })
       }
 
       function AddAllFoundMarkerFromTheirLayerGroup(foundmarker){
         foundmarker.eachLayer(marker => {
-          LayerGroupDict[marker.options.category].addLayer(marker)
+          LayerGroupDict[marker.options.markertype].addLayer(marker)
         })
       }
 
