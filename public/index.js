@@ -2,8 +2,9 @@ window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1
     let currentMarkerID = null
+    let markerDataArray = []
+    let isHidden=false
 
-    
 
     //#region GRUB
     let grubGroup = new L.LayerGroup()
@@ -1240,7 +1241,6 @@ window.addEventListener('load', function () {
 
           id+=1
           
-
           var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`;
           var NotFoundpopup = `<br><button id='MarkFoundButton'> Mark As Not Found</button>`
           Marker.bindPopup(Marker.options.title + Marker.options.description + Foundpopup,{maxHeight:250});
