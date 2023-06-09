@@ -122,13 +122,16 @@ window.addEventListener('load', function () {
 
     //#region WARRIOR DREAMS
     let warriordreamsGroup = new L.LayerGroup()
-    let warriordreamInfo = [['Gorb',-327,1308,'icon/warriordreams/gorb.png','',1,'warriorsdreams'],
-                        ['Elder Hu',-1359,2267,'icon/warriordreams/elder_hu.png','',1,'warriorsdreams'],
-                        ['Galien',-1849,955,'icon/warriordreams/galien.png','',1,'warriorsdreams'],
-                        ['Markoth',-1782,4107,'icon/warriordreams/markoth.png','',1,'warriorsdreams'],
-                        ['Marmu',-1367,695,'icon/warriordreams/marmu.png','',1,'warriorsdreams'],
-                        ['No Eyes',-1033,1664,'icon/warriordreams/no_eyes.png','',1,'warriorsdreams'],
-                        ['Xero',-934,3189,'icon/warriordreams/xero.png','',1,'warriorsdreams'],];
+    var warriordreamsData = [
+      {name:'Gorb', x:-327, y:1308, path:'icon/warriordreams/gorb.png', description:'', progression:1, markertype:'warriorsdreams'},
+      {name:'Elder Hu', x:-1359, y:2267, path:'icon/warriordreams/elder_hu.png', description:'', progression:1, markertype:'warriorsdreams'},
+      {name:'Galien', x:-1849, y:955, path:'icon/warriordreams/galien.png', description:'', progression:1, markertype:'warriorsdreams'},
+      {name:'Markoth', x:-1782, y:4107, path:'icon/warriordreams/markoth.png', description:'', progression:1, markertype:'warriorsdreams'},
+      {name:'Marmu', x:-1367, y:695, path:'icon/warriordreams/marmu.png', description:'', progression:1, markertype:'warriorsdreams'},
+      {name:'No Eyes', x:-1033, y:1664, path:'icon/warriordreams/no_eyes.png', description:'', progression:1, markertype:'warriorsdreams'},
+      {name:'Xero', x:-934, y:3189, path:'icon/warriordreams/xero.png', description:'', progression:1, markertype:'warriorsdreams'},
+    ]
+  
     //#endregion
 
     //#region  BOSSES
@@ -1102,8 +1105,8 @@ window.addEventListener('load', function () {
       charmsGroup.addTo(map)
       
 
-      // createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
-      // warriordreamsGroup.addTo(map)
+      createMarkers(warriordreamsData,[25,25],warriordreamsGroup)
+      warriordreamsGroup.addTo(map)
       
 
       // createMarkers(bossesInfo,[32,32],bossesGroup)
