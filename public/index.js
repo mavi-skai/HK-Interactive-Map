@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
 
     
-
+    //{name:, x:, y:, path:, description:'', progression:, markertype:},
 
     //#region GRUB
     let grubGroup = new L.LayerGroup()
@@ -66,51 +66,58 @@ window.addEventListener('load', function () {
 
     //#region CHARMS
     let charmsGroup = new L.LayerGroup()
-    let charmsInfo = [['Joni Blessing',-507, 1465,'icon/charms/joni_blessing.png','',1,'charms'],
-                     ['Baldur Shell',-665, 1303,'icon/charms/baldur_shell.png','',1,'charms'],
-                     ['Fury of The Fallen',-655, 1720,'icon/charms/fury_of_the_fallen.png','',1,'charms'],
-                     ['Grimm Child',-620,1888,'icon/charms/grimm_child.png','',1,'charms'],
-                     ['Nailmaster Glory',-599, 1978,'icon/charms/nailmaster_glory.png','',1,'charms'],
-                     ['Deep Focus',-644, 2481,'icon/charms/deep_focus.png','',1,'charms'],
-                     ['Shape of Unn',-909, 373,'icon/charms/shape_of_unn.png','',1,'charms'],
-                     ['Thorns of Agony',-931, 1287,'icon/charms/thorns_of_agony.png','',1,'charms'],
-                     ['Soul Catcher',-817, 2055,'icon/charms/soul_catcher.png','',1,'charms'],
-                     ['Glowing Womb',-801, 2335,'icon/charms/glowing_womb.png','',1,'charms'],
-                     ['Dream Shield',-856, 3318,'icon/charms/dream_shield.png','',1,'charms'],
-                     ['Soul Eater',-982, 3738,'icon/charms/soul_eater.png','',1,'charms'],
-                     ['King Soul Left',-1147, 546,'icon/charms/king_soul_part1.png','',0.5,'charms'],
-                     ['Spore Shroom',-1547, 1506,'icon/charms/spore_shroom.png','',1,'charms'],
-                     ['Mark of Pride',-1713, 1948,'icon/charms/mark_of_pride.png','',1,'charms'],
-                     ['Dash Master',-1832, 1991,'icon/charms/dash_master.png','',1,'charms'],
-                     ['Spell Twister',-1213, 2818,'icon/charms/spell_twister.png','',1,'charms'],
-                     ['Weaversong',-1940, 998,'icon/charms/weaversong.png','',1,'charms'],
-                     ['Sharp Shadow',-2175, 1692,'icon/charms/sharp_shadow.png','',1,'charms'],
-                     ['Flukenest',-1956, 2416,'icon/charms/flukenest.png','',1,'charms'],
-                     ['Defender Crest',-1809, 2960,'icon/charms/defender_crest.png','',1,'charms'],
-                     ['Quick Slash',-1913, 4151,'icon/charms/quick_slash.png','',1,'charms'],
-                     ['Hiverblood',-1986,4071,'icon/charms/hiverblood.png','',1,'charms'],
-                     ['King Soul Right',-2226, 3042,'icon/charms/king_soul_part2.png','',0.5,'charms'],
-                     ['Lifeblood Core',-2638, 2551,'icon/charms/lifeblood_core.png','',1,'charms'],
-                     ['Void Heart',-2812, 2721,'icon/charms/void_heart.png','Unlock 2 Endings',0,'charms'],
-                     ['Unbreakable Greed',-605,1840,'icon/charms/unbreakable_greed.png','',0,'charms'],
-                     ['Unbreakable Heart',-605,1855,'icon/charms/unbreakable_heart.png','',0,'charms'],
-                     ['Unbreakable Strength',-605,1870,'icon/charms/unbreakable_strength.png','',0,'charms'],
-                     ['Grubsong',-696,1874,'icon/charms/grubsong.png','',1,'charms'],
-                     ['Grubberfly\'s Elegy',-696,1886,'icon/charms/grubberfly_elegy.png','',1,'charms'],
-                     ['Gathering Swarm',-587,1955,'icon/charms/gathering_swarm.png','',1,'charms'],
-                     ['Stalwart Shell',-587,1967,'icon/charms/stalwart_shell.png','',1,'charms'],
-                     ['Heavy Blow',-587,1979,'icon/charms/heavy_blow.png','',1,'charms'],
-                     ['Sprintmaster Shell',-587,1991,'icon/charms/sprintmaster.png','',1,'charms'],
-                     ['Wayward Compass',-599, 2041,'icon/charms/wayward_compass.png','',1,'charms'],
-                     ['Fragile Greed',-1182,2100,'icon/charms/fragile_greed.png','',1,'charms'],
-                     ['Fragile Heart',-1182,2112,'icon/charms/fragile_heart.png','',1,'charms'],
-                     ['Fragile Strength',-1182,2124,'icon/charms/fragile_strength.png','',1,'charms'],
-                     ['Lifeblood Heart',-1006,2662,'icon/charms/lifeblood_heart.png','',1,'charms'],
-                     ['Longnail',-1006,2674,'icon/charms/long_nail.png','',1,'charms'],
-                     ['Steady Body',-1006,2686,'icon/charms/steady_body.png','',1,'charms'],
-                     ['Shaman Stone',-993,2662,'icon/charms/shaman_stone.png','',1,'charms'],
-                     ['Quick Focus',-993,2674,'icon/charms/quick_focus.png','',1,'charms'],
-                     ['Dream Wielder',-804,3421,'icon/charms/dream_wielder.png','',1,'charms'],]
+    var charmsData = [
+      {name:'Joni Blessing', x:-507, y:1465, path:'icon/charms/joni_blessing.png', description:'', progression:1, markertype:'charms'},
+      {name:'Baldur Shell', x:-665, y:1303, path:'icon/charms/baldur_shell.png', description:'', progression:1, markertype:'charms'},
+      {name:'Fury of The Fallen', x:-655, y:1720, path:'icon/charms/fury_of_the_fallen.png', description:'', progression:1, markertype:'charms'},
+      {name:'Grimm Child', x:-620, y:1888, path:'icon/charms/grimm_child.png', description:'', progression:1, markertype:'charms'},
+      {name:'Nailmaster Glory', x:-599, y:1978, path:'icon/charms/nailmaster_glory.png', description:'', progression:1, markertype:'charms'},
+      {name:'Deep Focus', x:-644, y:2481, path:'icon/charms/deep_focus.png', description:'', progression:1, markertype:'charms'},
+      {name:'Shape of Unn', x:-909, y:373, path:'icon/charms/shape_of_unn.png', description:'', progression:1, markertype:'charms'},
+      {name:'Thorns of Agony', x:-931, y:1287, path:'icon/charms/thorns_of_agony.png', description:'', progression:1, markertype:'charms'},
+      {name:'Soul Catcher', x:-817, y:2055, path:'icon/charms/soul_catcher.png', description:'', progression:1, markertype:'charms'},
+      {name:'Glowing Womb', x:-801, y:2335, path:'icon/charms/glowing_womb.png', description:'', progression:1, markertype:'charms'},
+      {name:'Dream Shield', x:-856, y:3318, path:'icon/charms/dream_shield.png', description:'', progression:1, markertype:'charms'},
+      {name:'Soul Eater', x:-982, y:3738, path:'icon/charms/soul_eater.png', description:'', progression:1, markertype:'charms'},
+      {name:'King Soul Left', x:-1147, y:546, path:'icon/charms/king_soul_part1.png', description:'', progression:0.5, markertype:'charms'},
+      {name:'Spore Shroom', x:-1547, y:1506, path:'icon/charms/spore_shroom.png', description:'', progression:1, markertype:'charms'},
+      {name:'Mark of Pride', x:-1713, y:1948, path:'icon/charms/mark_of_pride.png', description:'', progression:1, markertype:'charms'},
+      {name:'Dash Master', x:-1832, y:1991, path:'icon/charms/dash_master.png', description:'', progression:1, markertype:'charms'},
+      {name:'Spell Twister', x:-1213, y:2818, path:'icon/charms/spell_twister.png', description:'', progression:1, markertype:'charms'},
+      {name:'Weaversong', x:-1940, y:998, path:'icon/charms/weaversong.png', description:'', progression:1, markertype:'charms'},
+      {name:'Sharp Shadow', x:-2175, y:1692, path:'icon/charms/sharp_shadow.png', description:'', progression:1, markertype:'charms'},
+      {name:'Flukenest', x:-1956, y:2416, path:'icon/charms/flukenest.png', description:'', progression:1, markertype:'charms'},
+      {name:'Defender Crest', x:-1809, y:2960, path:'icon/charms/defender_crest.png', description:'', progression:1, markertype:'charms'},
+      {name:'Quick Slash', x:-1913, y:4151, path:'icon/charms/quick_slash.png', description:'', progression:1, markertype:'charms'},
+      {name:'Hiverblood', x:-1986, y:4071, path:'icon/charms/hiverblood.png', description:'', progression:1, markertype:'charms'},
+      {name:'King Soul Right', x:-2226, y:3042, path:'icon/charms/king_soul_part2.png', description:'', progression:0.5, markertype:'charms'},
+      {name:'Lifeblood Core', x:-2638, y:2551, path:'icon/charms/lifeblood_core.png', description:'', progression:1, markertype:'charms'},
+      {name:'Void Heart', x:-2812, y:2721, path:'icon/charms/void_heart.png', description:'', progression:0, markertype:'charms'},
+      {name:'Unbreakable Greed', x:-605, y:1840, path:'icon/charms/unbreakable_greed.png', description:'', progression:0, markertype:'charms'},
+      {name:'Unbreakable Heart', x:-605, y:1855, path:'icon/charms/unbreakable_heart.png', description:'', progression:0, markertype:'charms'},
+      {name:'Unbreakable Strength', x:-605, y:1870, path:'icon/charms/unbreakable_strength.png', description:'', progression:0, markertype:'charms'},
+      {name:'Grubsong', x:-696, y:1874, path:'icon/charms/grubsong.png', description:'', progression:1, markertype:'charms'},
+      {name:'Grubberfly\'s Elegy', x:-696, y:1886, path:'icon/charms/grubberfly_elegy.png', description:'', progression:1, markertype:'charms'},
+      {name:'Gathering Swarm', x:-587, y:1955, path:'icon/charms/gathering_swarm.png', description:'', progression:1, markertype:'charms'},
+      {name:'Stalwart Shell', x:-587, y:1967, path:'icon/charms/stalwart_shell.png', description:'', progression:1, markertype:'charms'},
+      {name:'Heavy Blow', x:-587, y:1979, path:'icon/charms/heavy_blow.png', description:'', progression:1, markertype:'charms'},
+      {name:'Sprintmaster Shell', x:-587, y:1991, path:'icon/charms/sprintmaster.png', description:'', progression:1, markertype:'charms'},
+      {name:'Wayward Compass', x:-599, y:2041, path:'icon/charms/wayward_compass.png', description:'', progression:1, markertype:'charms'},
+      {name:'Fragile Greed', x:-1182, y:2100, path:'icon/charms/fragile_greed.png', description:'', progression:1, markertype:'charms'},
+      {name:'Fragile Heart', x:-1182, y:2112, path:'icon/charms/fragile_heart.png', description:'', progression:1, markertype:'charms'},
+      {name:'Fragile Strength', x:-1182, y:2124, path:'icon/charms/fragile_strength.png', description:'', progression:1, markertype:'charms'},
+      {name:'Lifeblood Heart', x:-1006, y:2662, path:'icon/charms/lifeblood_heart.png', description:'', progression:1, markertype:'charms'},
+      {name:'Longnail', x:-1006, y:2674, path:'icon/charms/long_nail.png', description:'', progression:1, markertype:'charms'},
+      {name:'Steady Body', x:-1006, y:2686, path:'icon/charms/steady_body.png', description:'', progression:1, markertype:'charms'},
+      {name:'Shaman Stone', x:-993, y:2662, path:'icon/charms/shaman_stone.png', description:'', progression:1, markertype:'charms'},
+      {name:'Quick Focus', x:-993, y:2674, path:'icon/charms/quick_focus.png', description:'', progression:1, markertype:'charms'},
+      {name:'Dream Wielder', x:-804, y:3421, path:'icon/charms/dream_wielder.png', description:'', progression:1, markertype:'charms'},
+      
+    ]
+
+
+
+    
     //#endregion
 
     //#region WARRIOR DREAMS
@@ -1091,8 +1098,8 @@ window.addEventListener('load', function () {
       grubGroup.addTo(map)
       
 
-      // createMarkers(charmsInfo,[22,22],charmsGroup)
-      // charmsGroup.addTo(map)
+      createMarkers(charmsData,[22,22],charmsGroup)
+      charmsGroup.addTo(map)
       
 
       // createMarkers(warriordreamInfo,[25,25],warriordreamsGroup)
