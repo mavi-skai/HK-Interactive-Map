@@ -136,101 +136,113 @@ window.addEventListener('load', function () {
 
     //#region  BOSSES
     let bossesGroup = new L.LayerGroup()
-    let bossesInfo = [['Broken Vessel',-2243,2098 ,'icon/bosses/broken_vessel.png','',1,'boss'],
-              ['Brooding Mawlek',-872,1918,'icon/bosses/brooding_mawlek.png','',1,'boss'],
-              ['The Collector',-1522,3593,'icon/bosses/the_collector.png','',1,'boss'],
-              ['Crystal Guardian',-525,2869,'icon/bosses/crystal_guardian.png','',0,'boss'],
-              ['Dung Defender',-1804,2942,'icon/bosses/dung_defender.png','',1,'boss'],
-              ['False Knight',-844,2128,'icon/bosses/false_knight.png','',1,'boss'],
-              ['Flukemarm',-1942,2436,'icon/bosses/flukemarm.png','',0,'boss'],
-              ['Grimm',-624,1926,'icon/bosses/grimm.png','',1,'boss'],
-              ['Gruz Mother',-986,2595,'icon/bosses/gruz_mother.png','',1,'boss'],
-              ['Soul Master',-1220,2622,'icon/bosses/soul_master.png','',1,'boss'],
-              ['Hive Knight',-1951,4071,'icon/bosses/hive_knight.png','',1,'boss'],
-              ['Hollow Knight',-705,2238,'icon/bosses/hollow_knight.png','',0,'boss'],
-              ['Hornet',-728,815,'icon/bosses/hornet.png','',1,'boss'],
-              ['Mantis Lords',-1845,1866,'icon/bosses/mantis_lords.png','',1,'boss'],
-              ['Massive Moss Charger',-1047,1352,'icon/bosses/massive_moss_charger.png','',0,'boss'],
-              ['Nosk',-2128,1428,'icon/bosses/nosk.png','',1,'boss'],
-              ['The Radiance',-684,2238,'icon/bosses/the_radiance.png','',0,'boss'],
-              ['Soul Warrior',-1345,2686,'icon/bosses/soul_warrior.png','',0,'boss'],
-              ['Traitor Lord',-1149,732,'icon/bosses/traitor_lord.png','',1,'boss'],
-              ['Uumuu',-1210,1599,'icon/bosses/uumuu.png','',1,'boss'],
-              ['Vengefly King',-637,988,'icon/bosses/vengefly_king.png','',0,'boss'],
-              ['Watcher Knights',-1395,2985,'icon/bosses/watcher_knights.png','',1,'boss'],]
-              
-    //#endregion
+    var bossesData = [
+      {name:'Broken Vessel', x:-2243, y:2098, path:'icon/bosses/broken_vessel.png', description:'', progression:1, markertype:'boss'},
+      {name:'Brooding Mawlek', x:-872, y:1918, path:'icon/bosses/brooding_mawlek.png', description:'', progression:1, markertype:'boss'},
+      {name:'The Collector', x:-1522, y:3593, path:'icon/bosses/the_collector.png', description:'', progression:1, markertype:'boss'},
+      {name:'Crystal Guardian', x:-525, y:2869, path:'icon/bosses/crystal_guardian.png', description:'', progression:0, markertype:'boss'},
+      {name:'Dung Defender', x:-1804, y:2942, path:'icon/bosses/dung_defender.png', description:'', progression:1, markertype:'boss'},
+      {name:'False Knight', x:-844, y:2128, path:'icon/bosses/false_knight.png', description:'', progression:1, markertype:'boss'},
+      {name:'Flukemarm', x:-1942, y:2436, path:'icon/bosses/flukemarm.png', description:'', progression:0, markertype:'boss'},
+      {name:'Grimm', x:-624, y:1926, path:'icon/bosses/grimm.png', description:'', progression:1, markertype:'boss'},
+      {name:'Gruz Mother', x:-986, y:2595, path:'icon/bosses/gruz_mother.png', description:'', progression:1, markertype:'boss'},
+      {name:'Soul Master', x:-1220, y:2622, path:'icon/bosses/soul_master.png', description:'', progression:1, markertype:'boss'},
+      {name:'Hive Knight', x:-1951, y:4071, path:'icon/bosses/hive_knight.png', description:'', progression:1, markertype:'boss'},
+      {name:'Hollow Knight', x:-705, y:2238, path:'icon/bosses/hollow_knight.png', description:'', progression:0, markertype:'boss'},
+      {name:'Hornet', x:-728, y:815, path:'icon/bosses/hornet.png', description:'', progression:1, markertype:'boss'},
+      {name:'Mantis Lords', x:-1845, y:1866, path:'icon/bosses/mantis_lords.png', description:'', progression:1, markertype:'boss'},
+      {name:'Massive Moss Charger', x:-1047, y:1352, path:'icon/bosses/massive_moss_charger.png', description:'', progression:0, markertype:'boss'},
+      {name:'Nosk', x:-2128, y:1428, path:'icon/bosses/nosk.png', description:'', progression:1, markertype:'boss'},
+      {name:'The Radiance', x:-684, y:2238, path:'icon/bosses/the_radiance.png', description:'', progression:0, markertype:'boss'},
+      {name:'Soul Warrior', x:-1345, y:2686, path:'icon/bosses/soul_warrior.png', description:'', progression:0, markertype:'boss'},
+      {name:'Traitor Lord', x:-1149, y:732, path:'icon/bosses/traitor_lord.png', description:'', progression:1, markertype:'boss'},
+      {name:'Uumuu', x:-1210, y:1599, path:'icon/bosses/uumuu.png', description:'', progression:1, markertype:'boss'},
+      {name:'Vengefly King', x:-637, y:988, path:'icon/bosses/vengefly_king.png', description:'', progression:0, markertype:'boss'},
+      {name:'Watcher Knights', x:-1395, y:2985, path:'icon/bosses/watcher_knights.png', description:'', progression:1, markertype:'boss'},
+      {name:'Enraged Guardian', x:-480, y:2863, path:'icon/bossvariants/enraged_guardian.png', description:'', progression:0, markertype:'boss'},
+      {name:'Failed Champion', x:-824, y:2150, path:'icon/bossvariants/failed_champion.png', description:'', progression:0, markertype:'boss'},
+      {name:'Grey Prince Zote', x:-642, y:2063, path:'icon/bossvariants/grey_prince_zote.png', description:'', progression:0, markertype:'boss'},
+      {name:'Hornet Sentinel', x:-1692, y:4321, path:'icon/bossvariants/hornet_sentinel.png', description:'', progression:1, markertype:'boss'},
+      {name:'Lost Kin', x:-2243, y:2110, path:'icon/bossvariants/lost_kin.png', description:'', progression:0, markertype:'boss'},
+      {name:'Nightmare King Grimm', x:-611, y:1926, path:'icon/bossvariants/nightmare_king_grimm.png', description:'', progression:1, markertype:'boss'},
+      {name:'Soul Tyrant', x:-1222, y:2650, path:'icon/bossvariants/soul_tyrant.png', description:'', progression:0, markertype:'boss'},
+      {name:'White Defender', x:-1843, y:2953, path:'icon/bossvariants/white_defender.png', description:'', progression:0, markertype:'boss'},
+    ]
 
-    //#region BOSSVARIANTS
-    let bossvariantsGroup = new L.LayerGroup()
-    let bossvariants = [['Enraged Guardian',-480,2863,'icon/bossvariants/enraged_guardian.png','',0,'bossvariants'],
-                        ['Failed Champion',-824,2150,'icon/bossvariants/failed_champion.png','',0,'bossvariants'],
-                        ['Grey Prince Zote',-642,2063,'icon/bossvariants/grey_prince_zote.png','',0,'bossvariants'],
-                        ['Hornet Sentinel',-1692,4321,'icon/bossvariants/hornet_sentinel.png','',1,'bossvariants'],
-                        ['Lost Kin',-2243,2110,'icon/bossvariants/lost_kin.png','',0,'bossvariants'],
-                        ['Nightmare King Grimm',-611,1926,'icon/bossvariants/nightmare_king_grimm.png','',1,'bossvariants'],
-                        ['Soul Tyrant',-1222,2650,'icon/bossvariants/soul_tyrant.png','',0,'bossvariants'],
-                        ['White Defender',-1843,2953,'icon/bossvariants/white_defender.png','',0,'bossvariants'],]
+              
     //#endregion
 
     //#region DREAMERS
     let dreamersGroup = new L.LayerGroup()
-    let dreamersInfo = [['Herrah',-1855,327,'icon/dreamers/herrah.png','',1,'dreamers'],
-                    ['Lurien',-1119,3044,'icon/dreamers/lurien.png','',1,'dreamers'],
-                    ['Monomon',-1223,1602,'icon/dreamers/monomon.png','',1,'dreamers'],]
+    var dreamersData = [
+      {name:'Herrah', x:-1855, y:327, path:'icon/dreamers/herrah.png', description:'', progression:1, markertype:'dreamers'},
+      {name:'Lurien', x:-1119, y:3044, path:'icon/dreamers/lurien.png', description:'', progression:1, markertype:'dreamers'},
+      {name:'Monomon', x:-1223, y:1602, path:'icon/dreamers/monomon.png', description:'', progression:1, markertype:'dreamers'},
+    ]
+
     //#endregion
 
     //#region NOTCH
     let notchesGroup = new L.LayerGroup()
-    let notchesInfo = [['Notches',-980,2662,'icon/notch.png','Collect 5 Charms',0,'notches'],
-                     ['Notches',-980,2674,'icon/notch.png','Collect 10 Charms',0,'notches'],
-                     ['Notches',-980,2686,'icon/notch.png','Collect 18 Charms',0,'notches'],
-                     ['Notches',-993,2686,'icon/notch.png','Collect 25 Charms',0,'notches'],
-                     ['Notches',-1081,1731,'icon/notch.png','Unlock Isma\'s Tear or Monarch Wings',0,'notches'],
-                     ['Notches',-1262,1906,'icon/notch.png','Defeat 2 Shrumal Ogres',0,'notches'],
-                     ['Notches',-1255,3653,'icon/notch.png','Complete the Trial of the Warrior',0,'notches'],
-                     ['Notches',-596,1926,'icon/notch.png','Defeat Grimm',0,'notches'],]
+    var notchesData = [
+      {name:'Notches', x:-980, y:2662, path:'icon/notch.png', description:'<br>Collect 5 Charms', progression:0, markertype:'notches'},
+      {name:'Notches', x:-980, y:2674, path:'icon/notch.png', description:'<br>Collect 10 Charms', progression:0, markertype:'notches'},
+      {name:'Notches', x:-980, y:2686, path:'icon/notch.png', description:'<br>Collect 18 Charms', progression:0, markertype:'notches'},
+      {name:'Notches', x:-993, y:2686, path:'icon/notch.png', description:'<br>Collect 25 Charms', progression:0, markertype:'notches'},
+      {name:'Notches', x:-1081, y:1731, path:'icon/notch.png', description:'<br>Unlock Isma\'s Tear or Monarch Wings', progression:0, markertype:'notches'},
+      {name:'Notches', x:-1262, y:1906, path:'icon/notch.png', description:'<br>Defeat 2 Shrumal Ogres', progression:0, markertype:'notches'},
+      {name:'Notches', x:-1255, y:3653, path:'icon/notch.png', description:'<br>Complete the Trial of the Warrior', progression:0, markertype:'notches'},
+      {name:'Notches', x:-596, y:1926, path:'icon/notch.png', description:'<br>Defeat Grimm', progression:0, markertype:'notches'},
+    ]
+
     //#endregion
 
     //#region SPELL AND ABILITIES
     let spellsandabilitiesGroup = new L.LayerGroup()
-    let spellsandabilitiesInfo = [['Vengeful Spirit',-839,2054,'icon/spell_abilities/vengeful_spirit.png','',1,'spellsandabilities'],
-                           ['Desolate Dive',-1258,2637,'icon/spell_abilities/desolate_dive.png','',1,'spellsandabilities'],
-                           ['Howling Wraiths',-1190,1090,'icon/spell_abilities/howling_wraiths.png','',1,'spellsandabilities'],
-                           ['Shade Soul',-1331,2685,'icon/spell_abilities/shade_soul.png','',1,'spellsandabilities'],
-                           ['Descending Dark',-760,3309,'icon/spell_abilities/descending_dark.png','',1,'spellsandabilities'],
-                           ['Abyss Shriek',-2769,2365,'icon/spell_abilities/abyss_shriek.png','',1,'spellsandabilities'],
-                           ['Mothwing Cloak',-712,817,'icon/spell_abilities/mothwing_cloak.png','',1,'spellsandabilities'],
-                           ['Mantis Claw',-1634,1796,'icon/spell_abilities/mantis_claw.png','',1,'spellsandabilities'],
-                           ['Crystal Heart',-633,3409,'icon/spell_abilities/crystal_heart.png','',1,'spellsandabilities'],
-                           ['Monarch Wings',-2271,1858,'icon/spell_abilities/monarch_wings.png','',1,'spellsandabilities'],
-                           ['Isma\'s Tear',-1948,3372,'icon/spell_abilities/isma\'s_tear.png','',1,'spellsandabilities'],
-                           ['Shade Cloak',-2736,3643,'icon/spell_abilities/shade_cloak.png','',1,'spellsandabilities'],
-                           ['Dream Nail',-947,3321,'icon/spell_abilities/dream_nail.png','',1,'spellsandabilities'],
-                           ['Cyclone Slash',-379,1407,'icon/spell_abilities/cyclone_slash.png','',1,'spellsandabilities'],
-                           ['Dash Slash',-1823,4292,'icon/spell_abilities/dash_slash.png','',1,'spellsandabilities'],
-                           ['Great Slash',-928,477,'icon/spell_abilities/great_slash.png','',1,'spellsandabilities'],
-                           ['Awoken Dream Nail',-782,3433,'icon/spell_abilities/awoken_dream_nail.png','<br>Collect 1800 Essence with the Dream Nail.',1,'spellsandabilities'],]
+    var spellsandabilitiesData = [
+      {name:'Vengeful Spirit', x:-839, y:2054, path:'icon/spell_abilities/vengeful_spirit.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Desolate Dive', x:-1258, y:2637, path:'icon/spell_abilities/desolate_dive.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Howling Wraiths', x:-1190, y:1090, path:'icon/spell_abilities/howling_wraiths.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Shade Soul', x:-1331, y:2685, path:'icon/spell_abilities/shade_soul.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Descending Dark', x:-760, y:3309, path:'icon/spell_abilities/descending_dark.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Abyss Shriek', x:-2769, y:2365, path:'icon/spell_abilities/abyss_shriek.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Mothwing Cloak', x:-712, y:817, path:'icon/spell_abilities/mothwing_cloak.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Mantis Claw', x:-1634, y:1796, path:'icon/spell_abilities/mantis_claw.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Crystal Heart', x:-633, y:3409, path:'icon/spell_abilities/crystal_heart.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Monarch Wings', x:-2271, y:1858, path:'icon/spell_abilities/monarch_wings.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Isma\'s Tear', x:-1948, y:3372, path:'icon/spell_abilities/isma\'s_tear.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Shade Cloak', x:-2736, y:3643, path:'icon/spell_abilities/shade_cloak.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Dream Nail', x:-947, y:3321, path:'icon/spell_abilities/dream_nail.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Cyclone Slash', x:-379, y:1407, path:'icon/spell_abilities/cyclone_slash.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Dash Slash', x:-1823, y:4292, path:'icon/spell_abilities/dash_slash.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Great Slash', x:-928, y:477, path:'icon/spell_abilities/great_slash.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Awoken Dream Nail', x:-782, y:3433, path:'icon/spell_abilities/awoken_dream_nail.png', description:'<br>Collect 1800 Essence with the Dream Nail.', progression:1, markertype:'spellsandabilities'},
+    ]
+   
     //#endregion
 
     //#region MASK SHARD
     let maskshardGroup = new L.LayerGroup()
-    let maskshardInfo = [['Mask Shard',-575,1955,'icon/mask_shard.png','<br>Just Sly',0.25,'maskshard'], //name,x,y,path,description,progress,markertype
-                         ['Mask Shard',-575,1967,'icon/mask_shard.png','<br>Just Sly',0.25,'maskshard'],
-                         ['Mask Shard',-575,1979,'icon/mask_shard.png','<br>Sly With Shopkeeper Key',0.25,'maskshard'],
-                         ['Mask Shard',-575,1991,'icon/mask_shard.png','<br>Sly With Shopkeeper Key',0.25,'maskshard'],
-                         ['Mask Shard',-872,1935,'icon/mask_shard.png','<br>Reward for defeating Brooding Mawlek',0.25,'maskshard'],
-                         ['Mask Shard',-696,1898,'icon/mask_shard.png','<br>Requires rescuing 5 Grubs',0.25,'maskshard'],
-                         ['Mask Shard',-940,2122,'icon/mask_shard.png','<br>Recomended Mantis Claw',0.25,'maskshard'],
-                         ['Mask Shard',-1414,1606,'icon/mask_shard.png','<br>Requires Mantis Claw',0.25,'maskshard'],
-                         ['Mask Shard',-828,2063,'icon/mask_shard.png','<br>Requires rescuing Bretta from Fungal Wastes',0.25,'maskshard'],
-                         ['Mask Shard',-908,2027,'icon/mask_shard.png','<br>Recommended Lumafly Lantern',0.25,'maskshard'],
-                         ['Mask Shard',-1814,2157,'icon/mask_shard.png','',0.25,'maskshard'],
-                         ['Mask Shard',-1839,1700,'icon/mask_shard.png','<br>Requires Monarch Wings',0.25,'maskshard'],
-                         ['Mask Shard',-485,2835,'icon/mask_shard.png','<br>Requires Monarch Wings',0.25,'maskshard'],
-                         ['Mask Shard',-1968,3812,'icon/mask_shard.png','<br>Requires baiting a Hive Guardian into breaking a wall',0.25,'maskshard'],
-                         ['Mask Shard',-804,3431,'icon/mask_shard.png','<br>Requires collecting 1500 Essence',0.25,'maskshard'],
-                         ['Mask Shard',-936,3662,'icon/mask_shard.png','<br>Requires completing the Delicate Flower quest',0.25,'maskshard'],]
+    var maskshardData = [
+      {name:'Mask Shard', x:-575, y:1955, path:'icon/mask_shard.png', description:'<br>Just Sly', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-575, y:1967, path:'icon/mask_shard.png', description:'<br>Just Sly', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-575, y:1979, path:'icon/mask_shard.png', description:'<br>Sly With Shopkeeper Key', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-575, y:1991, path:'icon/mask_shard.png', description:'<br>Sly With Shopkeeper Key', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-872, y:1935, path:'icon/mask_shard.png', description:'<br>Reward for defeating Brooding Mawlek', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-696, y:1898, path:'icon/mask_shard.png', description:'<br>Requires rescuing 5 Grubs', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-940, y:2122, path:'icon/mask_shard.png', description:'<br>Recomended Mantis Claw', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-1414, y:1606, path:'icon/mask_shard.png', description:'<br>Requires Mantis Claw', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-627, y:2052, path:'icon/mask_shard.png', description:'<br>Requires rescuing Bretta from Fungal Wastes', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-1033, y:1680, path:'icon/mask_shard.png', description:'<br>Recommended Lumafly Lantern', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-1814, y:2157, path:'icon/mask_shard.png', description:'', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-1839, y:1700, path:'icon/mask_shard.png', description:'<br>Requires Monarch Wings', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-485, y:2835, path:'icon/mask_shard.png', description:'<br>Requires Monarch Wings', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-1968, y:3812, path:'icon/mask_shard.png', description:'<br>Requires baiting a Hive Guardian into breaking a wall', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-804, y:3431, path:'icon/mask_shard.png', description:'<br>Requires collecting 1500 Essence', progression:0.25, markertype:'maskshard'},
+      {name:'Mask Shard', x:-936, y:3662, path:'icon/mask_shard.png', description:'<br>Requires completing the Delicate Flower quest', progression:0.25, markertype:'maskshard'},
+
+    ]
+    
     //#endregion
 
     //#region VESSEL FRAGMENT
@@ -569,7 +581,6 @@ window.addEventListener('load', function () {
       'charms':charmsGroup,
       'boss':bossesGroup,
       'warriorsdreams':warriordreamsGroup,
-      'bossvariants':bossvariantsGroup,
       'dreamers':dreamersGroup,
       'notches':notchesGroup,
       'maskshard':maskshardGroup,
@@ -591,8 +602,7 @@ window.addEventListener('load', function () {
       'explorationandquest':1, //GODTUNER
       'paleore':4, //NAIL UPGRADES
       'charms':40,
-      'boss':15,
-      'bossvariants':2,
+      'boss':17,
       'warriorsdreams':7,
       'dreamers':3,
       'fools':3, //add trials of fools icon
@@ -809,11 +819,6 @@ window.addEventListener('load', function () {
     function showhidewarriordreams (){
       this.classList.toggle('active')
       map.hasLayer(warriordreamsGroup) === true ? hideMarker(warriordreamsGroup) : showMarker(warriordreamsGroup)
-    }
-
-    function showhidebossvariants (){
-      this.classList.toggle('active')
-      map.hasLayer(bossvariantsGroup) === true ? hideMarker(bossvariantsGroup) : showMarker(bossvariantsGroup)
     }
 
     function showhidedreamers (){
@@ -1109,28 +1114,24 @@ window.addEventListener('load', function () {
       warriordreamsGroup.addTo(map)
       
 
-      // createMarkers(bossesInfo,[32,32],bossesGroup)
-      // bossesGroup.addTo(map)
+      createMarkers(bossesData,[32,32],bossesGroup)
+      bossesGroup.addTo(map)
       
 
-      // createMarkers(bossvariants,[32,32],bossvariantsGroup)
-      // bossvariantsGroup.addTo(map)
+      createMarkers(dreamersData,[32,32],dreamersGroup)
+      dreamersGroup.addTo(map)
 
 
-      // createMarkers(dreamersInfo,[32,32],dreamersGroup)
-      // dreamersGroup.addTo(map)
+      createMarkers(notchesData,[22,22],notchesGroup)
+      notchesGroup.addTo(map)
 
 
-      // createMarkers(notchesInfo,[22,22],notchesGroup)
-      // notchesGroup.addTo(map)
+      createMarkers(spellsandabilitiesData,[25,25],spellsandabilitiesGroup)
+      spellsandabilitiesGroup.addTo(map)
 
 
-      // createMarkers(spellsandabilitiesInfo,[25,25],spellsandabilitiesGroup)
-      // spellsandabilitiesGroup.addTo(map)
-
-
-      // createMarkers(maskshardInfo,[25,25],maskshardGroup)
-      // maskshardGroup.addTo(map)
+      createMarkers(maskshardData,[25,25],maskshardGroup)
+      maskshardGroup.addTo(map)
 
 
       // createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
@@ -1190,7 +1191,6 @@ window.addEventListener('load', function () {
         hideMarker(charmsGroup)
         hideMarker(bossesGroup)
         hideMarker(warriordreamsGroup) 
-        hideMarker(bossvariantsGroup)
         hideMarker(dreamersGroup) 
         hideMarker(notchesGroup) 
         hideMarker(spellsandabilitiesGroup)
@@ -1210,7 +1210,6 @@ window.addEventListener('load', function () {
         showMarker(charmsGroup)
         showMarker(bossesGroup)
         showMarker(warriordreamsGroup) 
-        showMarker(bossvariantsGroup)
         showMarker(dreamersGroup) 
         showMarker(notchesGroup) 
         showMarker(spellsandabilitiesGroup)
