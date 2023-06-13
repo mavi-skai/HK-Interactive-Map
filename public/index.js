@@ -247,45 +247,211 @@ window.addEventListener('load', function () {
 
     //#region VESSEL FRAGMENT
     let vesselfragmentGroup = new L.LayerGroup()
-    let vesselfragmentInfo = [['Vessel Fragment',-563,1955,'icon/vessel_fragment.png','<br>Just Sly',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-563,1967,'icon/vessel_fragment.png','<br>Sly With Shopkeeper Key',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-1058,1024,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-984,2085,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-1481,3458,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-1983,1849,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-306,1221,'icon/vessel_fragment.png','null',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-793,3421,'icon/vessel_fragment.png','<br>Collecting 700 Essence',0.33,'vesselfragment'],
-                              ['Vessel Fragment',-2140,2782,'icon/vessel_fragment.png','<br>Dropping Geo 3000 into the fountain',0.33,'vesselfragment'],]
-
+    var vesselfragmentData = [
+      {name:'Vessel Fragment', x:-563, y:1955, path:'icon/vessel_fragment.png', description:'<br>Just Sly', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-563, y:1967, path:'icon/vessel_fragment.png', description:'<br>Sly With Shopkeeper Key', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-1058, y:1024, path:'icon/vessel_fragment.png', description:'', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-984, y:2085, path:'icon/vessel_fragment.png', description:'', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-1481, y:3458, path:'icon/vessel_fragment.png', description:'', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-1984, y:1813, path:'icon/vessel_fragment.png', description:'', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-306, y:1221, path:'icon/vessel_fragment.png', description:'', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-793, y:3421, path:'icon/vessel_fragment.png', description:'<br>Collecting 700 Essence', progression:0.33, markertype:'vesselfragment'},
+      {name:'Vessel Fragment', x:-2140, y:2782, path:'icon/vessel_fragment.png', description:'<br>Dropping Geo 3000 into the fountain', progression:0.33, markertype:'vesselfragment'},
+    ]
     //#endregion
 
     //#region PALE ORE
     let paleoreGroup = new L.LayerGroup()
-    let paleoreInfo = [['Pale Ore',-2135,2348,'icon/pale_ore.png','<br>Defeat two Lesser Mawleks that guard it.',0.66,'paleore'],
-                       ['Pale Ore',-793,3433,'icon/pale_ore.png','Collect 300 Essence with the Dream Nail.',0.66,'paleore'],
-                       ['Pale Ore',-104,3122,'icon/pale_ore.png','Requires Mantis Claw. Monarch Wings and Crystal Heart recommended.',0.66,'paleore'],
-                       ['Pale Ore',-2132,1549,'icon/pale_ore.png','Requires defeating Nosk.',0.66,'paleore'],
-                       ['Pale Ore',-696,1910,'icon/pale_ore.png','Rescue 31 Grubs.',0.66,'paleore'],
-                       ['Pale Ore',-1255,3665,'icon/pale_ore.png','<br>Complete the Trial of the Conqueror.',0.66,'paleore'],]
+    var paleoreData = [
+      {name:'Pale Ore', x:-2135, y:2348, path:'icon/pale_ore.png', description:'<br>Defeat two Lesser Mawleks that guard it.', progression:0.66, markertype:'paleore'},
+      {name:'Pale Ore', x:-793, y:3433, path:'icon/pale_ore.png', description:'<br>Collect 300 Essence with the Dream Nail.', progression:0.66, markertype:'paleore'},
+      {name:'Pale Ore', x:-104, y:3122, path:'icon/pale_ore.png', description:'<br>Requires Mantis Claw. Monarch Wings and Crystal Heart recommended.', progression:0.66, markertype:'paleore'},
+      {name:'Pale Ore', x:-2132, y:1549, path:'icon/pale_ore.png', description:'<br>Requires defeating Nosk.', progression:0.66, markertype:'paleore'},
+      {name:'Pale Ore', x:-696, y:1910, path:'icon/pale_ore.png', description:'<br>Rescue 31 Grubs.', progression:0.66, markertype:'paleore'},
+      {name:'Pale Ore', x:-1255, y:3665, path:'icon/pale_ore.png', description:'<br>Complete the Trial of the Conqueror.', progression:0.66, markertype:'paleore'},
+    ]
     //#endregion
 
     //#region WHISPERING ROOT
     let whisperingrootsGroup = new L.LayerGroup()
-    let whisperingrootsInfo = [['Whispering Roots',-839,2041,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1361,2459,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-431,3191,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1986,713,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-681,1978,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1186,1921,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1596,1868,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1069,915,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-2093,3876,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-559,1081,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1606,3754,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-1463,1175,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-892,3445,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-2002,3069,'icon/whispering_roots.png','',0,'whisperingroots'],
-                               ['Whispering Roots',-729,3676,'icon/whispering_roots.png','',0,'whisperingroots'],]
+    var whisperingrootsData = [
+      {name:'Whispering Roots', x:-839, y:2041, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1361, y:2459, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-431, y:3191, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1986, y:713, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-681, y:1978, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1186, y:1921, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1596, y:1868, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1069, y:915, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-2093, y:3876, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-559, y:1081, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1606, y:3754, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-1463, y:1175, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-892, y:3445, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-2002, y:3069, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+      {name:'Whispering Roots', x:-729, y:3676, path:'icon/whispering_roots.png', description:'', progression:0, markertype:'whisperingroots'},
+    ]
+    //#endregion
+
+    //#region BENCH AND TRANSPORT
+    let benchandtransportGroup = new L.LayerGroup()
+    var benchData = [
+      {name:'Bench', x:-395, y:1420, path:'icon/bench/mato_bench.png', description:'<br>Inside House', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-630, y:2000, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-917, y:2162, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-907, y:2350, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1020, y:2689, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-824, y:2042, path:'icon/bench/bone_bench.png', description:'<br>Inside House', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-705, y:2254, path:'icon/bench/final_boss_bench.png', description:'<br>Inside', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-739, y:1441, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-739, y:1441, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1007, y:1557, path:'icon/bench/fung_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-857, y:1090, path:'icon/bench/bench.png', description:'<br>50 Geo to unlock', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-771, y:919, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-768, y:584, path:'icon/bench/slug_shrine_bench.png', description:'<br>Inside', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-951, y:491, path:'icon/bench/sheo_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1228, y:1618, path:'icon/bench/fung_temple_bench.png', description:'<br>Inside', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1458, y:1489, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1195, y:2109, path:'icon/bench/leg_eater_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1752, y:2114, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1724, y:2000, path:'icon/bench/mantis_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1574, y:2484, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1411, y:2684, path:'icon/bench/toll_bench.png', description:'<br>150 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1265, y:2444, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1551, y:2898, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1671, y:3478, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1369, y:3279, path:'icon/bench/bath_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1855, y:2586, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-2074, y:1424, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1719, y:1326, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1860, y:313, path:'icon/bench/spider_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-2256, y:2633, path:'icon/bench/toll_bench.png', description:'<br>150 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-2233, y:3249, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1845, y:4311, path:'icon/bench/oro_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1581, y:4026, path:'icon/bench/camp_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1277, y:3665, path:'icon/bench/col_bench.png', description:'<br>Under Colloseum', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-2115, y:3609, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-2115, y:3609, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-853, y:2897, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-526, y:2854, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-859, y:3511, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-950, y:3678, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1325, y:1149, path:'icon/bench/guardian_bench.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1476, y:714, path:'icon/bench/toll_bench.png', description:'<br>150 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Bench', x:-1369, y:861, path:'icon/bench/bench.png', description:'', progression:0, markertype:'benchandtransport'},
+    ]
+    
+    var stagData = [
+      {name:'Stag', x:-304, y:1198, path:'icon/stag.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-769, y:891, path:'icon/stag.png', description:'<br>140 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-630, y:2016, path:'icon/stag.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-906, y:2328, path:'icon/stag.png', description:'<br>50 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-860, y:3543, path:'icon/stag.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-1264, y:2473, path:'icon/stag.png', description:'<br>200 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-860, y:3543, path:'icon/stag.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-1670, y:3506, path:'icon/stag.png', description:'<br>300 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-1457, y:1464, path:'icon/stag.png', description:'<br>140 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-1365, y:830, path:'icon/stag.png', description:'<br>200 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-1808, y:462, path:'icon/stag.png', description:'<br>250 Geo', progression:0, markertype:'benchandtransport'},
+      {name:'Stag', x:-2232, y:3221, path:'icon/stag.png', description:'', progression:0, markertype:'benchandtransport'},
+      
+    ]
+
+    var tramData = [
+      {name:'Tram', x:-935, y:2653, path:'icon/tram.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Tram', x:-935, y:2879, path:'icon/tram.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Tram', x:-2069, y:3281, path:'icon/tram.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Tram', x:-2069, y:2770, path:'icon/tram.png', description:'', progression:0, markertype:'benchandtransport'},
+      {name:'Tram', x:-2069, y:1820, path:'icon/tram.png', description:'', progression:0, markertype:'benchandtransport'},
+    ]
+    //#endregion
+
+    //#region  TRADABLES
+    let tradablesGroup = new L.LayerGroup()
+    var tradablesData = [
+      //{name:, x:, y:, path:, description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-487, y:2925, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-799, y:2868, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-751, y:2650, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-978, y:2876, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-986, y:433, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1276, y:1092, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1571, y:1714, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1957, y:1037, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-2003, y:721, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1837, y:332, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1768, y:2210, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1823, y:2421, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1852, y:2675, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1934, y:3130, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1530, y:2708, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1452, y:3218, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1375, y:3735, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Rancid Eggs', x:-1935, y:4246, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-459, y:3001, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-536, y:1155, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-767, y:970, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1071, y:1476, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1350, y:1865, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1574, y:1885, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1287, y:2305, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-2032, y:2971, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1567, y:3222, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1585, y:3428, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1003, y:3733, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1654, y:3677, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1766, y:3956, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Wanderers Journal', x:-1579, y:3994, path:'icon/wanderers_journal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-550, y:2730, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-582, y:1017, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-1844, y:1251, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-1837, y:3002, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-1339, y:3546, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-1391, y:4213, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'King\'s Idol', x:-778, y:3708, path:'icon/kings_idol.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-987, y:3439, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-658, y:2083, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1034, y:1814, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-979, y:1114, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1135, y:1297, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1424, y:1487, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1287, y:487, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1307, y:1787, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1852, y:298, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1741, y:1583, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1700, y:1977, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1327, y:2542, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1625, y:2551, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1348, y:2949, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Hallownest Seal', x:-1624, y:3461, path:'icon/hallownest_seal.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Arcane Egg', x:-2661, y:2430, path:'icon/arcane_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Arcane Egg', x:-2755, y:3589, path:'icon/arcane_egg.png', description:'', progression:0, markertype:'tradables'},
+      {name:'Arcane Egg', x:-2809, y:2626, path:'icon/arcane_egg.png', description:'', progression:0, markertype:'tradables'},
+    ]
+    
+                     
+    //#endregion
+
+    //#region  ExplorationQuest
+    let explorationandquestGroup = new L.LayerGroup()
+    let explorationandquest = [['Tram Pass',-1743,878,'icon/explorequest/tram_pass.png','',0,'explorationandquest'],
+                            ['Lumafly Lantern',-551,1955,'icon/lumafly_lantern.png','',0,'explorationandquest'],
+                            ['Collectors Map',-1523,3578,'icon/explorequest/collectors_map.png','<br>Marks the location of all 46 Grubs on any purchased Maps.',0,'explorationandquest'],
+                            ['Hunter Mark',-925,1668,'icon/explorequest/hunter_mark.png','',0,'explorationandquest'],
+                            ['Delicate Flower',-949,3646,'icon/explorequest/flower.png','<br>Clear Monster First, Donot bench',0,'explorationandquest'],
+                            ['Grave of The Traitors Child',-1312,827,'icon/explorequest/grave_marker.png','<br>Delicate Flower Destination',0,'explorationandquest'],
+                            ['Godtuner',-1957,2104,'icon/explorequest/godtuner.png','<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.',1,'explorationandquest'],]
+    
+    //#endregion
+
+    //#region  Keys
+    let keysGroup = new L.LayerGroup()
+    let keysInfo = [['Simple Key',-563,1979,'icon/simple_key.png','<br> Simple Key: 950 Geo',0,'keys'],
+                    ['Elegant Key',-563,1991,'icon/elegant_key.png','<br> Elegant Key: 800 Geo',0,'keys'],
+                    ['Love Key',-1479,1347,'icon/love_key.png','',0,'keys'],
+                    ['Shopkeeper\'s Key',-494,2808,'icon/shopkeeper_key.png','',0,'keys'],
+                    ['City Crest',-846,2143,'icon/city_crest.png','<br>Drop from False Knight',0,'keys'],
+                    ['King\'s Brand',-1742,4305,'icon/kings_brand.png','',2,'keys'],]
     //#endregion
 
     //#region NPC
@@ -424,157 +590,6 @@ window.addEventListener('load', function () {
                     ['Cornifer',-1789,2078,'icon/npc/cornifer.png',
                       ['<br>Map for Royal Waterways: 75 Geo'],0,'npc'],]
     //#endregion
-
-    //#region BENCH AND TRANSPORT
-    let benchandtransportGroup = new L.LayerGroup()
-    let benchInfo = [['Bench',-395,1420,'icon/bench/mato_bench.png','<br>Inside House',0,'benchandtransport'],
-                               ['Bench',-630,2000,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-917,2162,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-907,2350,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1020,2689,'icon/bench/salubra_bench.png','',0,'benchandtransport'],
-                               ['Bench',-824,2042,'icon/bench/bone_bench.png','<br>Inside House',0,'benchandtransport'],
-                               ['Bench',-705,2254,'icon/bench/final_boss_bench.png','<br>Inside',0,'benchandtransport'],
-                               ['Bench',-739,1441,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-739,1441,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1007,1557,'icon/bench/fung_bench.png','',0,'benchandtransport'],
-                               ['Bench',-857,1090,'icon/bench/bench.png','<br>50 Geo to unlock',0,'benchandtransport'],//GreenPath
-                               ['Bench',-771,919,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-768,584,'icon/bench/slug_shrine_bench.png','<br>Inside',0,'benchandtransport'],
-                               ['Bench',-951,491,'icon/bench/sheo_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1228,1618,'icon/bench/fung_temple_bench.png','<br>Inside',0,'benchandtransport'],
-                               ['Bench',-1458,1489,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1195,2109,'icon/bench/leg_eater_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1752,2114,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1724,2000,'icon/bench/mantis_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1574,2484,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1411,2684,'icon/bench/toll_bench.png','<br>150 Geo',0,'benchandtransport'],//city of tears
-                               ['Bench',-1265,2444,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1551,2898,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1671,3478,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1369,3279,'icon/bench/bath_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1855,2586,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-2074,1424,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1719,1326,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1860,313,'icon/bench/spider_bench.png','',0,'benchandtransport'],
-                               ['Bench',-2256,2633,'icon/bench/toll_bench.png','<br>150 Geo',0,'benchandtransport'],//ancient basin
-                               ['Bench',-2233,3249,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1845,4311,'icon/bench/oro_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1581,4026,'icon/bench/camp_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1277,3665,'icon/bench/col_bench.png','<br>Under Colloseum',0,'benchandtransport'],
-                               ['Bench',-2115,3609,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-2115,3609,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-853,2897,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-526,2854,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-859,3511,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-950,3678,'icon/bench/bench.png','',0,'benchandtransport'],
-                               ['Bench',-1325,1149,'icon/bench/guardian_bench.png','',0,'benchandtransport'],
-                               ['Bench',-1476,714,'icon/bench/toll_bench.png','<br>150 Geo',0,'benchandtransport'],//queen garden
-                               ['Bench',-1369,861,'icon/bench/bench.png','',0,'benchandtransport'],]
-
-    let stagInfo = [['Stag',-304,1198,'icon/stag.png','',0,'benchandtransport'],
-                    ['Stag',-769,891,'icon/stag.png','<br>140 Geo',0,'benchandtransport'],
-                    ['Stag',-630,2016,'icon/stag.png','',0,'benchandtransport'],
-                    ['Stag',-906,2328,'icon/stag.png','<br>50 Geo',0,'benchandtransport'],
-                    ['Stag',-860,3543,'icon/stag.png','',0,'benchandtransport'],
-                    ['Stag',-1264,2473,'icon/stag.png','<br>200 Geo',0,'benchandtransport'],
-                    ['Stag',-860,3543,'icon/stag.png','',0,'benchandtransport'],
-                    ['Stag',-1670,3506,'icon/stag.png','<br>300 Geo',0,'benchandtransport'],
-                    ['Stag',-1457,1464,'icon/stag.png','<br>140 Geo',0,'benchandtransport'],
-                    ['Stag',-1365,830,'icon/stag.png','<br>200 Geo',0,'benchandtransport'],
-                    ['Stag',-1808,462,'icon/stag.png','<br>250 Geo',0,'benchandtransport'],
-                    ['Stag',-2232,3221,'icon/stag.png','',0,'benchandtransport'],]
-
-    let tramInfo = [['Tram',-935,2653,'icon/tram.png','',0,'benchandtransport'],
-                    ['Tram',-935,2879,'icon/tram.png','',0,'benchandtransport'],
-                    ['Tram',-2069,3281,'icon/tram.png','',0,'benchandtransport'],
-                    ['Tram',-2069,2770,'icon/tram.png','',0,'benchandtransport'],
-                    ['Tram',-2069,1820,'icon/tram.png','',0,'benchandtransport'],]
-    //#endregion
-
-    //#region  TRADABLES
-    let tradablesGroup = new L.LayerGroup()
-    let tradablesInfo = [['Rancid Eggs',-487,2925,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-799,2868,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-751,2650,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-978,2876,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-986,433,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1276,1092,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1571,1714,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1957,1037,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-2003,721,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1837,332,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1768,2210,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1823,2421,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1852,2675,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1934,3130,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1530,2708,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1452,3218,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1375,3735,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Rancid Eggs',-1935,4246,'icon/rancid_egg.png','',0,'tradables'],
-                     ['Wanderers Journal',-459,3001,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-536,1155,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-767,970,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1071,1476,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1350,1865,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1574,1885,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1287,2305,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-2032,2971,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1567,3222,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1585,3428,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1003,3733,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1654,3677,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1766,3956,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['Wanderers Journal',-1579,3994,'icon/wanderers_journal.png','',0,'tradables'],
-                     ['King\'s Idol',-550,2730,'icon/kings_idol.png','',0,'tradables'],
-                     ['King\'s Idol',-582,1017,'icon/kings_idol.png','',0,'tradables'],
-                     ['King\'s Idol',-1844,1251,'icon/kings_idol.png','',0,'tradables'],
-                     ['King\'s Idol',-1837,3002,'icon/kings_idol.png','',0,'tradables'],
-                     ['King\'s Idol',-1339,3546,'icon/kings_idol.png','',0,'tradables'],
-                     ['King\'s Idol',-1391,4213,'icon/kings_idol.png','',0,'tradables'],
-                     ['King\'s Idol',-778,3708,'icon/kings_idol.png','',0,'tradables'],
-                     ['Hallownest Seal',-987,3439,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-658,2083,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1034,1814,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-979,1114,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1135,1297,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1424,1487,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1287,487,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1307,1787,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1852,298,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1741,1583,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1700,1977,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1327,2542,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1625,2551,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1348,2949,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Hallownest Seal',-1624,3461,'icon/hallownest_seal.png','',0,'tradables'],
-                     ['Arcane Egg',-2661,2430,'icon/arcane_egg.png','',0,'tradables'],
-                     ['Arcane Egg',-2755,3589,'icon/arcane_egg.png','',0,'tradables'],
-                     ['Arcane Egg',-2809,2626,'icon/arcane_egg.png','',0,'tradables'],]
-                     
-    //#endregion
-
-    //#region  ExplorationQuest
-    let explorationandquestGroup = new L.LayerGroup()
-    let explorationandquest = [['Tram Pass',-1743,878,'icon/explorequest/tram_pass.png','',0,'explorationandquest'],
-                            ['Lumafly Lantern',-551,1955,'icon/lumafly_lantern.png','',0,'explorationandquest'],
-                            ['Collectors Map',-1523,3578,'icon/explorequest/collectors_map.png','<br>Marks the location of all 46 Grubs on any purchased Maps.',0,'explorationandquest'],
-                            ['Hunter Mark',-925,1668,'icon/explorequest/hunter_mark.png','',0,'explorationandquest'],
-                            ['Delicate Flower',-949,3646,'icon/explorequest/flower.png','<br>Clear Monster First, Donot bench',0,'explorationandquest'],
-                            ['Grave of The Traitors Child',-1312,827,'icon/explorequest/grave_marker.png','<br>Delicate Flower Destination',0,'explorationandquest'],
-                            ['Godtuner',-1957,2104,'icon/explorequest/godtuner.png','<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.',1,'explorationandquest'],]
-    
-    //#endregion
-
-    //#region  Keys
-    let keysGroup = new L.LayerGroup()
-    let keysInfo = [['Simple Key',-563,1979,'icon/simple_key.png','<br> Simple Key: 950 Geo',0,'keys'],
-                    ['Elegant Key',-563,1991,'icon/elegant_key.png','<br> Elegant Key: 800 Geo',0,'keys'],
-                    ['Love Key',-1479,1347,'icon/love_key.png','',0,'keys'],
-                    ['Shopkeeper\'s Key',-494,2808,'icon/shopkeeper_key.png','',0,'keys'],
-                    ['City Crest',-846,2143,'icon/city_crest.png','<br>Drop from False Knight',0,'keys'],
-                    ['King\'s Brand',-1742,4305,'icon/kings_brand.png','',2,'keys'],]
-    //#endregion
-
 
     const LayerGroupDict = {
       'grub':grubGroup,
@@ -1104,74 +1119,57 @@ window.addEventListener('load', function () {
     //#region  CREATEMARKERS
       createMarkers(grubData,[32,32],grubGroup)
       grubGroup.addTo(map)
-      
 
       createMarkers(charmsData,[22,22],charmsGroup)
       charmsGroup.addTo(map)
       
-
       createMarkers(warriordreamsData,[25,25],warriordreamsGroup)
       warriordreamsGroup.addTo(map)
       
-
       createMarkers(bossesData,[32,32],bossesGroup)
       bossesGroup.addTo(map)
       
-
       createMarkers(dreamersData,[32,32],dreamersGroup)
       dreamersGroup.addTo(map)
-
 
       createMarkers(notchesData,[22,22],notchesGroup)
       notchesGroup.addTo(map)
 
-
       createMarkers(spellsandabilitiesData,[25,25],spellsandabilitiesGroup)
       spellsandabilitiesGroup.addTo(map)
-
 
       createMarkers(maskshardData,[25,25],maskshardGroup)
       maskshardGroup.addTo(map)
 
-
-      // createMarkers(vesselfragmentInfo,[24,20],vesselfragmentGroup)
-      // vesselfragmentGroup.addTo(map)
+      createMarkers(vesselfragmentData,[24,20],vesselfragmentGroup)
+      vesselfragmentGroup.addTo(map)
       
+      createMarkers(paleoreData,[22,22],paleoreGroup)
+      paleoreGroup.addTo(map)
 
-      // createMarkers(paleoreInfo,[22,22],paleoreGroup)
-      // paleoreGroup.addTo(map)
+      createMarkers(whisperingrootsData,[30,30],whisperingrootsGroup)
+      whisperingrootsGroup.addTo(map)
 
-
-      // createMarkers(whisperingrootsInfo,[30,30],whisperingrootsGroup)
-      // whisperingrootsGroup.addTo(map)
-
-
-      // createMarkers(npcInfo,[28,28],npcGroup)
-      // npcGroup.addTo(map)
-
-
-      // createMarkers(benchInfo,[30,20],benchandtransportGroup)
-      // benchandtransportGroup.addTo(map)
+      createMarkers(benchData,[30,20],benchandtransportGroup)
+      benchandtransportGroup.addTo(map)
     
+      createMarkers(stagData,[30,25],benchandtransportGroup)
+      benchandtransportGroup.addTo(map)
 
-      // createMarkers(stagInfo,[30,25],benchandtransportGroup)
-      // benchandtransportGroup.addTo(map)
+      createMarkers(tramData,[27,27],benchandtransportGroup)
+      benchandtransportGroup.addTo(map)
 
-
-      // createMarkers(tramInfo,[27,27],benchandtransportGroup)
-      // benchandtransportGroup.addTo(map)
-
+      createMarkers(tradablesData,[20,23],tradablesGroup)
+      tradablesGroup.addTo(map)
 
       // createMarkers(explorationandquest,[25,25],explorationandquestGroup)
       // explorationandquestGroup.addTo(map)
 
-
       // createMarkers(keysInfo,[25,25],keysGroup)
       // keysGroup.addTo(map)
 
-
-      // createMarkers(tradablesInfo,[20,23],tradablesGroup)
-      // tradablesGroup.addTo(map)
+      // createMarkers(npcInfo,[28,28],npcGroup)
+      // npcGroup.addTo(map)
 
 
       foundMarkersGroup.addTo(map)
@@ -1265,7 +1263,7 @@ window.addEventListener('load', function () {
             currentMarkerID = marker.options.id
 
             changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons)
-            getComments(currentMarkerID)
+            //getComments(currentMarkerID)
 
             var button = document.getElementById('MarkFoundButton')
             button.addEventListener('click',function(){
