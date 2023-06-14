@@ -434,24 +434,27 @@ window.addEventListener('load', function () {
 
     //#region  ExplorationQuest
     let explorationandquestGroup = new L.LayerGroup()
-    let explorationandquest = [['Tram Pass',-1743,878,'icon/explorequest/tram_pass.png','',0,'explorationandquest'],
-                            ['Lumafly Lantern',-551,1955,'icon/lumafly_lantern.png','',0,'explorationandquest'],
-                            ['Collectors Map',-1523,3578,'icon/explorequest/collectors_map.png','<br>Marks the location of all 46 Grubs on any purchased Maps.',0,'explorationandquest'],
-                            ['Hunter Mark',-925,1668,'icon/explorequest/hunter_mark.png','',0,'explorationandquest'],
-                            ['Delicate Flower',-949,3646,'icon/explorequest/flower.png','<br>Clear Monster First, Donot bench',0,'explorationandquest'],
-                            ['Grave of The Traitors Child',-1312,827,'icon/explorequest/grave_marker.png','<br>Delicate Flower Destination',0,'explorationandquest'],
-                            ['Godtuner',-1957,2104,'icon/explorequest/godtuner.png','<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.',1,'explorationandquest'],]
-    
+    var explorationandquestData = [
+      {name:'Tram Pass', x:-1743, y:878, path:'icon/explorequest/tram_pass.png', description:'', progression:0, markertype:'explorationandquest'},
+      {name:'Lumafly Lantern', x:-551, y:1955, path:'icon/lumafly_lantern.png', description:'', progression:0, markertype:'explorationandquest'},
+      {name:'Collectors Map', x:-1523, y:3578, path:'icon/explorequest/collectors_map.png', description:'<br>Marks the location of all 46 Grubs on any purchased Maps.', progression:0, markertype:'explorationandquest'},
+      {name:'Hunter Mark', x:-925, y:1668, path:'icon/explorequest/hunter_mark.png', description:'', progression:0, markertype:'explorationandquest'},
+      {name:'Delicate Flower', x:-949, y:3646, path:'icon/explorequest/flower.png', description:'<br>Clear Monster First, Donot bench', progression:0, markertype:'explorationandquest'},
+      {name:'Grave of The Traitors Child', x:-1312, y:827, path:'icon/explorequest/grave_marker.png', description:'<br>Delicate Flower Destination', progression:0, markertype:'explorationandquest'},
+      {name:'Godtuner', x:-1957, y:2104, path:'icon/explorequest/godtuner.png', description:'<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.', progression:1, markertype:'explorationandquest'},
+    ]    
     //#endregion
 
     //#region  Keys
     let keysGroup = new L.LayerGroup()
-    let keysInfo = [['Simple Key',-563,1979,'icon/simple_key.png','<br> Simple Key: 950 Geo',0,'keys'],
-                    ['Elegant Key',-563,1991,'icon/elegant_key.png','<br> Elegant Key: 800 Geo',0,'keys'],
-                    ['Love Key',-1479,1347,'icon/love_key.png','',0,'keys'],
-                    ['Shopkeeper\'s Key',-494,2808,'icon/shopkeeper_key.png','',0,'keys'],
-                    ['City Crest',-846,2143,'icon/city_crest.png','<br>Drop from False Knight',0,'keys'],
-                    ['King\'s Brand',-1742,4305,'icon/kings_brand.png','',2,'keys'],]
+    var keysData = [
+      {name:'Simple Key', x:-563, y:1979, path:'icon/simple_key.png', description:'<br> Simple Key: 950 Geo', progression:0, markertype:'keys'},
+      {name:'Elegant Key', x:-563, y:1991, path:'icon/elegant_key.png', description:'<br> Elegant Key: 800 Geo', progression:0, markertype:'keys'},
+      {name:'Love Key', x:-1479, y:1347, path:'icon/love_key.png', description:'', progression:0, markertype:'keys'},
+      {name:'Shopkeeper\'s Key', x:-494, y:2808, path:'icon/shopkeeper_key.png', description:'', progression:0, markertype:'keys'},
+      {name:'City Crest', x:-846, y:2143, path:'icon/city_crest.png', description:'<br>Drop from False Knight', progression:0, markertype:'keys'},
+      {name:'King\'s Brand', x:-1742, y:4305, path:'icon/kings_brand.png', description:'', progression:2, markertype:'keys'},
+    ]
     //#endregion
 
     //#region NPC
@@ -1162,15 +1165,14 @@ window.addEventListener('load', function () {
       createMarkers(tradablesData,[20,23],tradablesGroup)
       tradablesGroup.addTo(map)
 
-      // createMarkers(explorationandquest,[25,25],explorationandquestGroup)
-      // explorationandquestGroup.addTo(map)
+      createMarkers(explorationandquestData,[25,25],explorationandquestGroup)
+      explorationandquestGroup.addTo(map)
 
-      // createMarkers(keysInfo,[25,25],keysGroup)
-      // keysGroup.addTo(map)
+      createMarkers(keysData,[25,25],keysGroup)
+      keysGroup.addTo(map)
 
       // createMarkers(npcInfo,[28,28],npcGroup)
       // npcGroup.addTo(map)
-
 
       foundMarkersGroup.addTo(map)
 
