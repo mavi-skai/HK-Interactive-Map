@@ -460,138 +460,109 @@ window.addEventListener('load', function () {
     //#region NPC
     //Name X,Y,ImageURL,Description,Completion
     let npcGroup = new L.LayerGroup()
-    let npcInfo = [['Salubra',-1018,2676,'icon/npc/salubra.png',
-                    ['<br><img src="icon/charms/lifeblood_heart.png"  width="12" height="12"> Lifeblood Heart: 250 Geo</img>'+
-                    '<br><img src="icon/charms/long_nail.png"  width="12" height="12"> Long Nail: 300 Geo</img>'+
-                    '<br><img src="icon/charms/steady_body.png"  width="12" height="12"> Steady Body: 120 Geo</img>'+
-                    '<br><img src="icon/charms/shaman_stone.png"  width="12" height="12"> Shaman Stone: 220 Geo</img>'+
-                    '<br><img src="icon/charms/quick_focus.png"  width="12" height="12"> Quick Focus: 800 Geo</img>'+
-                    '<br><img src="icon/notch.png"  width="12" height="12"> Notch: 120 Geo and Own 5 Charms</img>'+ 
-                    '<br><img src="icon/notch.png" width="12" height="12"> Notch: 500 Geo and Own 10 Charms</img>'+
-                    '<br><img src="icon/notch.png" width="12" height="12"> Notch: 900 Geo and Own 18 Charms</img>'+ 
-                    '<br><img src="icon/notch.png" width="12" height="12"> Notch: 1400 Geo and Own 25 Charms</img>'+
-                    '<br><img src="icon/salubra_blessing.png" width="12" height="12"> Blessing: 800 Geo and Own 40 Charms</img>'],0,'npc'],
-                   ['Confessor Jiji',-633,2199,'icon/npc/confessor_jiji.png',['<br>Requires Rancid Eggs to summon the Knight\'s Shade.'],0,'npc'],
-                   ['Divine',-624,1853,'icon/npc/divine.png',
-                    ['<br><img src="icon/charms/unbreakable_greed.png"  width="12" height="12"> Unbreakable Greed: 9000 Geo</img>'+
-                    '<br><img src="icon/charms/unbreakable_heart.png"  width="12" height="12"> Unbreakable Heart: 12000 Geo</img>'+
-                    '<br><img src="icon/charms/unbreakable_strength.png"  width="12" height="12"> Unbreakable Strength: 15000 Geo</img>'],0,'npc'],
-                   ['Iselda',-627,2040,'icon/npc/iselda.png',
-                    ['<br><img src="icon/charms/wayward_compass.png"  width="12" height="12"> Wayward Compass: 220 Geo</img>'+
-                    '<br><img src="icon/area_map.png"  width="12" height="12"> Resting Grounds: 75 Geo</img>'+
-                    '<br><img src="icon/quill.png"  width="12" height="12"> :Quill</img>'+
-                    '<br><img src="icon/map_pins.png"  width="28" height="18"> :Map pins</img>'],0,'npc'],
-                   ['Legeater',-1193,2124,'icon/npc/legeater.png',
-                    ['<br><img src="icon/charms/fragile_heart.png"  width="12" height="12"> Fragile Heart: 350 Geo</img>'+
-                    '<br><img src="icon/charms/fragile_greed.png"  width="12" height="12"> Fragile Greed: 250 Geo</img>'+
-                    '<br><img src="icon/charms/fragile_strength.png"  width="12" height="12"> Fragile Strength:600 Geo</img>'+
-                    '<br><img src="icon/charms/fragile_heart_broken.png"  width="12" height="12"> Repair:200 Geo/Defender Crest Equipped 160G</img>'+
-                    '<br><img src="icon/charms/fragile_greed_broken.png"  width="12" height="12"> Repair:150 Geo/Defender Crest Equipped 120G</img>'+
-                    '<br><img src="icon/charms/fragile_strength_broken.png"  width="12" height="12"> Repair:350 Geo/Defender Crest Equipped 280G</img>'],0,'npc'],
-                   ['Little Fool',-1277,3648,'icon/npc/little_fool.png',
-                    ['<br><img src="icon/trial_of_the_warrior.png"  width="15" height="20"> Trial of The Warrior: 100 Geo</img>'+
-                    '<br><img src="icon/trial_of_the_conqueror.png"  width="15" height="20"> Trial of The Conqueror: 450 Geo</img>'+
-                    '<br><img src="icon/trial_of_the_fool.png"  width="15" height="20"> Trial of The Fool: 800 Geo</img>'],0,'npc'],
-                   ['Millibelle The Banker',-1391,1396,'icon/npc/millibelle.png',['<br>If she holds 2550 Geo or more and the Knight rests at a Bench or uses the Stagways, visiting the bank again reveals that Millibelle has abandoned her stand.'+
-                   '<br>Millibelle the Thief can be found at the Hot Spring in the Pleasure House in the City of Tears'],0,'npc'],
-                   ['Nailsmith',-1683,2184,'icon/npc/nailsmith.png',
-                    ['<br>Sharpened Nail: 250 Geo <br>Channelled Nail: 800g + x1 Pale Ore <br>Coiled Nail: 2000g + x2 Pale Ore <br>Pure Nail: 4000g + x3 Pale Ore'],0,'npc'],
-                   ['Relic Seeker Lemm',-1679,2733,'icon/npc/lemm.png',
-                    ['<br><img src="icon/wanderers_journal.png"  width="12" height="12"> Wanderer Journal: 200 Geo</img>'+
-                    '<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hollownest Seal: 450 Geo</img>'+
-                    '<br><img src="icon/kings_idol.png"  width="12" height="12"> King\'s Idol: 800 Geo</img>'+
-                    '<br><img src="icon/arcane_egg.png"  width="12" height="12"> Arcane Egg: 1200 Geo</img>'],0,'npc'],
-                   ['Sly',-627,1977,'icon/npc/sly.png',
-                    ['<br><img src="icon/simple_key.png"  width="12" height="12"> Simple Key: 950 Geo</img>'+
-                    '<br><img src="icon/rancid_egg.png"  width="12" height="12"> Rancid Egg: 60 Geo</img>'+
-                    '<br><img src="icon/lumafly_lantern.png"  width="12" height="12"> Lumafly Lantern: 1800 Geo</img>'+
-                    '<br><img src="icon/charms/gathering_swarm.png"  width="12" height="12"> Gathering Swarm: 300 Geo</img>'+
-                    '<br><img src="icon/charms/stalwart_shell.png"  width="12" height="12"> Stalwart Shell: 200 Geo</img>'+
-                    '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 150 Geo</img>'+
-                    '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 500 Geo </img>'+
-                    '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 550 Geo</img>'+
-                    '<br><img src="icon/elegant_key.png"  width="12" height="12"> Elegant Key: 800 Geo</img>'+
-                    '<br><img src="" width="12" height="12">Requires Shopkeeper\'s Key</img>'+
-                    '<br><img src="icon/charms/heavy_blow.png"  width="12" height="12"> Heavy Blow: 350 Geo</img>'+
-                    '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 800 Geo</img>'+
-                    '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 1500 Geo</img>'+
-                    '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 900 Geo</img>'+
-                    '<br><img src="icon/charms/sprintmaster.png"  width="12" height="12"> Sprintmaster: 400 Geo</img>'],0,'npc'],
-                   ['Tuk',-1748,2908,'icon/npc/tuk.png',
-                    ['<br>She sells the Knight Rancid Eggs for Geo.png 80-100.' +
-                     'She does not sell eggs if the Knight has 80 or more in their inventory.'+
-                     'She also gives them one for free if they are wearing the Defender\'s Crest Charm,'],0,'npc'],
-                   ['Mato',-393,1407,'icon/npc/mato.png',
-                    ['<br>Nailmaster Mato is one of three Nailmasters in Hollow Knight.'+
-                     ' He teaches the Cyclone Slash to whoever is willing to become his disciple.'],0,'npc'],
-                   ['Oro',-1845,4293,'icon/npc/oro.png',
-                    ['<br>Nailmaster Oro is one of three Nailmasters in Hollow Knight.'+
-                     ' He teaches the Dash Slash Nail Art to those willing to pay him for his services.'],0,'npc'],
-                   ['Sheo',-950,477,'icon/npc/sheo.png',
-                    ['<br>Nailmaster Sheo is one of three Nailmasters in Hollow Knight.'+
-                     ' Although retired, he teaches the Great Slash Nail Art to those seeking him.'],0,'npc'],
-                   ['Bretta',-1765,2017,'icon/npc/bretta.png',
-                    ['<br>Bretta is in Fungal Wastes past Dash Master statue. Unlock her house for Mask Shard. She sleeps in the house and sits on Bench.'],0,'npc'],
-                   ['Brumm',-1912,299,'icon/npc/brumm_banish.png',
-                    ['<br>After Grimm fight, Brumm in Distant Village gives Flame if Knight has less than three. He offers to help banish Grimm Troupe.'],0,'npc'],
-                   ['Brumm',-540,1279,'icon/npc/brumm_banish.png',
-                    ['<br>Brumm will jabs his staff into the brazier so it can be broken and banished Grimm Troupe'],0,'npc'],
-                   ['Grey Mourner',-950,3662,'icon/npc/grey_mourner.png',
-                    ['<br>Grey Mourner is in Resting Grounds, needs Desolate Dive/Descending Dark.'+
-                     ' She asks Knight to take Delicate Flower to lover\'s grave in Queen\'s Gardens, but flower breaks if Knight teleports or takes damage.'],0,'npc'],
-                   ['Grub Father',-715,1890,'icon/npc/grub_father.png',
-                    ['<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 5/46 Grub</img>'+
-                     '<br><img src="icon/charms/grubsong.png"  width="12" height="12"> Grubsong: 10/46 Grub</img>'+
-                     '<br><img src="icon/rancid_egg.png"  width="15" height="15"> Rancid Egg: 16/46 Grub</img>'+
-                     '<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 23/46 Grub</img>'+
-                     '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 31/46 Grub</img>'+
-                     '<br><img src="icon/kings_idol.png"  width="12" height="12"> King\'s Idol: 38/46 Grub</img>'+
-                     '<br><img src="icon/charms/grubberfly_elegy.png"  width="12" height="12"> Grubberfly Elegy: 46/46 Grub</img>'],0,'npc'],
-                   ['Seer',-815,3425,'icon/npc/seer.png',
-                    ['<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 100 Essence</img>'+
-                     '<br><img src=""  width="12" height="12"> Spirit Glade: 200 Essence</img>'+
-                     '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 300 Essence</img>'+
-                     '<br><img src="icon/charms/dream_wielder.png"  width="12" height="12"> Dream Wielder: 500 Essence</img>'+
-                     '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 700 Essence</img>'+
-                     '<br><img src="icon/dream_gate.png"  width="12" height="12"> Dream Gate: 900 Essence</img>'+
-                     '<br><img src="icon/arcane_egg.png"  width="12" height="12"> Arcane Egg: 1200 Essence</img>'+
-                     '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 1500 Essence</img>'+
-                     '<br><img src="icon/spell_abilities/awoken_dream_nail.png"  width="12" height="12"> Awoken Dream Nail: 1800 Essence</img>'+
-                     '<br><img src="icon/achievements/achievement_ascension.png"  width="12" height="12"> Ascension Achievement: 2400 Essence</img>'],0,'npc'],
-                    ['Hunter',-938,1668,'icon/npc/hunter.png',
-                     ['<br>He gifts the Hunter\'s Journal, a bestiary detailing all enemies in Hallownest.'],0,'npc'],
-                    ['Godseeker',-1971,2102,'icon/npc/godseeker.png',
-                     ['<br>Godseeker\'s cocoon is in Junk Pit, unlocks with Simple Key. Free Godseeker, get Godtuner, start seeking gods or use Dream Nail to join Godhome fights.'],0,'npc'],
-                    ['Zote',-643,972,'icon/npc/zote1.png',
-                     ['<br> Saved or If not saved before Mantis Claw, Zote dies there, leaving shell and nail. Hitting shell unlocks Neglect achievement.'+
-                      '<br>PS: FCK THIS GUY. FCK Grey Prince Zote.'],0,'npc'],
-                    ['Zote',-1833,1306,'icon/npc/zote1.png',
-                     ['<br>Found stuck in spider webs in Deepnest. Knight can save or leave him, but leaving him won\'t result in death.'+
-                      '<br>PS:FCK Grey Prince Zote. Specially in Pantheon!'],0,'npc'],
-                    ['Cornifer',-2154,2787,'icon/npc/cornifer.png',
-                      ['<br>Map for Ancient Basin: 112 Geo'],0,'npc'],
-                    ['Cornifer',-1409,2703,'icon/npc/cornifer.png',
-                      ['<br>Map for City of Tears: 90 Geo'],0,'npc'], 
-                    ['Cornifer',-570,2715,'icon/npc/cornifer.png',
-                      ['<br>Map for Crystal Peak: 112 Geo'],0,'npc'],
-                    ['Cornifer',-1696,1384,'icon/npc/cornifer.png',
-                      ['<br>Map for Deepnest: 38 Geo'],0,'npc'],
-                    ['Cornifer',-1117,1556,'icon/npc/cornifer.png',
-                      ['<br>Map for Fog Canyon: 150 Geo'],0,'npc'],
-                    ['Cornifer',-865,1992,'icon/npc/cornifer.png',
-                      ['<br>Map for Forgotten Crossroads: 30 Geo'],0,'npc'],
-                    ['Cornifer',-1460,1666,'icon/npc/cornifer.png',
-                      ['<br>Map for Fungal Wastes: 75 Geo'],0,'npc'],
-                    ['Cornifer',-891,1620,'icon/npc/cornifer.png',
-                      ['<br>Map for Greenpath: 60 Geo'],0,'npc'],
-                    ['Cornifer',-435,1468,'icon/npc/cornifer.png',
-                      ['<br>Map for Howling Cliffs: 75 Geo'],0,'npc'],
-                    ['Cornifer',-1757,3670,'icon/npc/cornifer.png',
-                      ['<br>Map for Kingdom\'s Edge: 112 Geo'],0,'npc'],
-                    ['Cornifer',-1327,1192,'icon/npc/cornifer.png',
-                      ['<br>Map for Queen\'s Gardens: 150 Geo'],0,'npc'],
-                    ['Cornifer',-1789,2078,'icon/npc/cornifer.png',
-                      ['<br>Map for Royal Waterways: 75 Geo'],0,'npc'],]
+    var npcData = [
+      //{name:, x:, y:, path:, description:'', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-2154, y:2787, path:'icon/npc/cornifer.png', description:'<br>Map for Ancient Basin: 112 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1409, y:2703, path:'icon/npc/cornifer.png', description:'<br>Map for City of Tears: 90 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-570, y:2715, path:'icon/npc/cornifer.png', description:'<br>Map for Crystal Peak: 112 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1696, y:1384, path:'icon/npc/cornifer.png', description:'<br>Map for Deepnest: 38 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1117, y:1556, path:'icon/npc/cornifer.png', description:'<br>Map for Fog Canyon: 150 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-865, y:1992, path:'icon/npc/cornifer.png', description:'<br>Map for Forgotten Crossroads: 30 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1460, y:1666, path:'icon/npc/cornifer.png', description:'<br>Map for Fungal Wastes: 75 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-891, y:1620, path:'icon/npc/cornifer.png', description:'<br>Map for Greenpath: 60 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-435, y:1468, path:'icon/npc/cornifer.png', description:'<br>Map for Howling Cliffs: 75 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1757, y:3670, path:'icon/npc/cornifer.png', description:'<br>Map for Kingdom\'s Edge: 112 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1327, y:1192, path:'icon/npc/cornifer.png', description:'<br>Map for Queen\'s Gardens: 150 Geo', progression:0, markertype:'npc'},
+      {name:'Cornifer', x:-1789, y:2078, path:'icon/npc/cornifer.png', description:'<br>Map for Royal Waterways: 75 Geo', progression:0, markertype:'npc'},
+      {name:'Zote', x:-643, y:972, path:'icon/npc/zote1.png', description:'<br> Saved or If not saved before Mantis Claw, Zote dies there, leaving shell and nail. Hitting shell unlocks Neglect achievement.'+
+      '<br>PS: FCK THIS GUY. FCK Grey Prince Zote.', progression:0, markertype:'npc'},
+      {name:'Zote', x:-1833, y:1306, path:'icon/npc/zote1.png', description:'<br>Found stuck in spider webs in Deepnest. Knight can save or leave him, but leaving him won\'t result in death.'+
+      '<br>PS:FCK Grey Prince Zote. Specially in Pantheon!', progression:0, markertype:'npc'},
+      {name:'Hunter', x:-938, y:1668, path:'icon/npc/hunter.png', description:'<br>He gifts the Hunter\'s Journal, a bestiary detailing all enemies in Hallownest.', progression:0, markertype:'npc'},
+      {name:'Godseeker', x:-1971, y:2102, path:'icon/npc/godseeker.png', description:'<br>Godseeker\'s cocoon is in Junk Pit, unlocks with Simple Key. Free Godseeker, get Godtuner, start seeking gods or use Dream Nail to join Godhome fights.', progression:0, markertype:'npc'},
+      {name:'Seer', x:-815, y:3425, path:'icon/npc/seer.png', description:'<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 100 Essence</img>'+
+      '<br><img src=""  width="12" height="12"> Spirit Glade: 200 Essence</img>'+
+      '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 300 Essence</img>'+
+      '<br><img src="icon/charms/dream_wielder.png"  width="12" height="12"> Dream Wielder: 500 Essence</img>'+
+      '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 700 Essence</img>'+
+      '<br><img src="icon/dream_gate.png"  width="12" height="12"> Dream Gate: 900 Essence</img>'+
+      '<br><img src="icon/arcane_egg.png"  width="12" height="12"> Arcane Egg: 1200 Essence</img>'+
+      '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 1500 Essence</img>'+
+      '<br><img src="icon/spell_abilities/awoken_dream_nail.png"  width="12" height="12"> Awoken Dream Nail: 1800 Essence</img>'+
+      '<br><img src="icon/achievements/achievement_ascension.png"  width="12" height="12"> Ascension Achievement: 2400 Essence</img>', progression:0, markertype:'npc'},
+      {name:'Grub Father', x:-715, y:1890, path:'icon/npc/grub_father.png', description:'<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 5/46 Grub</img>'+
+      '<br><img src="icon/charms/grubsong.png"  width="12" height="12"> Grubsong: 10/46 Grub</img>'+
+      '<br><img src="icon/rancid_egg.png"  width="15" height="15"> Rancid Egg: 16/46 Grub</img>'+
+      '<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hallownest Seal: 23/46 Grub</img>'+
+      '<br><img src="icon/pale_ore.png"  width="12" height="12"> Pale Ore: 31/46 Grub</img>'+
+      '<br><img src="icon/kings_idol.png"  width="12" height="12"> King\'s Idol: 38/46 Grub</img>'+
+      '<br><img src="icon/charms/grubberfly_elegy.png"  width="12" height="12"> Grubberfly Elegy: 46/46 Grub</img>', progression:0, markertype:'npc'},
+      {name:'Grey Mourner', x:-950, y:3662, path:'icon/npc/grey_mourner.png', description:'<br>Grey Mourner is in Resting Grounds, needs Desolate Dive/Descending Dark.'+
+      ' She asks Knight to take Delicate Flower to lover\'s grave in Queen\'s Gardens, but flower breaks if Knight teleports or takes damage.', progression:0, markertype:'npc'},
+      {name:'Brumm', x:-1912, y:299, path:'icon/npc/brumm_banish.png', description:'<br>After Grimm fight, Brumm in Distant Village gives Flame if Knight has less than three. He offers to help banish Grimm Troupe.', progression:0, markertype:'npc'},
+      {name:'Brumm', x:-540, y:1279, path:'icon/npc/brumm_banish.png', description:'<br>Brumm will jabs his staff into the brazier so it can be broken and banished Grimm Troupe', progression:0, markertype:'npc'},
+      {name:'Mato', x:-393, y:1407, path:'icon/npc/mato.png', description:'<br>Nailmaster Mato is one of three Nailmasters in Hollow Knight.'+
+      ' He teaches the Cyclone Slash to whoever is willing to become his disciple.', progression:0, markertype:'npc'},
+      {name:'Oro', x:-1845, y:4293, path:'icon/npc/oro.png', description:'<br>Nailmaster Oro is one of three Nailmasters in Hollow Knight.'+
+      ' He teaches the Dash Slash Nail Art to those willing to pay him for his services.', progression:0, markertype:'npc'},
+      {name:'Sheo', x:-950, y:477, path:'icon/npc/sheo.png', description:'<br>Nailmaster Sheo is one of three Nailmasters in Hollow Knight.'+
+      ' Although retired, he teaches the Great Slash Nail Art to those seeking him.', progression:0, markertype:'npc'},
+      {name:'Bretta', x:-1765, y:2017, path:'icon/npc/bretta.png', description:'<br>Bretta is in Fungal Wastes past Dash Master statue. Unlock her house for Mask Shard. She sleeps in the house and sits on Bench.', progression:0, markertype:'npc'},
+      {name:'Tuk', x:-1748, y:2908, path:'icon/npc/tuk.png', description:'<br>She sells the Knight Rancid Eggs for Geo.png 80-100.' +
+      'She does not sell eggs if the Knight has 80 or more in their inventory.'+
+      'She also gives them one for free if they are wearing the Defender\'s Crest Charm,', progression:0, markertype:'npc'},
+      {name:'Confessor Jiji', x:-633, y:2199, path:'icon/npc/confessor_jiji.png', description:'<br>Requires Rancid Eggs to summon the Knight\'s Shade.', progression:0, markertype:'npc'},
+      {name:'Little Fool', x:-1277, y:3648, path:'icon/npc/little_fool.png', description:'<br><img src="icon/trial_of_the_warrior.png"  width="15" height="20"> Trial of The Warrior: 100 Geo</img>'+
+      '<br><img src="icon/trial_of_the_conqueror.png"  width="15" height="20"> Trial of The Conqueror: 450 Geo</img>'+
+      '<br><img src="icon/trial_of_the_fool.png"  width="15" height="20"> Trial of The Fool: 800 Geo</img>', progression:0, markertype:'npc'},
+      {name:'Millibelle The Banker', x:-1391, y:1396, path:'icon/npc/millibelle.png', description:'<br>If she holds 2550 Geo or more and the Knight rests at a Bench or uses the Stagways, visiting the bank again reveals that Millibelle has abandoned her stand.'+
+      '<br>Millibelle the Thief can be found at the Hot Spring in the Pleasure House in the City of Tears', progression:0, markertype:'npc'},
+      {name:'Nailsmith', x:-1683, y:2184, path:'icon/npc/nailsmith.png', description:'<br>Sharpened Nail: 250 Geo <br>Channelled Nail: 800g + x1 Pale Ore <br>Coiled Nail: 2000g + x2 Pale Ore <br>Pure Nail: 4000g + x3 Pale Ore', progression:0, markertype:'npc'},
+      {name:'Iselda', x:-627, y:2040, path:'icon/npc/iselda.png', description:'<br><img src="icon/charms/wayward_compass.png"  width="12" height="12"> Wayward Compass: 220 Geo</img>'+
+      '<br><img src="icon/area_map.png"  width="12" height="12"> Resting Grounds: 75 Geo</img>'+
+      '<br><img src="icon/quill.png"  width="12" height="12"> :Quill</img>'+
+      '<br><img src="icon/map_pins.png"  width="28" height="18"> :Map pins</img>', progression:0, markertype:'npc'},
+      {name:'Relic Seeker Lemm', x:-1679, y:2733, path:'icon/npc/lemm.png', description:'<br><img src="icon/wanderers_journal.png"  width="12" height="12"> Wanderer Journal: 200 Geo</img>'+
+      '<br><img src="icon/hallownest_seal.png"  width="12" height="12"> Hollownest Seal: 450 Geo</img>'+
+      '<br><img src="icon/kings_idol.png"  width="12" height="12"> King\'s Idol: 800 Geo</img>'+
+      '<br><img src="icon/arcane_egg.png"  width="12" height="12"> Arcane Egg: 1200 Geo</img>', progression:0, markertype:'npc'},
+      {name:'Divine', x:-624, y:1853, path:'icon/npc/divine.png', description:'<br><img src="icon/charms/unbreakable_greed.png"  width="12" height="12"> Unbreakable Greed: 9000 Geo</img>'+
+      '<br><img src="icon/charms/unbreakable_heart.png"  width="12" height="12"> Unbreakable Heart: 12000 Geo</img>'+
+      '<br><img src="icon/charms/unbreakable_strength.png"  width="12" height="12"> Unbreakable Strength: 15000 Geo</img>', progression:0, markertype:'npc'},
+      {name:'Legeater', x:-1193, y:2124, path:'icon/npc/legeater.png', description:'<br><img src="icon/charms/fragile_heart.png"  width="12" height="12"> Fragile Heart: 350 Geo</img>'+
+      '<br><img src="icon/charms/fragile_greed.png"  width="12" height="12"> Fragile Greed: 250 Geo</img>'+
+      '<br><img src="icon/charms/fragile_strength.png"  width="12" height="12"> Fragile Strength:600 Geo</img>'+
+      '<br><img src="icon/charms/fragile_heart_broken.png"  width="12" height="12"> Repair:200 Geo/Defender Crest Equipped 160G</img>'+
+      '<br><img src="icon/charms/fragile_greed_broken.png"  width="12" height="12"> Repair:150 Geo/Defender Crest Equipped 120G</img>'+
+      '<br><img src="icon/charms/fragile_strength_broken.png"  width="12" height="12"> Repair:350 Geo/Defender Crest Equipped 280G</img>', progression:0, markertype:'npc'},
+      {name:'Salubra', x:-1018, y:2676, path:'icon/npc/salubra.png', description:'<br><img src="icon/charms/lifeblood_heart.png"  width="12" height="12"> Lifeblood Heart: 250 Geo</img>'+
+      '<br><img src="icon/charms/long_nail.png"  width="12" height="12"> Long Nail: 300 Geo</img>'+
+      '<br><img src="icon/charms/steady_body.png"  width="12" height="12"> Steady Body: 120 Geo</img>'+
+      '<br><img src="icon/charms/shaman_stone.png"  width="12" height="12"> Shaman Stone: 220 Geo</img>'+
+      '<br><img src="icon/charms/quick_focus.png"  width="12" height="12"> Quick Focus: 800 Geo</img>'+
+      '<br><img src="icon/notch.png"  width="12" height="12"> Notch: 120 Geo and Own 5 Charms</img>'+ 
+      '<br><img src="icon/notch.png" width="12" height="12"> Notch: 500 Geo and Own 10 Charms</img>'+
+      '<br><img src="icon/notch.png" width="12" height="12"> Notch: 900 Geo and Own 18 Charms</img>'+ 
+      '<br><img src="icon/notch.png" width="12" height="12"> Notch: 1400 Geo and Own 25 Charms</img>'+
+      '<br><img src="icon/salubra_blessing.png" width="12" height="12"> Blessing: 800 Geo and Own 40 Charms</img>', progression:0, markertype:'npc'},
+      {name:'Sly', x:-627, y:1977, path:'icon/npc/sly.png', description:'<br><img src="icon/simple_key.png"  width="12" height="12"> Simple Key: 950 Geo</img>'+
+      '<br><img src="icon/rancid_egg.png"  width="12" height="12"> Rancid Egg: 60 Geo</img>'+
+      '<br><img src="icon/lumafly_lantern.png"  width="12" height="12"> Lumafly Lantern: 1800 Geo</img>'+
+      '<br><img src="icon/charms/gathering_swarm.png"  width="12" height="12"> Gathering Swarm: 300 Geo</img>'+
+      '<br><img src="icon/charms/stalwart_shell.png"  width="12" height="12"> Stalwart Shell: 200 Geo</img>'+
+      '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 150 Geo</img>'+
+      '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 500 Geo </img>'+
+      '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 550 Geo</img>'+
+      '<br><img src="icon/elegant_key.png"  width="12" height="12"> Elegant Key: 800 Geo</img>'+
+      '<br><img src="" width="12" height="12">Requires Shopkeeper\'s Key</img>'+
+      '<br><img src="icon/charms/heavy_blow.png"  width="12" height="12"> Heavy Blow: 350 Geo</img>'+
+      '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 800 Geo</img>'+
+      '<br><img src="icon/mask_shard.png"  width="12" height="12"> Mask Shard: 1500 Geo</img>'+
+      '<br><img src="icon/vessel_fragment.png"  width="12" height="12"> Vessel Fragment: 900 Geo</img>'+
+      '<br><img src="icon/charms/sprintmaster.png"  width="12" height="12"> Sprintmaster: 400 Geo</img>', progression:0, markertype:'npc'},
+    ]
+
+                                      
     //#endregion
 
     const LayerGroupDict = {
@@ -1171,8 +1142,8 @@ window.addEventListener('load', function () {
       createMarkers(keysData,[25,25],keysGroup)
       keysGroup.addTo(map)
 
-      // createMarkers(npcInfo,[28,28],npcGroup)
-      // npcGroup.addTo(map)
+      createMarkers(npcData,[28,28],npcGroup)
+      npcGroup.addTo(map)
 
       foundMarkersGroup.addTo(map)
 
