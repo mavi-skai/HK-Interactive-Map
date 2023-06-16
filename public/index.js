@@ -565,6 +565,33 @@ window.addEventListener('load', function () {
                                       
     //#endregion
 
+    //#region  TRIALS OF FOOLS
+    let foolsGroup = new L.LayerGroup()
+    var foolsData = [
+      {name:'Trial of the Warrior', x:-1239, y:3645, path:'icon/trial_of_the_warrior.png', description:'<br>100 Geo to unlock', progression:1, markertype:'fools'},
+      {name:'Trial of the Conqueror', x:-1239, y:3665, path:'icon/trial_of_the_conqueror.png', description:'<br>450 Geo to unlock', progression:1, markertype:'fools'},
+      {name:'Trial of the Fool', x:-1239, y:3685, path:'icon/trial_of_the_fool.png', description:'<br>800 Geo to unlock', progression:1, markertype:'fools'},
+    ]
+    //#endregion
+
+    //#region GOD HOME
+    let godhomeGroup = new L.LayerGroup()
+    var godhomeData = [
+      {name:'Pantheon of the Master', x:-1941, y:2065, path:'icon/fools/pantheon_of_the_master.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of the Artist', x:-1941, y:2085, path:'icon/fools/pantheon_of_the_artist.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of the Sage', x:-1941, y:2105, path:'icon/fools/pantheon_of_the_sage.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of the Knight', x:-1941, y:2125, path:'icon/fools/pantheon_of_the_knight.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of Hallownest', x:-1941, y:2145, path:'icon/fools/pantheon_of_the_hallownest.png', description:'', progression:0, markertype:'godhome'},
+    ]
+    //#endregion
+
+    //#region ACHIEVEMENT
+    let achievementGroup = new L.LayerGroup()
+    var achievementData = [
+      {name:'Ascension', x:-780, y:3420, path:'icon/achievement/ascension.png', description:'', progression:1, markertype:'achievement'},
+    ]
+    //#endregion
+
     const LayerGroupDict = {
       'grub':grubGroup,
       'charms':charmsGroup,
@@ -582,6 +609,10 @@ window.addEventListener('load', function () {
       'tradables':tradablesGroup,
       'explorationandquest':explorationandquestGroup,
       'keys':keysGroup,
+      'fools':foolsGroup,
+      'godhome':godhomeGroup,
+      'achievement':achievementGroup,
+
     }
 
     const completionPercentage = {
@@ -594,9 +625,9 @@ window.addEventListener('load', function () {
       'boss':17,
       'warriorsdreams':7,
       'dreamers':3,
-      'fools':3, //add trials of fools icon
-      'seerascension':1, //add achievements
-      'godhomepantheons':4, // add god home
+      'fools':3, 
+      'achievement':1, 
+      'godhome':4,
       'keys':2,
     }
 
@@ -1144,6 +1175,16 @@ window.addEventListener('load', function () {
 
       createMarkers(npcData,[28,28],npcGroup)
       npcGroup.addTo(map)
+
+      createMarkers(foolsData,[35,35],foolsGroup)
+      foolsGroup.addTo(map)
+
+      createMarkers(godhomeData,[32,35],godhomeGroup)
+      godhomeGroup.addTo(map)
+
+      createMarkers(achievementData,[28,28],achievementGroup)
+      achievementGroup.addTo(map)
+      console.log(achievementGroup.getLayers().length)
 
       foundMarkersGroup.addTo(map)
 
