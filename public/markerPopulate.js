@@ -4,18 +4,18 @@ const Markers = require('../models/Markers')
 
 
 
-// const start = async () =>{
-//     try {
-//         await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
-//         await Markers.deleteMany()
-//         await Markers.create(markerData)
-//         console.log('Success!!!!')
-//         process.exit(0)
-//     } catch (error) {
-//         console.log(error)
-//         process.exit(1)
-//     }
-// }
+const start = async () =>{
+    try {
+        await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+        await Markers.deleteMany({})
+        await Markers.create(markerData)
+        console.log('Success!!!!')
+        process.exit(0)
+    } catch (error) {
+        console.log(error)
+        process.exit(1)
+    }
+}
 
 
 const findOne = async() =>{
@@ -31,5 +31,5 @@ const findOne = async() =>{
     });
   }
 
-//start()
-findOne()
+start()
+//findOne()

@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     let foundMarkersGroup = new L.LayerGroup()
     let id = 1
     let currentMarkerID = null
-   
+    let markers = []
 
 
     
@@ -57,7 +57,6 @@ window.addEventListener('load', function () {
       {name: 'Grub', x:-1715, y:4001, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
       {name: 'Grub', x:-1913, y:3916, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
       {name: 'Grub', x:-1942, y:4385, path:'icon/grub.png', description:'', progression:0, markertype:'grub'},
-      // Additional marker objects...
     ];
     
 
@@ -112,7 +111,6 @@ window.addEventListener('load', function () {
       {name:'Shaman Stone', x:-993, y:2662, path:'icon/charms/shaman_stone.png', description:'', progression:1, markertype:'charms'},
       {name:'Quick Focus', x:-993, y:2674, path:'icon/charms/quick_focus.png', description:'', progression:1, markertype:'charms'},
       {name:'Dream Wielder', x:-804, y:3421, path:'icon/charms/dream_wielder.png', description:'', progression:1, markertype:'charms'},
-      
     ]
 
 
@@ -240,7 +238,6 @@ window.addEventListener('load', function () {
       {name:'Mask Shard', x:-1968, y:3812, path:'icon/mask_shard.png', description:'<br>Requires baiting a Hive Guardian into breaking a wall', progression:0.25, markertype:'maskshard'},
       {name:'Mask Shard', x:-804, y:3431, path:'icon/mask_shard.png', description:'<br>Requires collecting 1500 Essence', progression:0.25, markertype:'maskshard'},
       {name:'Mask Shard', x:-936, y:3662, path:'icon/mask_shard.png', description:'<br>Requires completing the Delicate Flower quest', progression:0.25, markertype:'maskshard'},
-
     ]
     
     //#endregion
@@ -354,7 +351,6 @@ window.addEventListener('load', function () {
       {name:'Stag', x:-1365, y:830, path:'icon/stag.png', description:'<br>200 Geo', progression:0, markertype:'benchandtransport'},
       {name:'Stag', x:-1808, y:462, path:'icon/stag.png', description:'<br>250 Geo', progression:0, markertype:'benchandtransport'},
       {name:'Stag', x:-2232, y:3221, path:'icon/stag.png', description:'', progression:0, markertype:'benchandtransport'},
-      
     ]
 
     var tramData = [
@@ -369,7 +365,6 @@ window.addEventListener('load', function () {
     //#region  TRADABLES
     let tradablesGroup = new L.LayerGroup()
     var tradablesData = [
-      //{name:, x:, y:, path:, description:'', progression:0, markertype:'tradables'},
       {name:'Rancid Eggs', x:-487, y:2925, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
       {name:'Rancid Eggs', x:-799, y:2868, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
       {name:'Rancid Eggs', x:-751, y:2650, path:'icon/rancid_egg.png', description:'', progression:0, markertype:'tradables'},
@@ -458,10 +453,8 @@ window.addEventListener('load', function () {
     //#endregion
 
     //#region NPC
-    //Name X,Y,ImageURL,Description,Completion
     let npcGroup = new L.LayerGroup()
     var npcData = [
-      //{name:, x:, y:, path:, description:'', progression:0, markertype:'npc'},
       {name:'Cornifer', x:-2154, y:2787, path:'icon/npc/cornifer.png', description:'<br>Map for Ancient Basin: 112 Geo', progression:0, markertype:'npc'},
       {name:'Cornifer', x:-1409, y:2703, path:'icon/npc/cornifer.png', description:'<br>Map for City of Tears: 90 Geo', progression:0, markertype:'npc'},
       {name:'Cornifer', x:-570, y:2715, path:'icon/npc/cornifer.png', description:'<br>Map for Crystal Peak: 112 Geo', progression:0, markertype:'npc'},
@@ -1184,7 +1177,12 @@ window.addEventListener('load', function () {
 
       createMarkers(achievementData,[28,28],achievementGroup)
       achievementGroup.addTo(map)
-      console.log(achievementGroup.getLayers().length)
+
+
+      console.log(markers[27].options.id)
+      
+      
+      
 
       foundMarkersGroup.addTo(map)
 
@@ -1266,23 +1264,24 @@ window.addEventListener('load', function () {
               markertype:markerInfo[i].markertype,
             })
 
-          id+=1
           
-          var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`;
+          
+          var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`
           var NotFoundpopup = `<br><button id='MarkFoundButton'> Mark As Not Found</button>`
           Marker.bindPopup(Marker.options.name + Marker.options.description + Foundpopup,{maxHeight:250});
+          id+=1
           var popupContent
           Marker.on("popupopen",function(e){
             var marker = e.target
             currentMarkerID = marker.options.id
 
             changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons)
-            //getComments(currentMarkerID)
+            getComments(currentMarkerID)
 
-            var button = document.getElementById('MarkFoundButton')
+            var button = document.getElementById(`MarkFoundButton`)
             button.addEventListener('click',function(){
               var opacity = marker.options.opacity;
-
+              console.log('test')
 
               let markerINFO = {
                 id: marker.options.id,
@@ -1296,13 +1295,13 @@ window.addEventListener('load', function () {
               
 
               const token = sessionStorage.getItem('token')
-              // axios.put('/HKgitgud-map',{markerINFO,token})
-              //   .then(response => {
-              //     console.log(response.data);
-              //   })
-              //   .catch(error => {
-              //     console.log(error);
-              //   });
+              axios.put('/HKgitgud-map',{markerINFO,token})
+                .then(response => {
+                  console.log(response.data);
+                })
+                .catch(error => {
+                  console.log(error);
+                });
   
               
               if(marker.options.opacity===1){
@@ -1327,8 +1326,10 @@ window.addEventListener('load', function () {
               }
               marker.bindPopup(popupContent);
             })
+
           })
           markerGroupLayer.addLayer(Marker)
+          markers.push(Marker);
         }
       }
 
@@ -1443,9 +1444,6 @@ window.addEventListener('load', function () {
           console.log(error)
         })
 
-  
-
-
       }
 
       function changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons){
@@ -1469,10 +1467,7 @@ window.addEventListener('load', function () {
         const tooltipElement = skillPerElement.querySelector('.tooltip')
         skillPerElement.style.width = '10%';
         tooltipElement.textContent = '10%';
-      }
-
-
-      
+      }      
       
 });
 

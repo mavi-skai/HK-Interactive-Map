@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const MarkerSchema = new Schema({
-  id: {
+  markerid: {
     type: Number,
     required: [true, 'Please provide marker id'],
   },
-  name:{
+  markername:{
     type:String,
     required:[true,'Please provide name'],
   },
@@ -27,7 +27,7 @@ const MarkerSchema = new Schema({
       type: String
     }],
   },
-  progress:{
+  progression:{
     type:Number,
     required:[true,'Please provide progress'],
 

@@ -1,11 +1,13 @@
 const mongoose = require('mongoose')
 const User_Markers = require('../models/User_Markers')
+const Markers = require('../models/Markers')
 const Commnets = require('../models/Comments')
 const User = require('../models/User')
 const connectDB = require('../db/connect')
 const { response } = require('express')
 const Comments = require('../models/Comments')
 const fs = require('fs')
+const Marker = require('../models/Markers')
 
 
 
@@ -46,6 +48,16 @@ const deleteAllUserMarkers = async() => {
     }
 }
 
+const deleteAllMarkers = async() => {
+    await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+    try {
+        await Marker.deleteMany({})
+        console.log('all markers data deleted')
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const deleteComments = async() =>{
     await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
     try {
@@ -76,7 +88,9 @@ const deleteComments = async() =>{
 }
 
 //deleteDataUser()
-//deleteComments()
-//deleteAllUser()
-//deleteAllUserMarkers()
+
+deleteAllUser()
+deleteAllUserMarkers()
+deleteAllMarkers()
+deleteComments()
 
