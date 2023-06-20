@@ -570,11 +570,11 @@ window.addEventListener('load', function () {
     //#region GOD HOME
     let godhomeGroup = new L.LayerGroup()
     var godhomeData = [
-      {name:'Pantheon of the Master', x:-1941, y:2065, path:'icon/fools/pantheon_of_the_master.png', description:'', progression:1, markertype:'godhome'},
-      {name:'Pantheon of the Artist', x:-1941, y:2085, path:'icon/fools/pantheon_of_the_artist.png', description:'', progression:1, markertype:'godhome'},
-      {name:'Pantheon of the Sage', x:-1941, y:2105, path:'icon/fools/pantheon_of_the_sage.png', description:'', progression:1, markertype:'godhome'},
-      {name:'Pantheon of the Knight', x:-1941, y:2125, path:'icon/fools/pantheon_of_the_knight.png', description:'', progression:1, markertype:'godhome'},
-      {name:'Pantheon of Hallownest', x:-1941, y:2145, path:'icon/fools/pantheon_of_the_hallownest.png', description:'', progression:0, markertype:'godhome'},
+      {name:'Pantheon of the Master', x:-1941, y:2065, path:'icon/godhome/pantheon_of_the_master.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of the Artist', x:-1941, y:2085, path:'icon/godhome/pantheon_of_the_artist.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of the Sage', x:-1941, y:2105, path:'icon/godhome/pantheon_of_the_sage.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of the Knight', x:-1941, y:2125, path:'icon/godhome/pantheon_of_the_knight.png', description:'', progression:1, markertype:'godhome'},
+      {name:'Pantheon of Hallownest', x:-1941, y:2145, path:'icon/godhome/pantheon_of_the_hallownest.png', description:'', progression:0, markertype:'godhome'},
     ]
     //#endregion
 
@@ -810,7 +810,16 @@ window.addEventListener('load', function () {
               break;
           case 'keys active':
               button.addEventListener('click',showhidekeys)
-              break;        
+              break;
+          case 'godhome active':
+            button.addEventListener('click',showhidepantheon)
+            break;
+          case 'fools active':
+            button.addEventListener('click',showhidefools)
+            break;
+          case 'achievement active':
+            button.addEventListener('click',showhideachievement)
+            break;           
       }
     })
 
@@ -870,11 +879,6 @@ window.addEventListener('load', function () {
 
     }
 
-    function showhideshortcut (){
-      this.classList.toggle('active')
-  
-    }
-
     function showhidewhisperingroot (){
       this.classList.toggle('active')
       map.hasLayer(whisperingrootsGroup) === true ? hideMarker(whisperingrootsGroup) : showMarker(whisperingrootsGroup)
@@ -898,6 +902,21 @@ window.addEventListener('load', function () {
     function showhidekeys (){
       this.classList.toggle('active')
       map.hasLayer(keysGroup) === true ? hideMarker(keysGroup) : showMarker(keysGroup)
+    }
+
+    function showhidepantheon (){
+      this.classList.toggle('active')
+      map.hasLayer(godhomeGroup) === true ? hideMarker(godhomeGroup) : showMarker(godhomeGroup)
+    }
+
+    function showhidefools (){
+      this.classList.toggle('active')
+      map.hasLayer(foolsGroup) === true ? hideMarker(foolsGroup) : showMarker(foolsGroup)
+    }
+
+    function showhideachievement (){
+      this.classList.toggle('active')
+      map.hasLayer(achievementGroup) === true ? hideMarker(achievementGroup) : showMarker(achievementGroup)
     }
 
 
@@ -1179,7 +1198,7 @@ window.addEventListener('load', function () {
       achievementGroup.addTo(map)
 
 
-      console.log(markers[27].options.id)
+     //
       
       
       
@@ -1213,6 +1232,9 @@ window.addEventListener('load', function () {
         hideMarker(tradablesGroup)
         hideMarker(explorationandquestGroup)
         hideMarker(keysGroup)
+        hideMarker(godhomeGroup)
+        hideMarker(foolsGroup)
+        hideMarker(achievementGroup)
       }
 
       function showAllMarkers(){
@@ -1232,6 +1254,9 @@ window.addEventListener('load', function () {
         showMarker(tradablesGroup)
         showMarker(explorationandquestGroup)
         showMarker(keysGroup)
+        showMarker(godhomeGroup)
+        showMarker(foolsGroup)
+        showMarker(achievementGroup)
       }
 
       function hideAllFoundMarker(){
@@ -1266,8 +1291,8 @@ window.addEventListener('load', function () {
 
           
           
-          var Foundpopup = `<br><button id='MarkFoundButton'> Mark Found</button>`
-          var NotFoundpopup = `<br><button id='MarkFoundButton'> Mark As Not Found</button>`
+          var Foundpopup = `<br><button id='MarkFoundButton-${Marker.options.id}'> Mark Found</button>`
+          var NotFoundpopup = `<br><button id='MarkFoundButton-${Marker.options.id}'> Mark As Not Found</button>`
           Marker.bindPopup(Marker.options.name + Marker.options.description + Foundpopup,{maxHeight:250});
           id+=1
           var popupContent
@@ -1278,7 +1303,7 @@ window.addEventListener('load', function () {
             changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons)
             getComments(currentMarkerID)
 
-            var button = document.getElementById(`MarkFoundButton`)
+            var button = document.getElementById(`MarkFoundButton-${currentMarkerID}`)
             button.addEventListener('click',function(){
               var opacity = marker.options.opacity;
               console.log('test')
@@ -1318,6 +1343,9 @@ window.addEventListener('load', function () {
       
               var name = marker.options.name;
               var desc = marker.options.description;
+              var id = marker.options.id
+              var Foundpopup = `<br><button id='MarkFoundButton-${id}'> Mark Found</button>`
+              var NotFoundpopup = `<br><button id='MarkFoundButton-${id}'> Mark As Not Found</button>`
               if(desc){
                 popupContent = opacity === 1 ? name+desc+NotFoundpopup : name+desc+Foundpopup;
               }

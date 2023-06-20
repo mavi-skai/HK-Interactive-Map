@@ -29,6 +29,6 @@ const updateMarker = async(req,res) =>{
     
     
 }
-//document.getElementById(`MarkFoundButton`)
+//
 module.exports = {updateMarker}
 
