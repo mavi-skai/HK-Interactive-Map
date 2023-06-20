@@ -3714,7 +3714,7 @@
     "markername": "Pantheon of the Master",
     "x": -1941,
     "y": 2065,
-    "path": "icon/fools/pantheon_of_the_master.png",
+    "path": "icon/godhome/pantheon_of_the_master.png",
     "description": "",
     "progression": 1,
     "markertype": "godhome"
@@ -3724,7 +3724,7 @@
     "markername": "Pantheon of the Artist",
     "x": -1941,
     "y": 2085,
-    "path": "icon/fools/pantheon_of_the_artist.png",
+    "path": "icon/godhome/pantheon_of_the_artist.png",
     "description": "",
     "progression": 1,
     "markertype": "godhome"
@@ -3734,7 +3734,7 @@
     "markername": "Pantheon of the Sage",
     "x": -1941,
     "y": 2105,
-    "path": "icon/fools/pantheon_of_the_sage.png",
+    "path": "icon/godhome/pantheon_of_the_sage.png",
     "description": "",
     "progression": 1,
     "markertype": "godhome"
@@ -3744,7 +3744,7 @@
     "markername": "Pantheon of the Knight",
     "x": -1941,
     "y": 2125,
-    "path": "icon/fools/pantheon_of_the_knight.png",
+    "path": "icon/godhome/pantheon_of_the_knight.png",
     "description": "",
     "progression": 1,
     "markertype": "godhome"
@@ -3754,7 +3754,7 @@
     "markername": "Pantheon of Hallownest",
     "x": -1941,
     "y": 2145,
-    "path": "icon/fools/pantheon_of_the_hallownest.png",
+    "path": "icon/godhome/pantheon_of_the_hallownest.png",
     "description": "",
     "progression": 0,
     "markertype": "godhome"

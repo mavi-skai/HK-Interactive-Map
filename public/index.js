@@ -1197,10 +1197,6 @@ window.addEventListener('load', function () {
       createMarkers(achievementData,[28,28],achievementGroup)
       achievementGroup.addTo(map)
 
-
-     //
-      
-      
       
 
       foundMarkersGroup.addTo(map)
@@ -1292,10 +1288,9 @@ window.addEventListener('load', function () {
           
           
           var Foundpopup = `<br><button id='MarkFoundButton-${Marker.options.id}'> Mark Found</button>`
-          var NotFoundpopup = `<br><button id='MarkFoundButton-${Marker.options.id}'> Mark As Not Found</button>`
           Marker.bindPopup(Marker.options.name + Marker.options.description + Foundpopup,{maxHeight:250});
           id+=1
-          var popupContent
+
           Marker.on("popupopen",function(e){
             var marker = e.target
             currentMarkerID = marker.options.id
@@ -1306,7 +1301,7 @@ window.addEventListener('load', function () {
             var button = document.getElementById(`MarkFoundButton-${currentMarkerID}`)
             button.addEventListener('click',function(){
               var opacity = marker.options.opacity;
-              console.log('test')
+               
 
               let markerINFO = {
                 id: marker.options.id,
@@ -1338,21 +1333,10 @@ window.addEventListener('load', function () {
               }
               
 
-              marker.setOpacity(opacity===1? 0.5:1)
-              marker.closePopup();
+             
       
-              var name = marker.options.name;
-              var desc = marker.options.description;
-              var id = marker.options.id
-              var Foundpopup = `<br><button id='MarkFoundButton-${id}'> Mark Found</button>`
-              var NotFoundpopup = `<br><button id='MarkFoundButton-${id}'> Mark As Not Found</button>`
-              if(desc){
-                popupContent = opacity === 1 ? name+desc+NotFoundpopup : name+desc+Foundpopup;
-              }
-              else{
-                popupContent = opacity === 1 ? name+NotFoundpopup : name+Foundpopup;
-              }
-              marker.bindPopup(popupContent);
+              //create function for set bindpopup and description
+              setDescription(marker,markerINFO.isHidden)
             })
 
           })
@@ -1495,7 +1479,28 @@ window.addEventListener('load', function () {
         const tooltipElement = skillPerElement.querySelector('.tooltip')
         skillPerElement.style.width = '10%';
         tooltipElement.textContent = '10%';
-      }      
+      }
+      
+      function setDescription(marker,isHidden){
+            var name = marker.options.name;
+            var desc = marker.options.description;
+            var id = marker.options.id
+            var Foundpopup = `<br><button id='MarkFoundButton-${id}'> Mark Found</button>`
+            var NotFoundpopup = `<br><button id='MarkFoundButton-${id}'> Mark As Not Found</button>`
+            if(desc){
+              popupContent = isHidden === true ? name+desc+NotFoundpopup : name+desc+Foundpopup;
+            }
+            else{
+              popupContent = isHidden  === true ? name+NotFoundpopup : name+Foundpopup;
+            }
+            marker.options.opacity = isHidden === true ? 0.40 : 1 ;
+            marker.closePopup();
+            marker.setOpacity(isHidden === true ? 0.40 : 1)
+            marker.bindPopup(popupContent);
+            
+            
+      }
+
       
 });
 

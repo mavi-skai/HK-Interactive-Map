@@ -22,12 +22,12 @@
   font-weight: bold;
 }
 
-#MarkFoundButton {
-  width: 150px;
-  height: 25px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(200, 200, 200);
+[id*="MarkFoundButton"] { 
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(200, 200, 200);
 }
 
 
