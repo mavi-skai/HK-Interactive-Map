@@ -940,10 +940,11 @@ window.addEventListener('load', function () {
     const loginform = document.querySelector(".login-form")
     const login_alert = document.querySelector('.login-error span')
     const login_section = document.querySelector('.container.forms')
-    const user_info = document.querySelector('.user-details')
+    const user_details = document.querySelector('.user-details')
+    const user_info = document.querySelector('.user-info')
+    const h6element = user_info.querySelector('h6')
     const signupform = document.querySelector('.signup-form')
     const logoutbtn = document.getElementById('logout-btn')
-    
 
 
     pwShowHide.forEach(eyeIcon => {
@@ -1006,9 +1007,7 @@ window.addEventListener('load', function () {
 
       const username = document.querySelector('.login-username')
       const pass = document.querySelector('.login-password')
-      const userdetails = document.querySelector('.user-details')
-      const user_info = document.querySelector('.user-info')
-      const h6element = user_info.querySelector('h6')
+      
 
       login_alert.innerHTML = ''
       let action = 'login'
@@ -1021,9 +1020,11 @@ window.addEventListener('load', function () {
       axios.post('/HKgitgud-map',{action,logininfo})
                 .then(response => {
                   sessionStorage.setItem('token',response.data.token)
+                  sessionStorage.setItem('name',response.data.user.name)
+
                   h6element.textContent = response.data.user.name
                   login_section.style.display = 'none';
-                  userdetails.removeAttribute('style')
+                  user_details.removeAttribute('style')
                   clearAllInput()
                 })
                 .catch(error => {
@@ -1032,21 +1033,25 @@ window.addEventListener('load', function () {
       })
 
       const token = this.sessionStorage.getItem('token')
+      const name = this.sessionStorage.getItem('name')
       if(token){
         login_section.style.display = 'none';
-        user_info.removeAttribute('style')
+        user_details.removeAttribute('style')
+        console.log(name)
+        h6element.textContent = name
       }
       else{
         login_section.style.display = 'block';
-        user_info.setAttribute('style', 'display: none;');
+        user_details.setAttribute('style', 'display: none;');
       }
 
 
     logoutbtn.addEventListener('click',function(e){
       e.preventDefault()
       login_section.style.display = 'block';
-      user_info.setAttribute('style', 'display: none;');
+      user_details.setAttribute('style', 'display: none;');
       sessionStorage.removeItem('token')
+      sessionStorage.removeItem('name')
     })
 
     //#endregion
@@ -1315,13 +1320,14 @@ window.addEventListener('load', function () {
               
 
               const token = sessionStorage.getItem('token')
-              axios.put('/HKgitgud-map',{markerINFO,token})
-                .then(response => {
-                  console.log(response.data);
-                })
-                .catch(error => {
-                  console.log(error);
-                });
+
+              // axios.put('/HKgitgud-map',{markerINFO,token})
+              //   .then(response => {
+              //     console.log(response.data);
+              //   })
+              //   .catch(error => {
+              //     console.log(error);
+              //   });
   
               
               if(marker.options.opacity===1){
