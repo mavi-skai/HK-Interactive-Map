@@ -1321,13 +1321,13 @@ window.addEventListener('load', function () {
 
               const token = sessionStorage.getItem('token')
 
-              // axios.put('/HKgitgud-map',{markerINFO,token})
-              //   .then(response => {
-              //     console.log(response.data);
-              //   })
-              //   .catch(error => {
-              //     console.log(error);
-              //   });
+              axios.put('/HKgitgud-map',{markerINFO,token})
+                .then(response => {
+                  console.log(response.data);
+                })
+                .catch(error => {
+                  console.log(error);
+                });
   
               
               if(marker.options.opacity===1){
