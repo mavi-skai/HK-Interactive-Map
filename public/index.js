@@ -1311,9 +1311,6 @@ window.addEventListener('load', function () {
               let markerINFO = {
                 id: marker.options.id,
                 name: marker.options.name,
-                description: marker.options.description,
-                progression: marker.options.progression,
-                markertype: marker.options.markertype,
                 isHidden:opacity==1? true : false
               }
 

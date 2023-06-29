@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose');
 const redis = require("redis");
 const redisclient = redis.createClient();
-
+redisclient.connect();
 
 //await redisclient.sendCommand(["FLUSHALL"]);
 
@@ -12,11 +12,14 @@ const redisclient = redis.createClient();
 
 const updateMarker = async(req,res) =>{
     try {
-        const {id: id,name,description,progression,markertype,isHidden} = req.body.markerINFO
+        const {id: markerid,name,isHidden} = req.body.markerINFO
+        const decodedToken = jwt.decode(req.body.token);
+        const userID = decodedToken.userID
 
-        await redisclient.connect();
+        redisclient.hSet(String(markerid), 'userid', String(userID))
+        redisclient.hSet(String(markerid), 'isHidden', String(isHidden))
+       
 
-        redisclient.set('name2','BOOM')
 
         // if(req.body.token){
         //     const decodedToken = jwt.decode(req.body.token);
