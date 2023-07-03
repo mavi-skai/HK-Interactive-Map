@@ -1317,8 +1317,8 @@ window.addEventListener('load', function () {
               
 
               const token = sessionStorage.getItem('token')
-
-              axios.put('/HKgitgud-map',{markerINFO,token})
+              const updateDatabase = true
+              axios.put('/HKgitgud-map',{markerINFO,token,updateDatabase})
                 .then(response => {
                   console.log(response.data);
                 })
