@@ -2,13 +2,13 @@ const { StatusCodes } = require('http-status-codes')
 const User_Markers = require('../models/User_Markers')
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose');
-const redis = require("redis");
-const redisclient = redis.createClient();
-redisclient.connect();
+const Redis = require("ioredis");
+const redisclient = new Redis();
+
 
 //await redisclient.sendCommand(["FLUSHALL"]);
 
-var markers = []
+
 
 const updateMarker = async(req,res) =>{
     
@@ -19,16 +19,33 @@ const updateMarker = async(req,res) =>{
             const decodedToken = jwt.decode(req.body.token);
             const userID = decodedToken.userID
 
-            redisclient.hSet(String(markerid), 'userid', String(userID))
-            redisclient.hSet(String(markerid), 'isHidden', String(isHidden))
+
+            redisclient.hmset(markerid, 'userID', userID, 'isHidden', isHidden);
         }
         else if(req.body.updateDatabase===true){
             console.log('Update Database')
             
-            // var test = await redisclient.hGetAll('360')
-            // console.log(test)
+        //    await redisclient.keys('*',function(err,keys){
+        //         if(err) return console.log(err)
+        //         if(keys){
+        //             console.log(keys)
+        //             keys.forEach(function(key){
+        //                 redisclient.hgetall(key,function(err,value){
+        //                     if(err) return console.log(err)
+        //                     markers[key] = value
+        //                 })
+        //             })
+        //         }
+        //     })
 
-         
+        const keys = await redisclient.keys('*')
+        const markers = {}
+        for(const key of keys){
+            const value = await redisclient.hgetall(key)
+            markers[key] = value
+        }
+
+        console.log(markers);
         }
         
        

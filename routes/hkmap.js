@@ -5,7 +5,7 @@ const {getAllcomments,saveComment} = require('../controllers/comments.js')
 const {updateMarker} = require('../controllers/marker.js')
 const path = require('path')
 const multer = require('multer');
-const redis = require('../controllers/redis.js')
+
 
 
 var storage = multer.diskStorage({
