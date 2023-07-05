@@ -20,52 +20,44 @@ const updateMarker = async(req,res) =>{
             const userID = decodedToken.userID
 
 
-            redisclient.hmset(markerid, 'userID', userID, 'isHidden', isHidden);
+            redisclient.hmset(markerid, 'userID', userID, 'isHidden', isHidden,'markerID',markerid);
+            res.status(StatusCodes.OK).json({ msg: "marker updated" });
         }
         else if(req.body.updateDatabase===true){
             console.log('Update Database')
-            
-        //    await redisclient.keys('*',function(err,keys){
-        //         if(err) return console.log(err)
-        //         if(keys){
-        //             console.log(keys)
-        //             keys.forEach(function(key){
-        //                 redisclient.hgetall(key,function(err,value){
-        //                     if(err) return console.log(err)
-        //                     markers[key] = value
-        //                 })
-        //             })
-        //         }
-        //     })
+            const keys = await redisclient.keys('*')
+            const markers = []
 
-        const keys = await redisclient.keys('*')
-        const markers = {}
-        for(const key of keys){
-            const value = await redisclient.hgetall(key)
-            markers[key] = value
-        }
+            async function fetchMarkers (){
+                for(const key of keys){
+                    const value = await redisclient.hgetall(key)
+                    markers.push(value)
+                }
+            }
+           
+            await fetchMarkers()
+            console.log(markers);
 
-        console.log(markers);
+            const bulkUpdate = markers.map(marker =>({
+                updateOne:{
+                    filter:{markerid:marker.markerID,userid:marker.userID},
+                    update:{isHidden:marker.isHidden}
+                }
+            }))
+
+
+            User_Markers.bulkWrite(bulkUpdate)
+                .then(result => {
+                    console.log(`${result.modifiedCount} documents updated.`);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+
+            res.status(StatusCodes.OK).json({ msg: "database updated" });
         }
         
-       
-
-
-        // if(req.body.token){
-        //     const decodedToken = jwt.decode(req.body.token);
-        //     const userID = decodedToken.userID
-        //     const updatedmarker = await User_Markers.findOneAndUpdate(
-        //         {markerid:id,userid:userID,markername:name},
-        //         {
-        //             isHidden:isHidden   
-        //         },
-        //         {new:true})
-        //     console.log('after update')
-        //     console.log(updatedmarker)
-        // }
-        // else{
-        //     console.log('no account login')
-        // }
 
     } catch (error) {
         console.log(error)
@@ -73,6 +65,8 @@ const updateMarker = async(req,res) =>{
     
     
 }
-//
+
+
+
 module.exports = {updateMarker}
 

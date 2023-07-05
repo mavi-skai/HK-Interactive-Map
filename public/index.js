@@ -1320,7 +1320,7 @@ window.addEventListener('load', function () {
               const updateDatabase = true
               axios.put('/HKgitgud-map',{markerINFO,token,updateDatabase})
                 .then(response => {
-                  console.log(response.data);
+                  console.log(response.data.msg);
                 })
                 .catch(error => {
                   console.log(error);
