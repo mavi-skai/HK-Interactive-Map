@@ -1,6 +1,0 @@
-[
-    {
-      "userid": null,
-      "category": ""
-    },
-]

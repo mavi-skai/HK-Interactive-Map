@@ -609,8 +609,8 @@ window.addEventListener('load', function () {
     }
 
     const completionPercentage = {
-      'maskshard':4,
-      'vesselfragment':3,
+      'maskshard':4, //16
+      'vesselfragment':3, //9
       'spellsandabilities':23,
       'explorationandquest':1, //GODTUNER
       'paleore':4, //NAIL UPGRADES
@@ -1480,8 +1480,8 @@ window.addEventListener('load', function () {
       function changePercentage(category){
         const skillPerElement = document.querySelector('.skill-per'+category)
         const tooltipElement = skillPerElement.querySelector('.tooltip')
-        skillPerElement.style.width = '10%';
-        tooltipElement.textContent = '10%';
+        skillPerElement.style.width = '50%';
+        tooltipElement.textContent = '50%';
       }
       
       function setDescription(marker,isHidden){

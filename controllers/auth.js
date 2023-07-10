@@ -32,13 +32,16 @@ const handleAuth = async (req,res,next) => {
                 throw new BadRequestError('Username Already Exist');
             }
 
+
+      
             const createdUser = await User.create(userData)
             createdUser.createUserMakers(createdUser)
+            createdUser.createUserProgression(createdUser)
       
             res.status(StatusCodes.OK).json({ msg: "Your account has been created!" });
             
         } catch (error) {
-            //console.log(error)
+            console.log(error)
             next(error)
             
         }

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const User_CompletionSchema = new Schema({
+const User_ProgressSchema = new Schema({
     userid:{
         type:Schema.Types.ObjectId,
         required:[true,'Please provide User ID']
@@ -10,7 +10,7 @@ const User_CompletionSchema = new Schema({
         type:String,
         required:[true,'Please provide Marker Category']
     },
-    completionPercentage:{
+    progress:{
         type:Number,
         required:[true,'Please provide Completion Percentage'],
         default:0,
@@ -19,6 +19,6 @@ const User_CompletionSchema = new Schema({
 
 
 const HKMap = mongoose.connection.useDb('HKMap')
-const User_Completion = HKMap.model('user_completion',User_CompletionSchema)
+const User_Progress = HKMap.model('user_progresses',User_ProgressSchema)
 
-module.exports 
+module.exports = User_Progress

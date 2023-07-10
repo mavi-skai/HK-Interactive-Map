@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs');
 const User_Markers = require('./User_Markers')
 const usermarkerData = require('../usermarkersData.json')
+const userprogressData = require('../userprogressData.json')
+const User_Progress = require("../models/User_Progress")
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema({
@@ -27,10 +29,6 @@ const UserSchema = new Schema({
         minlength:[6, 'Password must be at least 8 characters long'],
         maxlength:[18, 'Password cannot be more than 50 characters long'],
     },
-    totalcompletion:{
-        type:Number,
-        default:0,
-    }
 })
 
 UserSchema.pre('save',async function(){
@@ -59,9 +57,21 @@ UserSchema.methods.createUserMakers = async function(){
             markername:usermarker.markername,
         }
     })
-    //console.log(markers)
     await User_Markers.insertMany(markers) // ID ERROR 
 }
+
+UserSchema.methods.createUserProgression = async function(){
+    const progress = userprogressData.map(progress=>{
+        return {
+            userid:this._id,
+            category:progress.category,
+            progress:progress.progress,
+        }
+    })
+    
+    await User_Progress.insertMany(progress)
+}
+
 
 const HKMap = mongoose.connection.useDb('HKMap')
 const User = HKMap.model('users',UserSchema)

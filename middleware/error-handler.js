@@ -23,6 +23,13 @@ const errorHandlerMiddleware = (error,req,res,next) => {
       .map((item) => item.message)
       customError.statusCode = 400
     }
+
+    if(error.name==='MongoServerError')
+    {
+      console.log('mongoose error')
+      customError.msg = 'database error'
+      customError.statusCode = 400
+    }
     
     return res.status(customError.statusCode).json({ msg: customError.msg })
 }
