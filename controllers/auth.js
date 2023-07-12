@@ -1,8 +1,25 @@
 const BadRequestError = require('../errors/bad-request')
 const { StatusCodes } = require('http-status-codes')
 const errorHandlerMiddleware = require('../middleware/error-handler')
+const User_Progress = require('../models/User_Progress')
 const User = require('../models/User')
+const jwt = require('jsonwebtoken')
+const redisclient = require('./redis')
 
+
+const prog = ['maskshard',
+              'vesselfragment',
+              'spellsandabilities',
+              'explorationandquest',
+              'paleore',
+              'charms',
+              'boss',
+              'warriorsdreams',
+              'dreamers',
+              'fools',
+              'achievement',
+              'godhome',
+              'keys',]
 
 const handleAuth = async (req,res,next) => {
     if(req.body.action=='signup'){
@@ -37,7 +54,9 @@ const handleAuth = async (req,res,next) => {
             const createdUser = await User.create(userData)
             createdUser.createUserMakers(createdUser)
             createdUser.createUserProgression(createdUser)
-      
+
+           
+            
             res.status(StatusCodes.OK).json({ msg: "Your account has been created!" });
             
         } catch (error) {
@@ -68,7 +87,16 @@ const handleAuth = async (req,res,next) => {
             }
 
             const token = user.createJWT()
-            res.status(StatusCodes.OK).json({ user: { name: user.username }, token });
+            const decodedToken = jwt.decode(token);
+            const userID = decodedToken.userID
+
+
+            const progress = await User_Progress.find({userid:userID}).select('-_id progress category')
+
+            for(var i=0;i<progress.length;i++){
+                redisclient.set('progress:'+progress[i].category,progress[i].progress)
+            }
+            res.status(StatusCodes.OK).json({ user: { name: user.username }, token ,progress})
             
         } catch (error) {
             console.log('inside of auth.js')

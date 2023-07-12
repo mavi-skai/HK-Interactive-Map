@@ -614,7 +614,7 @@ window.addEventListener('load', function () {
       'spellsandabilities':23,
       'explorationandquest':1, //GODTUNER
       'paleore':4, //NAIL UPGRADES
-      'charms':40,
+      'charms':40, //40
       'boss':17,
       'warriorsdreams':7,
       'dreamers':3,
@@ -624,7 +624,7 @@ window.addEventListener('load', function () {
       'keys':2,
     }
 
-    changePercentage('.maskshard')
+
     
     
     //#region DROPDOWN
@@ -1026,8 +1026,14 @@ window.addEventListener('load', function () {
                   login_section.style.display = 'none';
                   user_details.removeAttribute('style')
                   clearAllInput()
+
+                  for(let i=0;i<response.data.progress.length;i++){
+                    changePercentage(response.data.progress[i].category,response.data.progress[i].progress)
+                  }
+
                 })
                 .catch(error => {
+                  console.log(error)
                   login_alert.innerHTML = error.response.data.msg
                 });    
       })
@@ -1037,7 +1043,6 @@ window.addEventListener('load', function () {
       if(token){
         login_section.style.display = 'none';
         user_details.removeAttribute('style')
-        console.log(name)
         h6element.textContent = name
       }
       else{
@@ -1052,6 +1057,14 @@ window.addEventListener('load', function () {
       user_details.setAttribute('style', 'display: none;');
       sessionStorage.removeItem('token')
       sessionStorage.removeItem('name')
+      // const updateDatabase = true
+      // axios.put('/HKgitgud-map',{token,updateDatabase})
+      //   .then(response => {
+      //     console.log(response.data.msg);
+      //   })
+      //   .catch(error => {
+      //     console.log(error);
+      //   });
     })
 
     //#endregion
@@ -1311,16 +1324,22 @@ window.addEventListener('load', function () {
               let markerINFO = {
                 id: marker.options.id,
                 name: marker.options.name,
-                isHidden:opacity==1? true : false
+                isHidden:opacity==1? true : false,
+                progress:marker.options.progression,
+                markertype:marker.options.markertype,
               }
 
               
 
               const token = sessionStorage.getItem('token')
-              const updateDatabase = true
+              const updateDatabase = false
               axios.put('/HKgitgud-map',{markerINFO,token,updateDatabase})
                 .then(response => {
-                  console.log(response.data.msg);
+                  console.log(response.data.msg)
+                  if(response.data.newprogress !==undefined && response.data.markertype !==undefined){
+                    changePercentage(response.data.markertype,response.data.newprogress)
+                  }
+                 
                 })
                 .catch(error => {
                   console.log(error);
@@ -1477,12 +1496,17 @@ window.addEventListener('load', function () {
           }
       }
 
-      function changePercentage(category){
-        const skillPerElement = document.querySelector('.skill-per'+category)
+      function changePercentage(category,percent){
+        var percentage = (parseFloat(percent)/completionPercentage[category]*100)
+        const skillPerElement = document.querySelector('.skill-per.'+category)
         const tooltipElement = skillPerElement.querySelector('.tooltip')
-        skillPerElement.style.width = '50%';
-        tooltipElement.textContent = '50%';
+        console.log(Math.round(percentage))
+        skillPerElement.style.width = Math.round(percentage)+'%';
+        tooltipElement.textContent =  Math.round(percentage)+'%';
+        
       }
+
+
       
       function setDescription(marker,isHidden){
             var name = marker.options.name;

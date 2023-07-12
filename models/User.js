@@ -7,6 +7,7 @@ const userprogressData = require('../userprogressData.json')
 const User_Progress = require("../models/User_Progress")
 const Schema = mongoose.Schema
 
+
 const UserSchema = new Schema({
     username: {
         type:String,
@@ -68,6 +69,10 @@ UserSchema.methods.createUserProgression = async function(){
             progress:progress.progress,
         }
     })
+
+
+
+
     
     await User_Progress.insertMany(progress)
 }

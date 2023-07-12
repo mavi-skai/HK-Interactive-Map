@@ -26,8 +26,12 @@ const errorHandlerMiddleware = (error,req,res,next) => {
 
     if(error.name==='MongoServerError')
     {
-      console.log('mongoose error')
-      customError.msg = 'database error'
+      customError.msg = 'something wrong in the server'
+      customError.statusCode = 400
+    }
+
+    if(error.name==='ReferenceError'){
+      customError.msg = 'something wrong in the server'
       customError.statusCode = 400
     }
     

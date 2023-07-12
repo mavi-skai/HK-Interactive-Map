@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+
 const User_ProgressSchema = new Schema({
     userid:{
         type:Schema.Types.ObjectId,
@@ -11,9 +12,8 @@ const User_ProgressSchema = new Schema({
         required:[true,'Please provide Marker Category']
     },
     progress:{
-        type:Number,
+        type:String,
         required:[true,'Please provide Completion Percentage'],
-        default:0,
     }
 })
 

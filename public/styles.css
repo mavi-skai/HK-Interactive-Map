@@ -673,12 +673,12 @@ form{
     opacity: 0;
 }
 
-.skill-per .maskshard{
+.skill-per.maskshard{
     width: 0%; 
     animation-delay: 0.1s;
 }
 
-.skill-per.vesselfragments{
+.skill-per.vesselfragment{
     width: 0%;
     animation-delay: 0.1s;
 }
@@ -688,12 +688,12 @@ form{
     animation-delay: 0.2s;
 }
 
-.skill-per.godtuner{
+.skill-per.explorationandquest{
     width: 0%;
     animation-delay: 0.3s;
 }
 
-.skill-per.nailupgrades{
+.skill-per.paleore{
     width: 0%;
     animation-delay: 0.3s;
 }
@@ -703,12 +703,12 @@ form{
     animation-delay: 0.3s;
 }
 
-.skill-per.bosses{
+.skill-per.boss{
     width: 0%;
     animation-delay: 0.3s;
 }
 
-.skill-per.warriorsgraves{
+.skill-per.warriorsdreams{
     width: 0%;
     animation-delay: 0.3s;
 }
@@ -718,22 +718,22 @@ form{
     animation-delay: 0.3s;
 }
 
-.skill-per.colosseum{
+.skill-per.fools{
     width: 0%;
     animation-delay: 0.3s;
 }
 
-.skill-per.seerascension{
+.skill-per.achievement{
     width: 0%;
     animation-delay: 0.3s;
 }
 
-.skill-per.godhomepantheons{
+.skill-per.godhome{
     width: 0%;
     animation-delay: 0.3s;
 }
 
-.skill-per.kingbrand{
+.skill-per.keys{
     width: 0%;
     animation-delay: 0.3s;
 }
