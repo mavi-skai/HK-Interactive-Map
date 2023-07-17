@@ -19,7 +19,8 @@ const prog = ['maskshard',
               'fools',
               'achievement',
               'godhome',
-              'keys',]
+              'keys',
+              'total',]
 
 const handleAuth = async (req,res,next) => {
     if(req.body.action=='signup'){
@@ -96,6 +97,7 @@ const handleAuth = async (req,res,next) => {
             for(var i=0;i<progress.length;i++){
                 redisclient.set('progress:'+progress[i].category,progress[i].progress)
             }
+
             res.status(StatusCodes.OK).json({ user: { name: user.username }, token ,progress})
             
         } catch (error) {

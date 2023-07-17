@@ -622,6 +622,7 @@ window.addEventListener('load', function () {
       'achievement':1, 
       'godhome':4,
       'keys':2,
+      'total':112,
     }
 
 
@@ -1026,15 +1027,24 @@ window.addEventListener('load', function () {
                   login_section.style.display = 'none';
                   user_details.removeAttribute('style')
                   clearAllInput()
-
                   for(let i=0;i<response.data.progress.length;i++){
+                    if(response.data.progress[i].category==='total'){
+                      changeTotalPercentage(response.data.progress[i].category,response.data.progress[i].progress)
+                      continue
+                    }
                     changePercentage(response.data.progress[i].category,response.data.progress[i].progress)
                   }
 
                 })
                 .catch(error => {
                   console.log(error)
-                  login_alert.innerHTML = error.response.data.msg
+                  if(error){
+                    console.log(error)
+                  }
+                  else{
+                    login_alert.innerHTML = error.response.data.msg
+                  }
+                  
                 });    
       })
 
@@ -1313,7 +1323,7 @@ window.addEventListener('load', function () {
             var marker = e.target
             currentMarkerID = marker.options.id
 
-            changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons)
+            //changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons)
             getComments(currentMarkerID)
 
             var button = document.getElementById(`MarkFoundButton-${currentMarkerID}`)
@@ -1338,6 +1348,7 @@ window.addEventListener('load', function () {
                   console.log(response.data.msg)
                   if(response.data.newprogress !==undefined && response.data.markertype !==undefined){
                     changePercentage(response.data.markertype,response.data.newprogress)
+                    changeTotalPercentage('total',response.data.newtotalprogress)
                   }
                  
                 })
@@ -1500,10 +1511,17 @@ window.addEventListener('load', function () {
         var percentage = (parseFloat(percent)/completionPercentage[category]*100)
         const skillPerElement = document.querySelector('.skill-per.'+category)
         const tooltipElement = skillPerElement.querySelector('.tooltip')
-        console.log(Math.round(percentage))
         skillPerElement.style.width = Math.round(percentage)+'%';
         tooltipElement.textContent =  Math.round(percentage)+'%';
         
+      }
+
+      function changeTotalPercentage(category,percent){
+        var userpercentage = document.querySelector('.user-percentage span')
+        var newpercent = (parseFloat(percent)/completionPercentage[category]*100)
+        console.log(percent)
+        console.log(completionPercentage[category])
+        userpercentage.innerText = newpercent.toFixed(2)+'%'
       }
 
 

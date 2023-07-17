@@ -63,5 +63,10 @@
       "userid": null,
       "category": "keys",
       "progress":"0"
+    },
+    {
+      "userid": null,
+      "category": "total",
+      "progress":"0"
     }
 ]
