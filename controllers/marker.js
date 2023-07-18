@@ -6,9 +6,6 @@ const mongoose = require('mongoose');
 const redisclient = require('./redis')
 
 
-//await redisclient.sendCommand(["FLUSHALL"]);
-
-
 
 const updateMarker = async(req,res) =>{
     
@@ -25,14 +22,15 @@ const updateMarker = async(req,res) =>{
                 redisclient.get('progress:'+markertype,(err,value)=>{
                     if(err) throw err
 
-                    var newprogress = isHidden === true ? progress + parseFloat(value) : parseFloat(value) - progress 
+                    var newprogress = isHidden === true ? progress + parseFloat(value) : formatToZeroPercentage(parseFloat(value) - progress)
 
-                    //console.log(`new progress value: ${newprogress}`)
+                    console.log(`new progress value: ${newprogress}`)
                     redisclient.get('progress:total',(err,totalvalue)=>{
                         if(err) throw err
-                        //console.log(`old total value: ${totalvalue}`)
-                        var newtotalprogress = isHidden === true? parseFloat(totalvalue) + progress : parseFloat(totalvalue) - progress 
-                        //console.log(`new total value: ${newtotalprogress}`)
+                        console.log(`old total value: ${totalvalue}`)
+                        var newtotalprogress = isHidden === true? parseFloat(totalvalue) + progress : formatToZeroPercentage(parseFloat(totalvalue) - progress) 
+
+                        console.log(`new total value: ${newtotalprogress}`)
 
                         redisclient.set('progress:total',newtotalprogress)
 
@@ -63,7 +61,7 @@ const updateMarker = async(req,res) =>{
             }
            
             await fetchMarkers()
-            console.log(markers);
+            //console.log(markers);
 
             const bulkUpdate = markers.map(marker =>({
                 updateOne:{
@@ -81,7 +79,7 @@ const updateMarker = async(req,res) =>{
             //         console.error(error);
             //     });
 
-
+            redisclient.flushall()
             res.status(StatusCodes.OK).json({ msg: "database updated" });
         }
         
@@ -94,6 +92,9 @@ const updateMarker = async(req,res) =>{
 }
 
 
+function formatToZeroPercentage(value) {
+    return Math.abs(value) < 0.0001 ? '0%' : value ;
+  }
 
 module.exports = {updateMarker}
 

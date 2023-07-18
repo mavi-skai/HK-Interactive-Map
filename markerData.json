@@ -3257,7 +3257,7 @@
     "path": "icon/explorequest/godtuner.png",
     "description": "<br>It is dropped by the Godseeker automatically when she is freed from her coffin in the Junk Pit by using a Simple Key.",
     "progression": 1,
-    "markertype": "explorationandquest"
+    "markertype": "godhome"
   },
   {
     "markerid": 327,

@@ -204,12 +204,12 @@ window.addEventListener('load', function () {
       {name:'Shade Soul', x:-1331, y:2685, path:'icon/spell_abilities/shade_soul.png', description:'', progression:1, markertype:'spellsandabilities'},
       {name:'Descending Dark', x:-760, y:3309, path:'icon/spell_abilities/descending_dark.png', description:'', progression:1, markertype:'spellsandabilities'},
       {name:'Abyss Shriek', x:-2769, y:2365, path:'icon/spell_abilities/abyss_shriek.png', description:'', progression:1, markertype:'spellsandabilities'},
-      {name:'Mothwing Cloak', x:-712, y:817, path:'icon/spell_abilities/mothwing_cloak.png', description:'', progression:1, markertype:'spellsandabilities'},
-      {name:'Mantis Claw', x:-1634, y:1796, path:'icon/spell_abilities/mantis_claw.png', description:'', progression:1, markertype:'spellsandabilities'},
-      {name:'Crystal Heart', x:-633, y:3409, path:'icon/spell_abilities/crystal_heart.png', description:'', progression:1, markertype:'spellsandabilities'},
-      {name:'Monarch Wings', x:-2271, y:1858, path:'icon/spell_abilities/monarch_wings.png', description:'', progression:1, markertype:'spellsandabilities'},
-      {name:'Isma\'s Tear', x:-1948, y:3372, path:'icon/spell_abilities/isma\'s_tear.png', description:'', progression:1, markertype:'spellsandabilities'},
-      {name:'Shade Cloak', x:-2736, y:3643, path:'icon/spell_abilities/shade_cloak.png', description:'', progression:1, markertype:'spellsandabilities'},
+      {name:'Mothwing Cloak', x:-712, y:817, path:'icon/spell_abilities/mothwing_cloak.png', description:'', progression:2, markertype:'spellsandabilities'},
+      {name:'Mantis Claw', x:-1634, y:1796, path:'icon/spell_abilities/mantis_claw.png', description:'', progression:2, markertype:'spellsandabilities'},
+      {name:'Crystal Heart', x:-633, y:3409, path:'icon/spell_abilities/crystal_heart.png', description:'', progression:2, markertype:'spellsandabilities'},
+      {name:'Monarch Wings', x:-2271, y:1858, path:'icon/spell_abilities/monarch_wings.png', description:'', progression:2, markertype:'spellsandabilities'},
+      {name:'Isma\'s Tear', x:-1948, y:3372, path:'icon/spell_abilities/isma\'s_tear.png', description:'', progression:2, markertype:'spellsandabilities'},
+      {name:'Shade Cloak', x:-2736, y:3643, path:'icon/spell_abilities/shade_cloak.png', description:'', progression:2, markertype:'spellsandabilities'},
       {name:'Dream Nail', x:-947, y:3321, path:'icon/spell_abilities/dream_nail.png', description:'', progression:1, markertype:'spellsandabilities'},
       {name:'Cyclone Slash', x:-379, y:1407, path:'icon/spell_abilities/cyclone_slash.png', description:'', progression:1, markertype:'spellsandabilities'},
       {name:'Dash Slash', x:-1823, y:4292, path:'icon/spell_abilities/dash_slash.png', description:'', progression:1, markertype:'spellsandabilities'},
@@ -607,13 +607,13 @@ window.addEventListener('load', function () {
       'achievement':achievementGroup,
 
     }
-
+    //[totalpercentange,number of items]
     const completionPercentage = {
       'maskshard':4, //16
       'vesselfragment':3, //9
       'spellsandabilities':23,
       'explorationandquest':1, //GODTUNER
-      'paleore':4, //NAIL UPGRADES
+      'paleore':4, //NAIL UPGRADES, 4% 6.length
       'charms':40, //40
       'boss':17,
       'warriorsdreams':7,
@@ -622,7 +622,6 @@ window.addEventListener('load', function () {
       'achievement':1, 
       'godhome':4,
       'keys':2,
-      'total':112,
     }
 
 
@@ -1029,7 +1028,7 @@ window.addEventListener('load', function () {
                   clearAllInput()
                   for(let i=0;i<response.data.progress.length;i++){
                     if(response.data.progress[i].category==='total'){
-                      changeTotalPercentage(response.data.progress[i].category,response.data.progress[i].progress)
+                      changeTotalPercentage(response.data.progress[i].progress)
                       continue
                     }
                     changePercentage(response.data.progress[i].category,response.data.progress[i].progress)
@@ -1038,13 +1037,7 @@ window.addEventListener('load', function () {
                 })
                 .catch(error => {
                   console.log(error)
-                  if(error){
-                    console.log(error)
-                  }
-                  else{
-                    login_alert.innerHTML = error.response.data.msg
-                  }
-                  
+                  login_alert.innerHTML = error.response.data.msg
                 });    
       })
 
@@ -1067,14 +1060,14 @@ window.addEventListener('load', function () {
       user_details.setAttribute('style', 'display: none;');
       sessionStorage.removeItem('token')
       sessionStorage.removeItem('name')
-      // const updateDatabase = true
-      // axios.put('/HKgitgud-map',{token,updateDatabase})
-      //   .then(response => {
-      //     console.log(response.data.msg);
-      //   })
-      //   .catch(error => {
-      //     console.log(error);
-      //   });
+      const updateDatabase = true
+      axios.put('/HKgitgud-map',{token,updateDatabase})
+        .then(response => {
+          console.log(response.data.msg);
+        })
+        .catch(error => {
+          console.log(error);
+        });
     })
 
     //#endregion
@@ -1134,8 +1127,8 @@ window.addEventListener('load', function () {
         crs: crs,
         maxBoundsViscosity: 1.0,
         maxBounds: [
-          crs.unproject(L.point(mapExtent[0] -500,mapExtent[1]-500)),
-          crs.unproject(L.point(mapExtent[2]+500, mapExtent[3]+500))
+          crs.unproject(L.point(mapExtent[0] -1500,mapExtent[1]-1500)),
+          crs.unproject(L.point(mapExtent[2]+1500, mapExtent[3]+1500))
           ]
       });
 
@@ -1348,7 +1341,7 @@ window.addEventListener('load', function () {
                   console.log(response.data.msg)
                   if(response.data.newprogress !==undefined && response.data.markertype !==undefined){
                     changePercentage(response.data.markertype,response.data.newprogress)
-                    changeTotalPercentage('total',response.data.newtotalprogress)
+                    changeTotalPercentage(response.data.newtotalprogress)
                   }
                  
                 })
@@ -1419,7 +1412,16 @@ window.addEventListener('load', function () {
                 break;
             case 'Ancient Basin':
                 mapview(-2359,2656,2)
-                break;     
+                break;
+            case 'Deepnest':
+              mapview(-1931,1022,2)
+              break;
+            case 'Royal Waterways':
+              mapview(-2359,2656,2)
+              break;
+            case 'The Hive':
+              mapview(-1844,2603,2)
+              break;          
         }
       }
 
@@ -1507,21 +1509,19 @@ window.addEventListener('load', function () {
           }
       }
 
-      function changePercentage(category,percent){
-        var percentage = (parseFloat(percent)/completionPercentage[category]*100)
+      function changePercentage(category,newprogress){
+        var newprogress = (parseFloat(newprogress)/completionPercentage[category]*100)
         const skillPerElement = document.querySelector('.skill-per.'+category)
         const tooltipElement = skillPerElement.querySelector('.tooltip')
-        skillPerElement.style.width = Math.round(percentage)+'%';
-        tooltipElement.textContent =  Math.round(percentage)+'%';
+        skillPerElement.style.width = Math.ceil(newprogress)+'%';
+        tooltipElement.textContent =  Math.ceil(newprogress)+'%';
         
       }
 
-      function changeTotalPercentage(category,percent){
+      function changeTotalPercentage(newprogress){
         var userpercentage = document.querySelector('.user-percentage span')
-        var newpercent = (parseFloat(percent)/completionPercentage[category]*100)
-        console.log(percent)
-        console.log(completionPercentage[category])
-        userpercentage.innerText = newpercent.toFixed(2)+'%'
+        var newpercent = (parseFloat(newprogress))
+        userpercentage.innerText = Math.ceil(newpercent.toFixed(2))+'%'
       }
 
 
