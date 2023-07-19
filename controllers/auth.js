@@ -101,7 +101,6 @@ const handleAuth = async (req,res,next) => {
             res.status(StatusCodes.OK).json({ user: { name: user.username }, token ,progress})
             
         } catch (error) {
-            console.log('inside of auth.js')
             //console.log(error)
             next(error)//error 
         }

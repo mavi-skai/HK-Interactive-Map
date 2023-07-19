@@ -1058,12 +1058,15 @@ window.addEventListener('load', function () {
       e.preventDefault()
       login_section.style.display = 'block';
       user_details.setAttribute('style', 'display: none;');
+      const updateDatabase = true
+      
+      const token = sessionStorage.getItem('token')
       sessionStorage.removeItem('token')
       sessionStorage.removeItem('name')
-      const updateDatabase = true
       axios.put('/HKgitgud-map',{token,updateDatabase})
         .then(response => {
           console.log(response.data.msg);
+          
         })
         .catch(error => {
           console.log(error);
