@@ -34,14 +34,15 @@ const updateMarker = async(req,res) =>{
 
                         redisclient.set('progress:total',newtotalprogress)
 
-                        redisclient.set('progress:'+markertype,newprogress)     
+                        redisclient.set('progress:'+markertype,newprogress) 
+                            
                         res.status(StatusCodes.OK).json({ msg: "marker updated",newprogress,markertype,newtotalprogress});  
                     })  
                 })
             }
             else{
                 console.log('progress is equal to 0')
-                redisclient.hmset('marker:'+markerid, 'userID', userID, 'isHidden', isHidden,'markerID',markerid);
+                await redisclient.hmset('marker:'+markerid, 'userID', userID, 'isHidden',isHidden,'markerID',markerid);
                 res.status(StatusCodes.OK).json({ msg: "marker updated"});
             }
 
@@ -88,8 +89,8 @@ const updateMarker = async(req,res) =>{
             }))
             
 
-           // User_Markers.bulkWrite(bulkUpdate)
-            User_Progress.bulkWrite(bulkUpdate2)
+            //User_Markers.bulkWrite(bulkUpdate)
+            //User_Progress.bulkWrite(bulkUpdate2)
 
             redisclient.flushall()
             res.status(StatusCodes.OK).json({ msg: "Succesfully logout" });

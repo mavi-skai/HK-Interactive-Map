@@ -3,6 +3,7 @@ const { StatusCodes } = require('http-status-codes')
 const errorHandlerMiddleware = require('../middleware/error-handler')
 const User_Progress = require('../models/User_Progress')
 const User = require('../models/User')
+const User_Markers = require('../models/User_Markers')
 const jwt = require('jsonwebtoken')
 const redisclient = require('./redis')
 
@@ -93,16 +94,20 @@ const handleAuth = async (req,res,next) => {
 
 
             const progress = await User_Progress.find({userid:userID}).select('-_id progress category')
-
+            const markers = await User_Markers.find({userid:userID,isHidden:true}).select('-_id markerid isHidden')
             for(var i=0;i<progress.length;i++){
                 redisclient.set('progress:'+progress[i].category,progress[i].progress)
             }
 
-            res.status(StatusCodes.OK).json({ user: { name: user.username }, token ,progress})
+            for(var i=0;i<markers.length;i++){
+                redisclient.hmset('marker:'+markers[i].markerid, 'userID', userID, 'isHidden',markers[i].isHidden,'markerID',markers[i].markerid);
+            }
+           
+            res.status(StatusCodes.OK).json({ user: { name: user.username }, token ,progress,markers})
             
         } catch (error) {
-            //console.log(error)
-            next(error)//error 
+            console.log(error)
+            next(error)
         }
     }
 }

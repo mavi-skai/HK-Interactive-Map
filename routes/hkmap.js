@@ -3,6 +3,7 @@ const router = express.Router()
 const {handleAuth} = require('../controllers/auth.js')
 const {getAllcomments,saveComment} = require('../controllers/comments.js')
 const {updateMarker} = require('../controllers/marker.js')
+const {getUserinfo} = require('../controllers/user_info.js')
 const path = require('path')
 const multer = require('multer');
 
@@ -20,7 +21,14 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage});
 
 router.route('/')
-.get(getAllcomments)
+.get((req,res,next)=>{
+  if(req.query.getUserinfo === 'false'){
+    getAllcomments(req,res)
+  }
+  else if(req.query.getUserinfo === 'true'){
+    getUserinfo(req,res,next)
+  }
+})
 .put(updateMarker)
 .post((req,res,next)=>{
 

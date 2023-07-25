@@ -1026,13 +1026,8 @@ window.addEventListener('load', function () {
                   login_section.style.display = 'none';
                   user_details.removeAttribute('style')
                   clearAllInput()
-                  for(let i=0;i<response.data.progress.length;i++){
-                    if(response.data.progress[i].category==='total'){
-                      changeTotalPercentage(response.data.progress[i].progress)
-                      continue
-                    }
-                    changePercentage(response.data.progress[i].category,response.data.progress[i].progress)
-                  }
+                  setAllProgress(response.data.progress)
+                  setisHiddenMarkers(response.data.markers)
 
                 })
                 .catch(error => {
@@ -1047,6 +1042,16 @@ window.addEventListener('load', function () {
         login_section.style.display = 'none';
         user_details.removeAttribute('style')
         h6element.textContent = name
+        const getUserinfo = true
+        axios.get('/HKgitgud-map',{params:{getUserinfo}})
+        .then(response=>{
+          console.log(response.data.msg)
+          setAllProgress(response.data.progress)
+          setisHiddenMarkers(response.data.markers)
+        }).catch(error=>{
+          console.log(error)
+        })
+
       }
       else{
         login_section.style.display = 'block';
@@ -1224,6 +1229,7 @@ window.addEventListener('load', function () {
       
 
       foundMarkersGroup.addTo(map)
+      
 
       //#endregion
 
@@ -1341,7 +1347,6 @@ window.addEventListener('load', function () {
               const updateDatabase = false
               axios.put('/HKgitgud-map',{markerINFO,token,updateDatabase})
                 .then(response => {
-                  console.log(response.data.msg)
                   if(response.data.newprogress !==undefined && response.data.markertype !==undefined){
                     changePercentage(response.data.markertype,response.data.newprogress)
                     changeTotalPercentage(response.data.newtotalprogress)
@@ -1464,7 +1469,8 @@ window.addEventListener('load', function () {
           usersmessages.removeAttribute("style")
         }
 
-        axios.get('/HKgitgud-map',{params:{currentMarkerID}})
+        const getUserinfo = false
+        axios.get('/HKgitgud-map',{params:{currentMarkerID,getUserinfo}})
         .then(response=>{
           usersmessages.innerHTML=''
           if(response.data.comments.length===0){
@@ -1527,9 +1533,18 @@ window.addEventListener('load', function () {
         userpercentage.innerText = Math.ceil(newpercent.toFixed(2))+'%'
       }
 
-
+      function setAllProgress(progress){
+        for(let i=0;i<progress.length;i++){
+          if(progress[i].category==='total'){
+            changeTotalPercentage(progress[i].progress)
+            continue
+          }
+          changePercentage(progress[i].category,progress[i].progress)
+        }
+      }
       
       function setDescription(marker,isHidden){
+            console.log('test')
             var name = marker.options.name;
             var desc = marker.options.description;
             var id = marker.options.id
@@ -1545,8 +1560,13 @@ window.addEventListener('load', function () {
             marker.closePopup();
             marker.setOpacity(isHidden === true ? 0.40 : 1)
             marker.bindPopup(popupContent);
-            
-            
+      }
+
+      function setisHiddenMarkers(markersData){
+        console.log(markersData)
+        for(var i=0;i<markersData.length;i++){
+          setDescription(markers[markersData[i].markerid-1],markersData[i].isHidden)
+        }
       }
 
       
