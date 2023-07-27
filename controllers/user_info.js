@@ -19,7 +19,6 @@ const getUserinfo = async(req,res,next) =>{
 
         for(const keys of markers_keys){
             const value = await redisclient.hgetall(keys)
-            console.log(value)
             const newobj = {'markerid':parseInt(value.markerID),'isHidden':JSON.parse(value.isHidden)}
             markers.push(newobj)
         }

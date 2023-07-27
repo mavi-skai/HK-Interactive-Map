@@ -696,7 +696,8 @@ window.addEventListener('load', function () {
 
     function hideall(){
         this.classList.toggle('active')
-        hideAllFoundMarker()
+        var isActive = this.classList.contains('active')
+        hideAllFoundMarker(isActive)
     }
 
     function selectall(){
@@ -763,19 +764,16 @@ window.addEventListener('load', function () {
           case 'charms active':
               button.addEventListener('click',showhidecharms)
               break;  
-          case 'bossess active':
+          case 'boss active':
               button.addEventListener('click',showhidebossess)
               break;
-          case 'warriordreams active':
+          case 'warriorsdreams active':
               button.addEventListener('click',showhidewarriordreams)
-              break;
-          case 'bossvariants active':
-              button.addEventListener('click',showhidebossvariants)
               break;
           case 'dreamers active':
               button.addEventListener('click',showhidedreamers)
               break;  
-          case 'nocthes active':
+          case 'notches active':
               button.addEventListener('click',showhidenotches)
               break;
           case 'spellsandabilities active':
@@ -793,10 +791,7 @@ window.addEventListener('load', function () {
           case 'paleore active':
               button.addEventListener('click',showhidepaleore)
               break;
-          case 'shortcut active':
-              button.addEventListener('click',showhideshortcut)
-              break;
-          case 'whisperingroot active':
+          case 'whisperingroots active':
               button.addEventListener('click',showhidewhisperingroot)
               break;
           case 'benchandtransport active':
@@ -1285,17 +1280,15 @@ window.addEventListener('load', function () {
         showMarker(achievementGroup)
       }
 
-      function hideAllFoundMarker(){
-        if(map.hasLayer(foundMarkersGroup)){
-          hideMarker(foundMarkersGroup)
+      function hideAllFoundMarker(isActive){
+        if(isActive){
+          console.log(isActive)
           removeAllFoundMarkerFromTheirLayerGroup(foundMarkersGroup)
         }
         else{
-          showMarker(foundMarkersGroup)
+          console.log(isActive)
           AddAllFoundMarkerFromTheirLayerGroup(foundMarkersGroup)
         }
-
-        
       }
 
       function createMarkers(markerInfo,iconSize,markerGroupLayer){
@@ -1358,16 +1351,6 @@ window.addEventListener('load', function () {
                 });
   
               
-              if(marker.options.opacity===1){
-                foundMarkersGroup.addLayer(marker)
-              }
-              else{
-                foundMarkersGroup.removeLayer(marker)
-                LayerGroupDict[marker.options.markertype].addLayer(marker)
-              }
-              
-
-             
       
               //create function for set bindpopup and description
               setDescription(marker,markerINFO.isHidden)
@@ -1377,10 +1360,6 @@ window.addEventListener('load', function () {
           markerGroupLayer.addLayer(Marker)
           markers.push(Marker);
         }
-      }
-
-      function hideAllMarkers(groupMarkers){
-        map.removeLayer(groupMarkers);
       }
 
       function setMapView(map){
@@ -1502,22 +1481,6 @@ window.addEventListener('load', function () {
 
       }
 
-      function changeSideBarButtons(markerBlock,commentBlock,loginBlock,buttons){
-          markerBlock.style.display = "none";
-          commentBlock.style.display = "block";
-          
-          loginBlock.style.display = "none";
-
-          for (const button of buttons){
-            if(button.classList.contains('comment-button')){
-              button.classList.add('active')
-            }
-            else{
-              button.classList.remove('active')
-            }
-          }
-      }
-
       function changePercentage(category,newprogress){
         var newprogress = (parseFloat(newprogress)/completionPercentage[category]*100)
         const skillPerElement = document.querySelector('.skill-per.'+category)
@@ -1544,7 +1507,6 @@ window.addEventListener('load', function () {
       }
       
       function setDescription(marker,isHidden){
-            console.log('test')
             var name = marker.options.name;
             var desc = marker.options.description;
             var id = marker.options.id
@@ -1556,6 +1518,15 @@ window.addEventListener('load', function () {
             else{
               popupContent = isHidden  === true ? name+NotFoundpopup : name+Foundpopup;
             }
+
+            if(marker.options.opacity===1){
+              foundMarkersGroup.addLayer(marker)
+            }
+            else{
+              foundMarkersGroup.removeLayer(marker)
+              LayerGroupDict[marker.options.markertype].addLayer(marker)
+            }
+
             marker.options.opacity = isHidden === true ? 0.40 : 1 ;
             marker.closePopup();
             marker.setOpacity(isHidden === true ? 0.40 : 1)
@@ -1563,7 +1534,6 @@ window.addEventListener('load', function () {
       }
 
       function setisHiddenMarkers(markersData){
-        console.log(markersData)
         for(var i=0;i<markersData.length;i++){
           setDescription(markers[markersData[i].markerid-1],markersData[i].isHidden)
         }
