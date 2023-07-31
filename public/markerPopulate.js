@@ -6,7 +6,7 @@ const Markers = require('../models/Markers')
 
 const start = async () =>{
     try {
-        await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+        await connectDB(process.env.MONGO_URL)
         await Markers.deleteMany({})
         await Markers.create(markerData)
         console.log('Success!!!!')
@@ -19,7 +19,7 @@ const start = async () =>{
 
 
 const findOne = async() =>{
-    await connectDB('mongodb+srv://mavey24:XKpUgQqu89aubL3Q@hkmap.vixvfaf.mongodb.net/?retryWrites=true&w=majority')
+    await connectDB(process.env.MONGO_URL)
     Markers.findOne({ id: 285 }, (err, marker) => {
       if (err) {
         console.error(err);
