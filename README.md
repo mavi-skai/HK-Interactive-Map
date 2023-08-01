@@ -1,1 +1,1 @@
-# HollowKnight-InteractiveMap
+# HollowKnight InteractiveMap
