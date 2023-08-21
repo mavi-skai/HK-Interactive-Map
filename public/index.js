@@ -5,9 +5,6 @@ window.addEventListener('load', function () {
     let markers = []
 
 
-    
-    //{name:, x:, y:, path:, description:'', progression:, markertype:},
-
     //#region GRUB
     let grubGroup = new L.LayerGroup()
     var grubData = [
@@ -1026,7 +1023,6 @@ window.addEventListener('load', function () {
 
                 })
                 .catch(error => {
-                  console.log(error)
                   login_alert.innerHTML = error.response.data.msg
                 });    
       })
@@ -1282,11 +1278,9 @@ window.addEventListener('load', function () {
 
       function hideAllFoundMarker(isActive){
         if(isActive){
-          console.log(isActive)
           removeAllFoundMarkerFromTheirLayerGroup(foundMarkersGroup)
         }
         else{
-          console.log(isActive)
           AddAllFoundMarkerFromTheirLayerGroup(foundMarkersGroup)
         }
       }
