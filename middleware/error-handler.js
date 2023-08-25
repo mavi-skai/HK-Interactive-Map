@@ -4,7 +4,6 @@ const CustomAPIError = require('../errors/custom-api')
 
 
 const errorHandlerMiddleware = (error,req,res,next) => {
-    console.log('test inside error-handler.js')
     let customError = {
         // set default
         statusCode: error.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
@@ -15,7 +14,6 @@ const errorHandlerMiddleware = (error,req,res,next) => {
       //   return res.status(customError.statusCode).json({ msg: customError.msg })
       // } 
 
-    console.log(error.name)
    
     if(error.name === 'ValidationError'){
       console.log('validation error')

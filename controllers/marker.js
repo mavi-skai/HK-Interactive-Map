@@ -41,7 +41,6 @@ const updateMarker = async(req,res) =>{
                 })
             }
             else{
-                console.log('progress is equal to 0')
                 await redisclient.hmset('marker:'+markerid, 'userID', userID, 'isHidden',isHidden,'markerID',markerid);
                 res.status(StatusCodes.OK).json({ msg: "marker updated"});
             }
@@ -89,8 +88,8 @@ const updateMarker = async(req,res) =>{
             }))
             
 
-            //User_Markers.bulkWrite(bulkUpdate)
-            //User_Progress.bulkWrite(bulkUpdate2)
+            User_Markers.bulkWrite(bulkUpdate)
+            User_Progress.bulkWrite(bulkUpdate2)
 
             redisclient.flushall()
             res.status(StatusCodes.OK).json({ msg: "Succesfully logout" });
